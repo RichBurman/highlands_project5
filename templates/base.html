@@ -44,15 +44,15 @@
     <header class="container-fluid fixed-top">
       <nav>
         <ul class="horizontal-nav">
-          <li><a href="">Home</a></li>
+          <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="">Walking Packages</a></li>
-          <li><a href="">About Us</a></li>
-          <li><a href="">Gallery</a></li>
+          <li><a href="{% url 'about_us' %}">About Us</a></li>
+          <li><a href="{% url 'gallery' %}">Gallery</a></li>
           <li><a href="">Reviews</a></li>
           <li><a href="">Cart</a></li>
           {% if user.is_authenticated %}
           <li><a href="{% url 'account_logout' %}">Logout</a></li>
-          <li><a href="">Profile</a></li>
+          <li><a href="">User Profile</a></li>
           {% else %}
           <li><a href="{% url 'account_login' %}">Login</a></li>
           <li><a href="{% url 'account_signup' %}">Register</a></li>
@@ -73,9 +73,9 @@
       </div>
       <div class="container">
         <ul class="social-links">
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Instagram</a></li>
+          <li><a href="https://www.facebook.com">Facebook</a></li>
+          <li><a href="https://www.twitter.com">Twitter</a></li>
+          <li><a href="https://www.instagram.com">Instagram</a></li>
         </ul>
       </div>
       <div class="container">
@@ -85,7 +85,7 @@
 
     {% if messages %}
     <div class="message-container"></div>
-    {% endif %} {% block page_header %} {% endblock %} {% block postloadjs %} {%
-    endblock %}
+    {% endif %} {% block page_header %} {% endblock %} {% block postloadjs %} 
+    {% endblock %}
   </body>
 </html>
