@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>User Profile</h1>
+<p>Welcome, {{ user.username }}!</p>
+
+<h2>Profile Information</h2>
+<p>First Name: {{ user.first_name }}</p>
+<p>Last Name: {{ user.last_name }}</p>
+<p>Email: {{ user.email }}</p>
+<p>Address Line 1: {{ user.addressline_1 }}</p>
+<p>Address Line 2: {{ user.addressline_2 }}</p>
+<p>County: {{ user.default_county }}</p>
+<p>Country: {{ user.default_country }}</p>
+<p>Phone Number: {{ user.phone_number }}</p>
+<p>Discount Code: {{ user.discount_code }}</p>
+<a href="{% url 'custom_user_edit' %}">Edit User Data</a>
+
+<h2>User Profile</h2>
+<p>Bio: {{ user_profile.bio }}</p>
+{% if user_profile.profile_picture %}
+<p>Profile Picture: <img src="{{ user_profile.profile_picture.url }}" alt="Profile Picture"></p>
+{% else %}
+<p>No profile picture uploaded.</p>
+{% endif %}
+<a href="{% url 'user_profile_edit' %}">Edit Profile</a>
+{% endblock %}

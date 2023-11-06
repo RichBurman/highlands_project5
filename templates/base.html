@@ -39,53 +39,64 @@
     <title>Highland Walks {% block extra_title %}{% endblock %}</title>
   </head>
 
-  <body>
+<body>
     <header class="container-fluid fixed-top"></header>
     <header class="container-fluid fixed-top">
-      <nav>
-        <ul class="horizontal-nav">
-          <li><a href="{% url 'home' %}">Home</a></li>
-          <li><a href="">Walking Packages</a></li>
-          <li><a href="{% url 'about_us' %}">About Us</a></li>
-          <li><a href="{% url 'gallery' %}">Gallery</a></li>
-          <li><a href="">Reviews</a></li>
-          <li><a href="">Cart</a></li>
-          {% if user.is_authenticated %}
-          <li><a href="{% url 'account_logout' %}">Logout</a></li>
-          <li><a href="">User Profile</a></li>
-          {% else %}
-          <li><a href="{% url 'account_login' %}">Login</a></li>
-          <li><a href="{% url 'account_signup' %}">Register</a></li>
-          {% endif %}
-        </ul>
-      </nav>
+        <nav> <!-- nav bar -->
+            <ul class="horizontal-nav">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="">Walking Packages</a></li>
+                <li><a href="{% url 'about_us' %}">About Us</a></li>
+                <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                <li><a href="">Reviews</a></li>
+                <li><a href="">Cart</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'account_logout' %}">Logout</a></li>
+                <!-- Dropdown menu for User Profile Details - Need to remember to change names and adjust layout order as not right -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        User Profile Details
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'user_profile' %}">User Profile</a>
+                        <a class="dropdown-item" href="{% url 'user_profile_edit' %}">Edit Profile</a>
+                        <a class="dropdown-item" href="{% url 'custom_user_edit' %}">Edit Custom User</a>
+                    </div>
+                </li>
+                {% else %}
+                <li><a href="{% url 'account_login' %}">Login</a></li>
+                <li><a href="{% url 'account_signup' %}">Register</a></li>
+                {% endif %}
+            </ul>
+        </nav>
     </header>
 
     <main class="content-container">
-      <div class="container table-responsive">
-        {% block content %} {% endblock %}
-      </div>
+        <div class="container table-responsive">
+            {% block content %} {% endblock %}
+        </div>
     </main>
 
     <footer>
-      <div class="container">
-        <h3>Connect with Us</h3>
-      </div>
-      <div class="container">
-        <ul class="social-links">
-          <li><a href="https://www.facebook.com">Facebook</a></li>
-          <li><a href="https://www.twitter.com">Twitter</a></li>
-          <li><a href="https://www.instagram.com">Instagram</a></li>
-        </ul>
-      </div>
-      <div class="container">
-        <p>&copy; 2023 Hiking Walks</p>
-      </div>
+        <div class="container">
+            <h3>Connect with Us</h3>
+        </div>
+        <div class="container">
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com">Facebook</a></li>
+                <li><a href="https://www.twitter.com">Twitter</a></li>
+                <li><a href="https://www.instagram.com">Instagram</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <p>&copy; 2023 Hiking Walks</p>
+        </div>
     </footer>
 
     {% if messages %}
     <div class="message-container"></div>
-    {% endif %} {% block page_header %} {% endblock %} {% block postloadjs %} 
-    {% endblock %}
-  </body>
+    {% endif %} {% block page_header %} {% endblock %} {% block postloadjs %} {% endblock %}
+</body>
+
 </html>

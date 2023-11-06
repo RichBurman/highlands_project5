@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Edit Your User Profile</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }} {# Display CustomUserForm fields #}
+    <button type="submit">Save User Profile</button>
+</form>
+{% endblock %}
