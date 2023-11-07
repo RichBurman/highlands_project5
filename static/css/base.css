@@ -90,3 +90,12 @@ img {
     max-width: 300px;
     max-height: 200px;
 }
+
+/* Styling for message popup, to display under navbar  */
+.messages-container {
+    position: fixed;
+    top: 70px;
+    right: 10px;
+    z-index: 1050;
+    width: 25%;
+}
