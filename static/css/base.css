@@ -78,3 +78,15 @@ footer .social-links li {
 .content-container {
     margin-top: 80px;
 }
+
+/* Style images in package_list */
+ul li img {
+    max-width: 200px;
+    max-height: 150px;
+}
+
+/* Style images in package_detail */
+img {
+    max-width: 300px;
+    max-height: 200px;
+}

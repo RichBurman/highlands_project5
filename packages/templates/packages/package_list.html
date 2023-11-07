@@ -6,6 +6,7 @@
     {% for package in packages %}
     <li>
         <a href="{% url 'package_detail' package.pk %}">{{ package.title }}</a>
+        <img src="{{ package.image.url }}" alt="{{ package.title }}">
         <p>{{ package.description }}</p>
         <p>Price: ${{ package.price }}</p>
     </li>
