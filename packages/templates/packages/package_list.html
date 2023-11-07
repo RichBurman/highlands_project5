@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Walking Packages</h1>
+<ul>
+    {% for package in packages %}
+    <li>
+        <a href="{% url 'package_detail' package.pk %}">{{ package.title }}</a>
+        <p>{{ package.description }}</p>
+        <p>Price: ${{ package.price }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

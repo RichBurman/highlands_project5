@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ package.title }}</h1>
+<p>{{ package.description }}</p>
+<p>Price: ${{ package.price }}</p>
+<p>Average Rating: {{ package.average_review_rating }}</p>
+<a href="#">Add to Cart</a>
+<form method="post">
+    {% csrf_token %}
+    <label for="discount_code">Discount Code:</label>
+    <input type="text" name="discount_code">
+    <button type="submit">Apply Discount</button>
+</form>
+{% endblock %}
