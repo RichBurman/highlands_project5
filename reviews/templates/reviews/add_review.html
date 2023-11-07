@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Add a Review for {{ package.name }}</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Submit Review</button>
+</form>
+
+<a href="{% url 'reviews:review_list' %}" class="btn btn-primary">Back to Reviews</a>
+</div>
+{% endblock %}

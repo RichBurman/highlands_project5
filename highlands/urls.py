@@ -23,8 +23,10 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('home.urls')),
     path('user/', include('user.urls')),
-    path('packages/', include('packages.urls'), name='package_list'),
+    path('packages/', include('packages.urls')),
+    path('reviews/', include('reviews.urls')),
 ]
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

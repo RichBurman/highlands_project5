@@ -40,10 +40,10 @@
         <nav>
             <ul class="horizontal-nav">
                 <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'package_list' %}">View Packages</a></li>
+                <li><a href="{% url 'packages:package_list' %}">View Packages</a></li>
                 <li><a href="{% url 'about_us' %}">About Us</a></li>
                 <li><a href="{% url 'gallery' %}">Gallery</a></li>
-                <li><a href="">Reviews</a></li>
+                <li><a href="{% url 'reviews:review_list' %}">Reviews</a></li>
                 <li><a href="">Cart</a></li>
                 {% if user.is_authenticated %}
                 <li><a href="{% url 'account_logout' %}">Logout</a></li>
