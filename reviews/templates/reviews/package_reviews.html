@@ -5,7 +5,7 @@
 <ul>
     {% for review in reviews %}
     <li>
-        {{ review.title }} - {{ review.user }} - {{ review.created_at }}
+        {{ review.title }} - <a href="{% url 'display_user_profile' pk=review.user.id %}">{{ review.user }}</a> - {{review.created_at }}
         <br>
         <strong>Difficulty Rating:</strong> {{ review.difficulty_rating }}
         <br>

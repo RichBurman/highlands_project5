@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>User Profile: {{ user.username }}</h1>
+<p>Bio: {{ user.userprofile.bio }}</p>
+{% if user.userprofile.profile_picture %}
+<p>Profile Picture: <img src="{{ user.userprofile.profile_picture.url }}" alt="Profile Picture"></p>
+{% else %}
+<p>No profile picture uploaded.</p>
+{% endif %}
+
+<h2>Reviews by {{ user.username }}</h2>
+<ul>
+    {% for review in reviews %}
+    <li>
+        {{ review.title }} - {{ review.created_at }}
+        <p>{{ review.text }}</p>
+    </li>
+    {% empty %}
+    <li>No reviews by this user.</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'reviews:review_list' %}" class="btn btn-primary">Back to Reviews</a>
+{% endblock %}

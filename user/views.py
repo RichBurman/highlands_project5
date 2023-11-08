@@ -2,6 +2,10 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .models import CustomUser, UserProfile
 from .forms import CustomUserForm, UserProfileForm
+from django.views.generic import DetailView
+from reviews.models import Review
+from django.contrib.auth.models import User
+
 
 # View the User Profile
 @login_required
@@ -43,3 +47,14 @@ def custom_user_edit(request):
         form = CustomUserForm(instance=custom_user)
 
     return render(request, 'user/custom_user_edit.html', {'form': form, 'custom_user': custom_user})
+
+
+class DisplayUserProfileView(DetailView):
+    model = CustomUser
+    template_name = 'user/display_user_profile.html'
+    context_object_name = 'user'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['reviews'] = Review.objects.filter(user=self.object)
+        return context
