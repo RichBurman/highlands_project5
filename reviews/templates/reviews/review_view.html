@@ -9,7 +9,11 @@
             {% if reviews %}
             {% for review in reviews %}
             <li>{{ review.title }} - {{ review.user }} - {{ review.created_at }}</li>
-            <p>{{ review.text }}</p> 
+            <br>
+            <strong>Difficulty Rating:</strong> {{ review.difficulty_rating }}
+            <br>
+            <strong>Overall Rating:</strong> {{ review.overall_rating }}
+            <p>{{ review.text }}</p>
             {% endfor %}
             {% else %}
             <li>No reviews available for this package.</li>

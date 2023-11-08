@@ -37,13 +37,13 @@ main {
     order: 2;
     flex-grow: 1;
     padding: 20px;
+    margin-top: 70px;
 }
 
 footer {
     order: 3;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    position: relative;
+    /* Change to relative */
     width: 100%;
     background-color: #333;
     color: #fff;
@@ -66,17 +66,15 @@ footer .social-links li {
     margin: 0 10px;
 }
 
-
-/* sign up forms */
-
-.custom-card {
-    margin-top: 20px;
+/* index page styling */
+.content-container {
+    margin-top: 70px;
+    margin-bottom: 70px;
 }
 
-/* index page styling */
-
-.content-container {
-    margin-top: 80px;
+/* sign up forms */
+.custom-card {
+    margin-top: 20px;
 }
 
 /* Style images in package_list */
@@ -91,7 +89,7 @@ img {
     max-height: 200px;
 }
 
-/* Styling for message popup, to display under navbar  */
+/* Styling for message popup, to display under navbar */
 .messages-container {
     position: fixed;
     top: 70px;

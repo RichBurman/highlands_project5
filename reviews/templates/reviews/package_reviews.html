@@ -4,10 +4,16 @@
 <h1>Reviews for {{ package.title }}</h1>
 <ul>
     {% for review in reviews %}
-    <li>{{ review.title }} - {{ review.user }} - {{ review.created_at }}</li>
-    <p>{{ review.text }}</p>
+    <li>
+        {{ review.title }} - {{ review.user }} - {{ review.created_at }}
+        <br>
+        <strong>Difficulty Rating:</strong> {{ review.difficulty_rating }}
+        <br>
+        <strong>Overall Rating:</strong> {{ review.overall_rating }}
+        <p>{{ review.text }}</p>
+    </li>
     {% endfor %}
 </ul>
 
-<a href="{% url 'reviews:view_review' %}" class="btn btn-primary">Back to All Reviews</a>
+<a href="{% url 'reviews:review_list' %}" class="btn btn-primary">Back to All Reviews</a>
 {% endblock %}
