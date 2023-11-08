@@ -5,8 +5,7 @@
 <img src="{{ package.image.url }}" alt="{{ package.title }}">
 <p>{{ package.description }}</p>
 <p>Price: ${{ package.price }}</p>
-<p>Average Rating: {{ package.average_review_rating }}</p>
-<a href="#">Add to Cart</a>
+<a href="{% url 'cart:add_to_cart' package.id %}" class="btn btn-primary">Add to Cart</a>
 <form method="post">
     {% csrf_token %}
     <label for="discount_code">Discount Code:</label>
