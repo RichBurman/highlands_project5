@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Customer Reviews</h1>
+<ul>
+    {% for package, reviews in package_reviews.items %}
+    <li>{{ package.title }}
+        <ul>
+            {% if reviews %}
+            {% for review in reviews %}
+            <li>{{ review.title }} - {{ review.user }} - {{ review.created_at }}</li>
+            <p>{{ review.text }}</p> 
+            {% endfor %}
+            {% else %}
+            <li>No reviews available for this package.</li>
+            {% endif %}
+        </ul>
+    </li>
+    {% empty %}
+    <li>No packages available.</li>
+    {% endfor %}
+</ul>
+
+{% if user.is_authenticated %}
+<a href="{% url 'reviews:review_list' %}" class="btn btn-primary">Back to Reviews</a>
+{% else %}
+<p>Please <a href="{% url 'account_login' %}">login</a> to add a review.</p>
+{% endif %}
+{% endblock %}

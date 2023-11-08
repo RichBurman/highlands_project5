@@ -1,6 +1,5 @@
 from django.db import models
 from django.conf import settings
-# Import the Package model from your packages app
 from packages.models import Package
 
 

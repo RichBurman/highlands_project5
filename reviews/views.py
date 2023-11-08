@@ -4,6 +4,7 @@ from .forms import ReviewForm
 from django.urls import reverse
 from django.views.generic import ListView
 from packages.models import Package
+from pprint import pprint
 
 # Create your views here.
 
@@ -16,7 +17,7 @@ class ReviewsListView(ListView):
 
 def review_list(request):
     packages = Package.objects.all()
-    package_reviews = {}  
+    package_reviews = {}
 
     for package in packages:
         reviews = Review.objects.filter(package=package)
@@ -41,3 +42,20 @@ def add_review(request, package_id):
         form = ReviewForm()
 
     return render(request, 'reviews/add_review.html', {'form': form, 'package': package})
+
+
+def view_review(request):
+    packages = Package.objects.all()
+    package_reviews = {}
+
+    for package in packages:
+        reviews = Review.objects.filter(package=package)
+        package_reviews[package] = reviews
+
+    return render(request, 'reviews/review_view.html', {'package_reviews': package_reviews})
+
+
+def view_package_reviews(request, package_id):
+    package = Package.objects.get(pk=package_id)
+    reviews = Review.objects.filter(package=package)
+    return render(request, 'reviews/package_reviews.html', {'package': package, 'reviews': reviews})
