@@ -5,14 +5,15 @@
 <ul>
     {% for item in cart_items %}
     <li>
-        {{ item.package.title }} - Quantity: {{ item.quantity }}
+        {{ item.package.title }} - Quantity:
+        <form method="post" action="{% url 'cart:update_cart' item.id %}">
+            {% csrf_token %}
+            <input type="number" name="quantity" value="{{ item.quantity }}" min="1">
+            <input type="submit" value="Update Quantity">
+        </form>
         <form method="post" action="{% url 'cart:remove_from_cart' item.id %}">
             {% csrf_token %}
             <input type="submit" value="Remove">
-        </form>
-        <form method="post" action="{% url 'cart:add_to_cart' item.package.id %}">
-            {% csrf_token %}
-            <input type="submit" value="Add">
         </form>
     </li>
     {% empty %}

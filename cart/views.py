@@ -31,3 +31,15 @@ def view_cart(request):
                       item.quantity for item in cart_items)
 
     return render(request, 'cart/cart.html', {'cart_items': cart_items, 'total_price': total_price})
+
+
+def update_cart(request, item_id):
+    cart_item = get_object_or_404(Cart, id=item_id)
+
+    if request.method == 'POST':
+        new_quantity = int(request.POST.get('quantity'))
+        if new_quantity > 0:
+            cart_item.quantity = new_quantity
+            cart_item.save()
+
+    return redirect('cart:cart_view')
