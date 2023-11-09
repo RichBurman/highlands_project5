@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Your Reviews</h2>
+    <ul>
+        {% for review in user_reviews %}
+            <li>
+                {{ review.text }} - {{ review.created_at }}
+                {% if review.package %}
+                    (Package: {{ review.package.title }})
+                {% else %}
+                    (No associated package)
+                {% endif %}
+                <a href="{% url 'reviews:review-update' review.id %}">Edit</a>
+                <a href="{% url 'reviews:review-delete' review.id %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
