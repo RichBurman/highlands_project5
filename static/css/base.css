@@ -97,3 +97,32 @@ img {
     z-index: 1050;
     width: 25%;
 }
+
+/* Styles for About Us page */
+.about-section {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.about-section h1,
+.about-section h2 {
+    color: red;
+    margin-top: 20px;
+}
+
+.about-section p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Style the list in the "How the Hiking Packages Work" section */
+.about-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.about-section a {
+    color: #007bff;
+    text-decoration: underline;
+}
