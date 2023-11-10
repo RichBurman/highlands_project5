@@ -5,6 +5,17 @@
   <form method="post" action="{% url 'checkout:process_checkout' %}">
     {% csrf_token %}
 
+  
+     <h2>Order Summary</h2>
+     <ul>
+       {% for cart_item in cart %}
+         <li>{{ cart_item.package.title }} - Quantity: {{ cart_item.quantity }} - Price: {{ cart_item.package.price }}</li>
+       {% endfor %}
+     </ul>
+     <p>Total Price: {{ total_price }}</p>
+
+
+    <h2>Shipping Information</h2>
     <div class="form-group">
       <label for="{{ form.addressline_1.id_for_label }}">Address Line 1:</label>
       {{ form.addressline_1 }}
@@ -30,8 +41,8 @@
       {{ form.phone_number }}
     </div>
 
-    
-
+   
+    <h2>Payment Information</h2>
     <div class="form-group">
       <label for="{{ form.card_number.id_for_label }}">Card Number:</label>
       {{ form.card_number }}
