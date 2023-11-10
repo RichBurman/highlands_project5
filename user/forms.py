@@ -2,11 +2,13 @@ from django import forms
 from .models import CustomUser, UserProfile
 
 
+from django import forms
+from django_countries.fields import CountryField
+
 class CustomUserForm(forms.ModelForm):
     class Meta:
         model = CustomUser
-        fields = ('first_name', 'last_name', 'addressline_1', 'addressline_2',
-                  'default_county', 'default_country', 'phone_number')
+        fields = ['username', 'first_name', 'last_name', 'email', 'addressline_1', 'addressline_2', 'county', 'country', 'phone_number', 'discount_code']
 
 
 class UserProfileForm(forms.ModelForm):

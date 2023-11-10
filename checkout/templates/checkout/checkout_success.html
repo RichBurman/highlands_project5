@@ -1,7 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Order Confirmation</h1>
-<p>Thank you for your purchase. Your order has been confirmed.</p>
-</div>
+  <h1>Order Confirmation</h1>
+  <p>Thank you for your purchase. Your order has been confirmed.</p>
+
+  <h2>Order Details</h2>
+  <p>User: {{ order.user.username }}</p>
+  <p>Total Price: {{ order.total_price }}</p>
+
+  <p>Address Line 1: {{ order.addressline_1 }}</p>
+  <p>Address Line 2: {{ order.addressline_2 }}</p>
+  <p>County: {{ order.county }}</p>
+  <p>Country: {{ order.country }}</p>
+  <p>Phone Number: {{ order.phone_number }}</p>
 {% endblock %}

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Checkout</h1>
+  <form method="post" action="{% url 'checkout:process_checkout' %}">
+    {% csrf_token %}
+
+    <div class="form-group">
+      <label for="{{ form.addressline_1.id_for_label }}">Address Line 1:</label>
+      {{ form.addressline_1 }}
+    </div>
+
+    <div class="form-group">
+      <label for="{{ form.addressline_2.id_for_label }}">Address Line 2:</label>
+      {{ form.addressline_2 }}
+    </div>
+
+    <div class="form-group">
+      <label for="{{ form.county.id_for_label }}">County:</label>
+      {{ form.county }}
+    </div>
+
+    <div class="form-group">
+      <label for="{{ form.country.id_for_label }}">Country:</label>
+      {{ form.country }}
+    </div>
+
+    <div class="form-group">
+      <label for="{{ form.phone_number.id_for_label }}">Phone Number:</label>
+      {{ form.phone_number }}
+    </div>
+
+    
+
+    <div class="form-group">
+      <label for="{{ form.card_number.id_for_label }}">Card Number:</label>
+      {{ form.card_number }}
+    </div>
+
+    <div class="form-group">
+      <label for="{{ form.card_expiry.id_for_label }}">Card Expiry (MM/YY):</label>
+      {{ form.card_expiry }}
+    </div>
+
+    <div class="form-group">
+      <label for="{{ form.card_cvc.id_for_label }}">Card CVC:</label>
+      {{ form.card_cvc }}
+    </div>
+
+    <div class="form-group">
+      <label for="{{ form.terms_and_conditions.id_for_label }}">Terms and Conditions:</label>
+      {{ form.terms_and_conditions }}
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}

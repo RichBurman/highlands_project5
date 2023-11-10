@@ -21,7 +21,10 @@
     {% endfor %}
 </ul>
 <p>Total Price: ${{ total_price }}</p>
-<a href="{% url 'cart:cart_view' %}" class="btn btn-primary">View Cart</a>
+
+{% if cart_items %}
+    <a href="{% url 'checkout:checkout' %}" class="btn btn-success">Proceed to Checkout</a>
+{% endif %}
 
 </div>
 {% endblock %}
