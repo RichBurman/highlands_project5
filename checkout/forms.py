@@ -12,3 +12,4 @@ class CheckoutForm(forms.Form):
     card_expiry = forms.CharField()
     card_cvc = forms.CharField()
     terms_and_conditions = forms.BooleanField()
+    discount_code = forms.CharField(required=False)

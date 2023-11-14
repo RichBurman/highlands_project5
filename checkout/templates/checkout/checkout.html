@@ -1,19 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div id="alert-container" class="container messages-container"></div>
+
   <h1>Checkout</h1>
   <form method="post" action="{% url 'checkout:process_checkout' %}">
     {% csrf_token %}
 
-  
-     <h2>Order Summary</h2>
-     <ul>
-       {% for cart_item in cart %}
-         <li>{{ cart_item.package.title }} - Quantity: {{ cart_item.quantity }} - Price: {{ cart_item.package.price }}</li>
-       {% endfor %}
-     </ul>
-     <p>Total Price: {{ total_price }}</p>
-
+    <!-- Shipping Information Section -->
 
     <h2>Shipping Information</h2>
     <div class="form-group">
@@ -41,7 +35,8 @@
       {{ form.phone_number }}
     </div>
 
-   
+    <!-- Payment Information  -->
+
     <h2>Payment Information</h2>
     <div class="form-group">
       <label for="{{ form.card_number.id_for_label }}">Card Number:</label>
@@ -63,6 +58,96 @@
       {{ form.terms_and_conditions }}
     </div>
 
+    <!-- Order Summary  -->
+
+    <h2>Order Summary</h2>
+    <ul>
+      {% for cart_item in cart %}
+        <li>{{ cart_item.package.title }} - Quantity: {{ cart_item.quantity }}</li>
+      {% endfor %}
+    </ul>
+    <p>Total Price(without discount): {{ total_price }}</p>
+
+    <!-- Discount Code Section -->
+
+    <div class="form-group">
+      <label for="{{ form.discount_code.id_for_label }}">Discount Code:</label>
+      {{ form.discount_code }}
+      <button type="button" id="apply-discount">Apply Discount</button>
+      <input type="hidden" id="discount-applied" value="false">
+    </div>
+    
+    <!-- This to change when a discount is applied! Need this to work!   -->
+    <p>Total Price: $<span id="total-price">{{ total_price }}</span></p>
+
+    <!-- Submit Button -->
     <button type="submit">Submit</button>
+
+    <!-- JavaScript Section -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('apply-discount').addEventListener('click', function () {
+          applyDiscount();
+        });
+      });
+    
+      function applyDiscount() {
+        var discountCode = document.getElementById('id_discount_code').value;
+    
+        // Check if discount has already been applied
+        if (document.getElementById('discount-applied').value === 'true') {
+          showAlert('Discount already applied.', 'warning');
+          return;
+        }
+    
+        fetch('/checkout/validate_discount/' + discountCode + '/')
+          .then(response => response.json())
+          .then(data => {
+            // Check if the discount code is valid and fetch the discount percentage
+            if (data.valid) {
+              var discountPercentage = data.discount_percentage;
+    
+              // Calculate discounted total price
+              var totalPrice = parseFloat(document.getElementById('total-price').textContent);
+              var discountedPrice = totalPrice - (totalPrice * (discountPercentage / 100));
+    
+              // Update the displayed total price
+              document.getElementById('total-price').textContent = discountedPrice.toFixed(2);
+    
+              // Update the order summary for each item
+              var items = document.querySelectorAll('#order-summary li');
+              items.forEach(function (item) {
+                var originalPrice = parseFloat(item.textContent.match(/Price: \$([\d.]+)/)[1]);
+                var discountedItemPrice = originalPrice - (originalPrice * (discountPercentage / 100));
+                item.textContent = item.textContent.replace(/(Price: \$[\d.]+)/, 'Price: $' + discountedItemPrice.toFixed(2));
+              });
+    
+              // Mark that the discount has been applied
+              document.getElementById('discount-applied').value = 'true';
+    
+              // Display success message
+              showAlert('Discount applied successfully.', 'success');
+            } else {
+              showAlert('Invalid discount code', 'danger');
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            showAlert('An error occurred while applying the discount.', 'danger');
+          });
+      }
+    
+      function showAlert(message, alertType) {
+        var alertContainer = document.getElementById('alert-container');
+        var alertDiv = document.createElement('div');
+        alertDiv.classList.add('alert', 'alert-' + alertType, 'alert-dismissible', 'fade', 'show');
+        alertDiv.role = 'alert';
+        alertDiv.innerHTML = message +
+          '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
+          '<span aria-hidden="true">&times;</span>' +
+          '</button>';
+        alertContainer.appendChild(alertDiv);
+      }
+    </script>
   </form>
 {% endblock %}

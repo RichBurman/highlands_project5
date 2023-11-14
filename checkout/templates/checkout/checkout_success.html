@@ -1,16 +1,32 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Order Confirmation</h1>
-  <p>Thank you for your purchase. Your order has been confirmed.</p>
+  <div class="container">
+    <h1 class="mb-4">Order Confirmation</h1>
+    <p class="lead">Thank you for your purchase. Your order has been confirmed.</p>
 
-  <h2>Order Details</h2>
-  <p>User: {{ order.user.username }}</p>
-  <p>Total Price: {{ order.total_price }}</p>
+    <div class="row mt-5">
+      <div class="col-md-6">
+        <h2>Order Details</h2>
+        <p><strong>User:</strong> {{ order.user.username }}</p>
+        <p><strong>Total Price:</strong> ${{ order.total_price }}</p>
 
-  <p>Address Line 1: {{ order.addressline_1 }}</p>
-  <p>Address Line 2: {{ order.addressline_2 }}</p>
-  <p>County: {{ order.county }}</p>
-  <p>Country: {{ order.country }}</p>
-  <p>Phone Number: {{ order.phone_number }}</p>
+        <h3>Items Ordered</h3>
+        <ul>
+          {% for item in order.orderitem_set.all %}
+            <li>{{ item.package.title }} - Quantity: {{ item.quantity }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="col-md-6">
+        <h2>Shipping Information</h2>
+        <p><strong>Address Line 1:</strong> {{ order.addressline_1 }}</p>
+        <p><strong>Address Line 2:</strong> {{ order.addressline_2 }}</p>
+        <p><strong>County:</strong> {{ order.county }}</p>
+        <p><strong>Country:</strong> {{ order.country }}</p>
+        <p><strong>Phone Number:</strong> {{ order.phone_number }}</p>
+      </div>
+    </div>
+  </div>
 {% endblock %}

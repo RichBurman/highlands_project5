@@ -6,10 +6,4 @@
 <p>{{ package.description }}</p>
 <p>Price: ${{ package.price }}</p>
 <a href="{% url 'cart:add_to_cart' package.id %}" class="btn btn-primary">Add to Cart</a>
-<form method="post">
-    {% csrf_token %}
-    <label for="discount_code">Discount Code:</label>
-    <input type="text" name="discount_code">
-    <button type="submit">Apply Discount</button>
-</form>
 {% endblock %}
