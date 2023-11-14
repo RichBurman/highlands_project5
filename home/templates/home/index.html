@@ -2,36 +2,39 @@
 {% load static %}
 
 {% block content %}
-<div class="welcome-section">
-    <h1>Welcome to Highland Adventures!</h1>
-    <p>Your Gateway to Highland Thrills!</p>
+    <img src="{% get_media_prefix %}media/packages/background.jpg" alt="Background Image" class="background-image">
 
-    <p>Embark on a journey into the heart of the Scottish Highlands with Highland Adventures, where every step is an adventure waiting to be discovered.</p>
 
-    <h2>Why Join Us?</h2>
-    <p>Become a member today and unlock a world of exclusive benefits:</p>
-    <ul>
-        <li>10% Member Discount: Enjoy a special 10% discount on all our thrilling walking packages.</li>
-        <li>Unique Discount Code: Receive your very own unique discount code for an extra touch of personalization.</li>
-    </ul>
 
-    <h2>Booking Made Easy:</h2>
-    <p>Non-members, give us a call at 0000 0000 0000 to secure your spot. But why settle for the standard when you can elevate your experience?</p>
+        <h1>Welcome to Highland Adventures!</h1>
+        <p>Your Gateway to Highland Thrills!</p>
 
-    <p>Members, Rejoice! Book online as a registered member and watch the prices drop by 10%! It's that simple. Your adventure begins with a click.</p>
+        <p>Embark on a journey into the heart of the Scottish Highlands with Highland Adventures, where every step is an adventure waiting to be discovered.</p>
 
-    <h2>Stay in the Loop:</h2>
-    <p>Sign up for our newsletter and be the first to hear about:</p>
-    <ul>
-        <li> New Adventures: Be the trailblazer and explore the latest additions to our lineup.</li>
-        <li> Exclusive Offers: Access member-only promotions and limited-time discounts.</li>
-    </ul>
+        <h2>Why Join Us?</h2>
+        <p>Become a member today and unlock a world of exclusive benefits:</p>
+        <ul>
+            <li>10% Member Discount: Enjoy a special 10% discount on all our thrilling walking packages.</li>
+            <li>Unique Discount Code: Receive your very own unique discount code for an extra touch of personalization.</li>
+        </ul>
+
+        <h2>Booking Made Easy:</h2>
+        <p>Non-members, give us a call at 0000 0000 0000 to secure your spot. But why settle for the standard when you can elevate your experience?</p>
+
+        <p>Members, Rejoice! Book online as a registered member and watch the prices drop by 10%! It's that simple. Your adventure begins with a click.</p>
+
+        <h2>Stay in the Loop:</h2>
+        <p>Sign up for our newsletter and be the first to hear about:</p>
+        <ul>
+            <li>New Adventures: Be the trailblazer and explore the latest additions to our lineup.</li>
+            <li>Exclusive Offers: Access member-only promotions and limited-time discounts.</li>
+        </ul>
 
     <!-- Mailchimp Signup Form -->
     <div id="mc_embed_shell">
         <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
         <style type="text/css">
-            #mc_embed_signup{background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;}
+            #mc_embed_signup{background:rgba(255,255,255,0.7); clear:left; font:14px Helvetica,Arial,sans-serif; max-width: 600px; padding: 20px;}
             /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
                We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
         </style>
@@ -71,7 +74,6 @@
 
     <p>Ready to Conquer? Join Now! Unleash the adventurer in you. Register as a member today and let the Highland Adventures begin!</p>
 
-    <p>Connect with us on our  <a href="https://www.facebook.com/YourBusinessPage" target="_blank">Facebook Business Page!</a>.</p>
-</div>
+    <p>Connect with us on our <a href="https://www.facebook.com/YourBusinessPage" target="_blank">Facebook Business Page!</a>.</p>
 </div>
 {% endblock %}
