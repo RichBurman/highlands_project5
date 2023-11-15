@@ -29,7 +29,7 @@ TEMPLATES_DIRS = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-richburman-highlands-pro-kecrygk8zz.us2.codeanyapp.com', '127.0.0.1', 'highlands.herokuapp.com', 'highlands-fe23cbc4972e.herokuapp.com']
 
@@ -72,7 +72,7 @@ ROOT_URLCONF = 'highlands.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIRS],
+        'DIRS': [TEMPLATES_DIRS,],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
