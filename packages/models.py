@@ -9,4 +9,17 @@ class Package(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
     image = models.ImageField(upload_to='media/packages/')
-    average_review_rating = models.DecimalField(max_digits=3, decimal_places=2)
+    
+    DIFFICULTY_CHOICES = (
+        ('Easy', 'Easy'),
+        ('Moderate', 'Moderate'),
+        ('Difficult', 'Difficult'),
+        ('Challenging', 'Challenging'),
+    )
+
+    difficulty_rating = models.CharField(
+        max_length=20,
+        choices=DIFFICULTY_CHOICES,
+        default='Easy'
+    )
+    

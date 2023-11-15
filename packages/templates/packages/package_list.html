@@ -7,8 +7,9 @@
     <li>
         <a href="{% url 'packages:package_detail' package_id=package.pk %}">{{ package.title }}</a>
         <img src="{{ package.image.url }}" alt="{{ package.title }}">
-        <p>{{ package.description }}</p>
-        <p>Price: ${{ package.price }}</p>
+        <p><strong>Description:</strong><br>{{ package.description }}</p>
+        <p>Difficulty Rating: <strong>{{ package.difficulty_rating|title }}</strong></p>
+        <p>Price: £{{ package.price }}</p>
     </li>
     {% endfor %}
 </ul>

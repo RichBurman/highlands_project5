@@ -3,7 +3,8 @@
 {% block content %}
 <h1>{{ package.title }}</h1>
 <img src="{{ package.image.url }}" alt="{{ package.title }}">
-<p>{{ package.description }}</p>
-<p>Price: ${{ package.price }}</p>
+<p><strong>Description:</strong><br>{{ package.description }}</p>
+<p>Difficulty Rating: <strong>{{ package.difficulty_rating|title }}</strong></p>
+<p>Price: £{{ package.price }}</p>
 <a href="{% url 'cart:add_to_cart' package.id %}" class="btn btn-primary">Add to Cart</a>
 {% endblock %}
