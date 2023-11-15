@@ -1,1 +1,1 @@
-web: gunicorn highlands.wsgi
+web: gunicorn highlands_project5.wsgi
