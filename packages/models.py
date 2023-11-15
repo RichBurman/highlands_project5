@@ -22,4 +22,8 @@ class Package(models.Model):
         choices=DIFFICULTY_CHOICES,
         default='Easy'
     )
+
+
+    def __str__(self):
+        return self.title
     
