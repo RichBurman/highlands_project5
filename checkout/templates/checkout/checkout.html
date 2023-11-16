@@ -91,33 +91,32 @@
         });
 
       // Handle form submission.
-      var form = document.getElementById('payment-form');
-      var submitButton = document.getElementById('submit-button');
+var form = document.getElementById('payment-form');
+var submitButton = document.getElementById('submit-button');
 
-      form.addEventListener('submit', function (event) {
-        event.preventDefault();
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
 
-        stripe.confirmCardPayment('{{ client_secret }}', {
-          payment_method: {
+    stripe.confirmCardPayment('{{ client_secret }}', {
+        payment_method: {
             card: card,
-          }
-        }).then(function (result) {
-          console.log('Stripe confirmCardPayment callback:', result);
+        }
+    }).then(function (result) {
+        console.log('Stripe confirmCardPayment callback:', result);
 
-          if (result.error) {
+        if (result.error) {
             // Show error 
             var errorElement = document.getElementById('card-errors');
             errorElement.textContent = result.error.message;
 
             // Re-enable the submit button on error
             submitButton.disabled = false;
-          } else {
+        } else {
             // The payment succeeded!
             form.submit();
-          }
-        });
-
-        });
+        }
+    });
+});
     });
 
     document.addEventListener('DOMContentLoaded', function () {
