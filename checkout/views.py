@@ -6,6 +6,9 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from decimal import Decimal
+import stripe
+from django.conf import settings
+
 
 def create_order(request):
     cart = Cart.objects.filter(user=request.user)
@@ -98,6 +101,8 @@ def checkout(request):
 
     return render(request, 'checkout/checkout.html', {'form': form, 'cart': cart, 'total_price': total_price, 'discounted_cart': discounted_cart})
 
+stripe.api_key = settings.STRIPE_SECRET_KEY
+
 def process_checkout(request):
     cart = Cart.objects.filter(user=request.user)
     total_price = sum(item.package.price * item.quantity for item in cart)
@@ -109,6 +114,13 @@ def process_checkout(request):
 
             discount_code = form.cleaned_data.get('discount_code', '')
             discount_amount = calculate_discount(total_price, discount_code)
+
+            # Create a PaymentIntent
+            intent = stripe.PaymentIntent.create(
+                amount=int((total_price - discount_amount) * 100), 
+                currency='gbp', 
+                description='Order payment',
+            )
 
             order = Order.objects.create(
                 user=request.user,
@@ -129,8 +141,9 @@ def process_checkout(request):
 
             cart.delete()
 
-            messages.success(request, 'Order placed successfully!')
-            return redirect('checkout:checkout_success', order_id=order.id)
+            messages.success(request, 'Order placed successfully! Your Adventure Begins!')
+    
+            return render(request, 'checkout/checkout_success.html', {'order': order})
     else:
         form = CheckoutForm()
 
@@ -155,3 +168,4 @@ def validate_discount(request, discount_code):
         return JsonResponse({'valid': True, 'discount_percentage': float(code.discount_percentage)})
     except DiscountCode.DoesNotExist:
         return JsonResponse({'valid': False})
+

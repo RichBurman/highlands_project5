@@ -4,7 +4,7 @@
 <div id="alert-container" class="container messages-container"></div>
 
   <h1>Checkout</h1>
-  <form method="post" action="{% url 'checkout:process_checkout' %}">
+  <form method="post" action="{% url 'checkout:process_checkout' %}" id="payment-form">
     {% csrf_token %}
 
     <!-- Shipping Information Section -->
@@ -35,7 +35,7 @@
       {{ form.phone_number }}
     </div>
 
-    <!-- Payment Information  -->
+    <!-- Payment Information Section
 
     <h2>Payment Information</h2>
     <div class="form-group">
@@ -56,9 +56,9 @@
     <div class="form-group">
       <label for="{{ form.terms_and_conditions.id_for_label }}">Terms and Conditions:</label>
       {{ form.terms_and_conditions }}
-    </div>
+    </div> -->
 
-    <!-- Order Summary  -->
+    <!-- Order Summary Section -->
 
     <h2>Order Summary</h2>
     <ul>
@@ -66,7 +66,7 @@
         <li>{{ cart_item.package.title }} - Quantity: {{ cart_item.quantity }}</li>
       {% endfor %}
     </ul>
-    <p>Total Price(without discount): {{ total_price }}</p>
+    <p>Total Price (without discount): ${{ total_price }}</p>
 
     <!-- Discount Code Section -->
 
@@ -76,15 +76,73 @@
       <button type="button" id="apply-discount">Apply Discount</button>
       <input type="hidden" id="discount-applied" value="false">
     </div>
-    
-    <!-- This to change when a discount is applied! Need this to work!   -->
+
+    <!-- Updated Total Price Section -->
     <p>Total Price: $<span id="total-price">{{ total_price }}</span></p>
+
+    <!-- Stripe Elements for Card Input Section -->
+    <div id="card-element">
+        <!-- A Stripe Element will be inserted here. -->
+    </div>
+
+    <!-- Used to display form errors. -->
+    <div id="card-errors" role="alert"></div>
 
     <!-- Submit Button -->
     <button type="submit">Submit</button>
 
-    <!-- JavaScript Section -->
+    <script src="https://js.stripe.com/v3/"></script>
     <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var stripe = Stripe('pk_test_51OCjleAlMexvtTh6jF3VgmQ3nxfXbOJFidXa2RyQonGasXz8RxMWULqBek05FVxZG4lNVT0mAVbW7yIpMx20M9Q400aVsmlqn2');
+        var elements = stripe.elements();
+
+        // Create an instance of the card Element.
+        var card = elements.create('card');
+
+        // Add an instance of the card Element into the `card-element` div.
+        card.mount('#card-element');
+
+        // Handle real-time validation errors from the card Element.
+        card.addEventListener('change', function (event) {
+            var displayError = document.getElementById('card-errors');
+            if (event.error) {
+                displayError.textContent = event.error.message;
+            } else {
+                displayError.textContent = '';
+            }
+        });
+
+        // Handle form submission.
+        var form = document.getElementById('payment-form');
+        var submitButton = document.getElementById('submit-button');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Disable the submit button to prevent multiple submits
+            submitButton.disabled = true;
+
+            stripe.confirmCardPayment('{{ client_secret }}', {
+                payment_method: {
+                    card: card,
+                }
+            }).then(function (result) {
+                if (result.error) {
+                    // Show error 
+                    var errorElement = document.getElementById('card-errors');
+                    errorElement.textContent = result.error.message;
+
+                    // Re-enable the submit button on error
+                    submitButton.disabled = false;
+                } else {
+                    // The payment succeeded!
+                    form.submit();
+                }
+            });
+        });
+    });
+
       document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('apply-discount').addEventListener('click', function () {
           applyDiscount();
