@@ -3,78 +3,55 @@
 {% block content %}
 <div id="alert-container" class="container messages-container"></div>
 
-  <h1>Checkout</h1>
-  <form method="post" action="{% url 'checkout:process_checkout' %}" id="payment-form">
+<h1>Checkout</h1>
+<form method="post" action="{% url 'checkout:process_checkout' %}" id="payment-form">
     {% csrf_token %}
 
     <!-- Shipping Information Section -->
 
     <h2>Shipping Information</h2>
     <div class="form-group">
-      <label for="{{ form.addressline_1.id_for_label }}">Address Line 1:</label>
-      {{ form.addressline_1 }}
+        <label for="{{ form.addressline_1.id_for_label }}">Address Line 1:</label>
+        {{ form.addressline_1 }}
     </div>
 
     <div class="form-group">
-      <label for="{{ form.addressline_2.id_for_label }}">Address Line 2:</label>
-      {{ form.addressline_2 }}
+        <label for="{{ form.addressline_2.id_for_label }}">Address Line 2:</label>
+        {{ form.addressline_2 }}
     </div>
 
     <div class="form-group">
-      <label for="{{ form.county.id_for_label }}">County:</label>
-      {{ form.county }}
+        <label for="{{ form.county.id_for_label }}">County:</label>
+        {{ form.county }}
     </div>
 
     <div class="form-group">
-      <label for="{{ form.country.id_for_label }}">Country:</label>
-      {{ form.country }}
+        <label for="{{ form.country.id_for_label }}">Country:</label>
+        {{ form.country }}
     </div>
 
     <div class="form-group">
-      <label for="{{ form.phone_number.id_for_label }}">Phone Number:</label>
-      {{ form.phone_number }}
+        <label for="{{ form.phone_number.id_for_label }}">Phone Number:</label>
+        {{ form.phone_number }}
     </div>
-
-    <!-- Payment Information Section
-
-    <h2>Payment Information</h2>
-    <div class="form-group">
-      <label for="{{ form.card_number.id_for_label }}">Card Number:</label>
-      {{ form.card_number }}
-    </div>
-
-    <div class="form-group">
-      <label for="{{ form.card_expiry.id_for_label }}">Card Expiry (MM/YY):</label>
-      {{ form.card_expiry }}
-    </div>
-
-    <div class="form-group">
-      <label for="{{ form.card_cvc.id_for_label }}">Card CVC:</label>
-      {{ form.card_cvc }}
-    </div>
-
-    <div class="form-group">
-      <label for="{{ form.terms_and_conditions.id_for_label }}">Terms and Conditions:</label>
-      {{ form.terms_and_conditions }}
-    </div> -->
 
     <!-- Order Summary Section -->
 
     <h2>Order Summary</h2>
     <ul>
-      {% for cart_item in cart %}
+        {% for cart_item in cart %}
         <li>{{ cart_item.package.title }} - Quantity: {{ cart_item.quantity }}</li>
-      {% endfor %}
+        {% endfor %}
     </ul>
     <p>Total Price (without discount): ${{ total_price }}</p>
 
     <!-- Discount Code Section -->
 
     <div class="form-group">
-      <label for="{{ form.discount_code.id_for_label }}">Discount Code:</label>
-      {{ form.discount_code }}
-      <button type="button" id="apply-discount">Apply Discount</button>
-      <input type="hidden" id="discount-applied" value="false">
+        <label for="{{ form.discount_code.id_for_label }}">Discount Code:</label>
+        {{ form.discount_code }}
+        <button type="button" id="apply-discount">Apply Discount</button>
+        <input type="hidden" id="discount-applied" value="false">
     </div>
 
     <!-- Updated Total Price Section -->
@@ -91,16 +68,16 @@
     <!-- Submit Button -->
     <button type="submit" id="submit-button">Submit</button>
 
-    <script src="https://js.stripe.com/v3/"></script>
-    <script>
+</form>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script>
     document.addEventListener('DOMContentLoaded', function () {
         var stripe = Stripe('pk_test_51OCjleAlMexvtTh6jF3VgmQ3nxfXbOJFidXa2RyQonGasXz8RxMWULqBek05FVxZG4lNVT0mAVbW7yIpMx20M9Q400aVsmlqn2');
         var elements = stripe.elements();
 
-        // Create an instance of the card Element.
         var card = elements.create('card');
 
-        // Add an instance of the card Element into the `card-element` div.
         card.mount('#card-element');
 
         // Handle real-time validation errors from the card Element.
@@ -117,98 +94,93 @@
         var form = document.getElementById('payment-form');
         var submitButton = document.getElementById('submit-button');
 
-        document.addEventListener('DOMContentLoaded', function () {
-          var submitButton = document.getElementById('submit-button');
-    
-          if (submitButton) {
-              submitButton.disabled = true;
-          }
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
 
-          stripe.confirmCardPayment('{{ client_secret }}', {
-              payment_method: {
-                  card: card,
-              }
-          }).then(function (result) {
-              console.log('Stripe confirmCardPayment callback:', result);
+            stripe.confirmCardPayment('{{ client_secret }}', {
+                payment_method: {
+                    card: card,
+                }
+            }).then(function (result) {
+                console.log('Stripe confirmCardPayment callback:', result);
 
-              if (result.error) {
-                  // Show error 
-                  var errorElement = document.getElementById('card-errors');
-                  errorElement.textContent = result.error.message;
+                if (result.error) {
+                    // Show error 
+                    var errorElement = document.getElementById('card-errors');
+                    errorElement.textContent = result.error.message;
 
-                  // Re-enable the submit button on error
-                  submitButton.disabled = false;
-              } else {
-                  // The payment succeeded!
-                  form.submit();
-              }
-          });
+                    // Re-enable the submit button on error
+                    submitButton.disabled = false;
+                } else {
+                    // The payment succeeded!
+                    form.submit();
+                }
+            });
         });
     });
 
-      document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('apply-discount').addEventListener('click', function () {
-          applyDiscount();
+            applyDiscount();
         });
-      });
-    
-      function applyDiscount() {
+    });
+
+    function applyDiscount() {
         var discountCode = document.getElementById('id_discount_code').value;
-    
+
         // Check if discount has already been applied
         if (document.getElementById('discount-applied').value === 'true') {
-          showAlert('Discount already applied.', 'warning');
-          return;
+            showAlert('Discount already applied.', 'warning');
+            return;
         }
-    
+
         fetch('/checkout/validate_discount/' + discountCode + '/')
-          .then(response => response.json())
-          .then(data => {
-            // Check if the discount code is valid and fetch the discount percentage
-            if (data.valid) {
-              var discountPercentage = data.discount_percentage;
-    
-              // Calculate discounted total price
-              var totalPrice = parseFloat(document.getElementById('total-price').textContent);
-              var discountedPrice = totalPrice - (totalPrice * (discountPercentage / 100));
-    
-              // Update the displayed total price
-              document.getElementById('total-price').textContent = discountedPrice.toFixed(2);
-    
-              // Update the order summary for each item
-              var items = document.querySelectorAll('#order-summary li');
-              items.forEach(function (item) {
-                var originalPrice = parseFloat(item.textContent.match(/Price: \$([\d.]+)/)[1]);
-                var discountedItemPrice = originalPrice - (originalPrice * (discountPercentage / 100));
-                item.textContent = item.textContent.replace(/(Price: \$[\d.]+)/, 'Price: $' + discountedItemPrice.toFixed(2));
-              });
-    
-              // Mark that the discount has been applied
-              document.getElementById('discount-applied').value = 'true';
-    
-              // Display success message
-              showAlert('Discount applied successfully.', 'success');
-            } else {
-              showAlert('Invalid discount code', 'danger');
-            }
-          })
-          .catch(error => {
-            console.error('Error:', error);
-            showAlert('An error occurred while applying the discount.', 'danger');
-          });
-      }
-    
-      function showAlert(message, alertType) {
+            .then(response => response.json())
+            .then(data => {
+                // Check if the discount code is valid and fetch the discount percentage
+                if (data.valid) {
+                    var discountPercentage = data.discount_percentage;
+
+                    // Calculate discounted total price
+                    var totalPrice = parseFloat(document.getElementById('total-price').textContent);
+                    var discountedPrice = totalPrice - (totalPrice * (discountPercentage / 100));
+
+                    // Update the displayed total price
+                    document.getElementById('total-price').textContent = discountedPrice.toFixed(2);
+
+                    // Update the order summary for each item
+                    var items = document.querySelectorAll('#order-summary li');
+                    items.forEach(function (item) {
+                        var originalPrice = parseFloat(item.textContent.match(/Price: \$([\d.]+)/)[1]);
+                        var discountedItemPrice = originalPrice - (originalPrice * (discountPercentage / 100));
+                        item.textContent = item.textContent.replace(/(Price: \$[\d.]+)/, 'Price: $' + discountedItemPrice.toFixed(2));
+                    });
+
+                    // Mark that the discount has been applied
+                    document.getElementById('discount-applied').value = 'true';
+
+                    // Display success message
+                    showAlert('Discount applied successfully.', 'success');
+                } else {
+                    showAlert('Invalid discount code', 'danger');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showAlert('An error occurred while applying the discount.', 'danger');
+            });
+    }
+
+    function showAlert(message, alertType) {
         var alertContainer = document.getElementById('alert-container');
         var alertDiv = document.createElement('div');
         alertDiv.classList.add('alert', 'alert-' + alertType, 'alert-dismissible', 'fade', 'show');
         alertDiv.role = 'alert';
         alertDiv.innerHTML = message +
-          '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
-          '<span aria-hidden="true">&times;</span>' +
-          '</button>';
+            '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
+            '<span aria-hidden="true">&times;</span>' +
+            '</button>';
         alertContainer.appendChild(alertDiv);
-      }
-    </script>
-  </form>
+    }
+</script>
 {% endblock %}
