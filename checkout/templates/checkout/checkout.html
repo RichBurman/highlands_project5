@@ -97,10 +97,11 @@
         form.addEventListener('submit', function (event) {
             event.preventDefault();
 
+            console.log('{{ client_secret }}');
             stripe.confirmCardPayment('{{ client_secret }}', {
-                payment_method: {
-                    card: card,
-                }
+              payment_method: {
+                card: card,
+              }
             }).then(function (result) {
                 console.log('Stripe confirmCardPayment callback:', result);
 
