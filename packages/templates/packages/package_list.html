@@ -1,16 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Walking Packages</h1>
-<ul>
-    {% for package in packages %}
-    <li>
-        <a href="{% url 'packages:package_detail' package_id=package.pk %}">{{ package.title }}</a>
-        <img src="{{ package.image.url }}" alt="{{ package.title }}">
-        <p><strong>Description:</strong><br>{{ package.description }}</p>
-        <p>Difficulty Rating: <strong>{{ package.difficulty_rating|title }}</strong></p>
-        <p>Price: £{{ package.price }}</p>
-    </li>
-    {% endfor %}
-</ul>
+<div class="container">
+    <h1 class="text-center mb-4">Walking Packages <i class="fas fa-hiking"></i></h1>
+    <div class="row">
+      {% for package in packages %}
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 d-flex package-card">
+            <img src="{{ package.image.url }}" class="card-img-top" alt="{{ package.title }}">
+            <div class="card-body text-center">
+              <h5 class="card-title"><a href="{% url 'packages:package_detail' package_id=package.pk %}">{{ package.title }} <i class="fas fa-map-marker-alt"></i></a></h5>
+              <p class="card-text">{{ package.description }}</p>
+              <p class="card-text"><strong><i class="fas fa-tachometer-alt"></i> Difficulty Rating:</strong> {{ package.difficulty_rating|title }}</p>
+              <p class="card-text"><strong>Price:</strong> <i class="fas fa-pound-sign"></i> {{ package.price }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
 {% endblock %}

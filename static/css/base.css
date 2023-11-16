@@ -127,3 +127,57 @@ img {
     text-decoration: underline;
 }
 
+
+/* Style for package list */
+
+
+.package-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+    transition: transform 0.3s;
+}
+
+.package-card:hover {
+    transform: scale(1.05);
+}
+
+.package-card img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0; 
+}
+
+.package-card-content {
+    padding: 15px;
+}
+
+.package-card h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #2c3e50;
+    margin-top: 10px;
+}
+
+.package-card .card-title a {
+    color: #2980b9;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.package-card .card-title a:hover {
+    color: #e74c3c;
+}
+
+.package-card .card-text {
+    color: #555;
+    margin-top: 8px;
+}
+
+.package-card .fa {
+    font-size: 1.5rem;
+    margin-right: 5px;
+    color: #555; 
+}
