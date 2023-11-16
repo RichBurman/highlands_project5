@@ -153,6 +153,7 @@ def process_checkout(request):
     return render(request, 'checkout/checkout.html', {'form': form, 'cart': cart, 'total_price': total_price, 'client_secret': client_secret})
 
 
+
 def calculate_discount(total_price, discount_code):
     if not discount_code:
         return 0  # No discount code provided
