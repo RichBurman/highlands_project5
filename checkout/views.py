@@ -121,7 +121,8 @@ def process_checkout(request):
                 currency='gbp', 
                 description='Order payment',
             )
-            print("Client Secret:", intent.client_secret)
+            
+            client_secret = intent.client_secret
 
             order = Order.objects.create(
                 user=request.user,
