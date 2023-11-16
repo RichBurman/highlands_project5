@@ -155,6 +155,7 @@ def process_checkout(request):
 
 
 
+
 def calculate_discount(total_price, discount_code):
     if not discount_code:
         return 0  # No discount code provided
