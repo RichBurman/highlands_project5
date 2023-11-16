@@ -143,7 +143,7 @@ def process_checkout(request):
 
             messages.success(request, 'Order placed successfully! Your Adventure Begins!')
     
-            return render(request, 'checkout/checkout_success.html', {'order': order})
+            return render(request, 'checkout/checkout_success.html', {'order': order, 'client_secret': intent.client_secret})
     else:
         form = CheckoutForm()
 
