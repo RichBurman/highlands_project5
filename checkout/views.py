@@ -117,11 +117,11 @@ def process_checkout(request):
 
             # Create a PaymentIntent
             intent = stripe.PaymentIntent.create(
-                amount=int((total_price - discount_amount) * 100), 
-                currency='gbp', 
+                amount=int((total_price - discount_amount) * 100),
+                currency='gbp',
                 description='Order payment',
             )
-            
+
             client_secret = intent.client_secret
 
             order = Order.objects.create(
@@ -144,12 +144,13 @@ def process_checkout(request):
             cart.delete()
 
             messages.success(request, 'Order placed successfully! Your Adventure Begins!')
-    
+
             return render(request, 'checkout/checkout_success.html', {'order': order, 'client_secret': intent.client_secret})
     else:
         form = CheckoutForm()
 
-    return render(request, 'checkout/checkout.html', {'form': form, 'cart': cart, 'total_price': total_price})
+    client_secret = intent.client_secret if 'intent' in locals() else None
+    return render(request, 'checkout/checkout.html', {'form': form, 'cart': cart, 'total_price': total_price, 'client_secret': client_secret})
 
 
 def calculate_discount(total_price, discount_code):
