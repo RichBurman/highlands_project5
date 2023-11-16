@@ -17,3 +17,5 @@ def about_us(request):
 def gallery(request):
     """ Return to Gallery """
     return render(request, 'home/gallery.html')
+
+
