@@ -124,23 +124,25 @@
               submitButton.disabled = true;
           }
 
-            stripe.confirmCardPayment('{{ client_secret }}', {
-                payment_method: {
-                    card: card,
-                }
-            }).then(function (result) {
-                if (result.error) {
-                    // Show error 
-                    var errorElement = document.getElementById('card-errors');
-                    errorElement.textContent = result.error.message;
+          stripe.confirmCardPayment('{{ client_secret }}', {
+              payment_method: {
+                  card: card,
+              }
+          }).then(function (result) {
+              console.log('Stripe confirmCardPayment callback:', result);
 
-                    // Re-enable the submit button on error
-                    submitButton.disabled = false;
-                } else {
-                    // The payment succeeded!
-                    form.submit();
-                }
-            });
+              if (result.error) {
+                  // Show error 
+                  var errorElement = document.getElementById('card-errors');
+                  errorElement.textContent = result.error.message;
+
+                  // Re-enable the submit button on error
+                  submitButton.disabled = false;
+              } else {
+                  // The payment succeeded!
+                  form.submit();
+              }
+          });
         });
     });
 
