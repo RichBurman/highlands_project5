@@ -181,3 +181,86 @@ img {
     margin-right: 5px;
     color: #555; 
 }
+
+
+/* Package Detail */
+.package-detail {
+    text-align: center; 
+}
+
+.package-detail .package-image {
+    width: 100%;
+    max-height: 900px; 
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.package-detail .package-image:hover {
+    transform: scale(1.1); 
+}
+
+.package-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #3498db; 
+    margin-bottom: 20px;
+    font-size: 2.5rem; 
+}
+
+.package-detail .description {
+    margin-top: 20px;
+    color: #555;
+    text-align: justify;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+}
+
+.package-detail .btn-primary {
+    font-size: 2rem;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: #2ecc71;
+    border-color: #2ecc71; 
+}
+
+.package-detail .reviews {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.package-detail .reviews h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #3498db; 
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.package-detail .reviews li {
+    list-style: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.package-detail .reviews li:not(:last-child) {
+    border-bottom: 1px solid #ddd; 
+}
+
+.package-detail .reviews ul {
+    list-style: none; 
+}
+
+.package-detail .reviews li {
+    border-bottom: 1px solid #ddd; 
+    padding-bottom: 15px; 
+    margin-bottom: 15px; 
+}

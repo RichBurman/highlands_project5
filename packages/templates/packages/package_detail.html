@@ -1,10 +1,34 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{{ package.title }}</h1>
-<img src="{{ package.image.url }}" alt="{{ package.title }}">
-<p><strong>Description:</strong><br>{{ package.description }}</p>
-<p>Difficulty Rating: <strong>{{ package.difficulty_rating|title }}</strong></p>
-<p>Price: £{{ package.price }}</p>
-<a href="{% url 'cart:add_to_cart' package.id %}" class="btn btn-primary">Add to Cart</a>
+    <div class="package-detail">
+        <h1 class="package-title">{{ package.title }} <i class="fas fa-map-marker-alt"></i></h1>
+        <img src="{{ package.image.url }}" alt="{{ package.title }}" class="package-image">
+        <p class="description"><strong>Description:</strong><br>{{ package.description }}</p>
+        <p>Difficulty Rating: <strong>{{ package.difficulty_rating|title }}</strong></p>
+        <p>Price: £{{ package.price }}</p>
+        <a href="{% url 'cart:add_to_cart' package.id %}" class="btn btn-primary">Add to Cart <i class="fas fa-shopping-cart"></i></a>
+
+        <div class="reviews">
+            <h2>Customer Reviews <i class="fas fa-star"></i></h2>
+            {% if package.review_set.all %}
+                <ul>
+                    {% for review in package.review_set.all %}
+                        <li>
+                            <a href="{% url 'display_user_profile' pk=review.user.id %}"><i class="fas fa-user"></i> {{ review.user }} </i></a>
+                            <br>
+                            <strong>Date of Review</strong> - {{ review.created_at }}
+                            <br>
+                            <strong>Difficulty Rating:</strong> {{ review.difficulty_rating }}
+                            <br>
+                            <strong>Overall Rating:</strong> {{ review.overall_rating }}
+                            <p>{{ review.text }}</p>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No reviews available for this package.</p>
+            {% endif %}
+        </div>
+    </div>
 {% endblock %}
