@@ -2,33 +2,41 @@
 {% load static %}
 
 {% block content %}
-    <img src="https://res.cloudinary.com/dbagkfamv/image/upload/v1700050366/static/media/media/packages/background.7c9dd2a78a74.jpg" alt="Background Image" class="background-image">
+
+<div id="main-heading-section" class="section">
+    <h1>Welcome to Highland Adventures!</h1>
+    <p>Your Gateway to Highland Thrills!</p>
+</div>
+
+<div class="container">
+    <div class="background-image-container">
+        <img src="https://res.cloudinary.com/dbagkfamv/image/upload/v1700050366/static/media/media/packages/background.7c9dd2a78a74.jpg" alt="Background Image" class="background-image">
+    </div>
 
 
+        <div id="join-us-section" class="section">
+            <h2>Why Join Us? <i class="fas fa-gem fa-icon"></i></h2>
+            <p>Become a member today and unlock a world of exclusive benefits:</p>
+            <ul>
+                <li><i class="fas fa-percent fa-icon"></i> 10% Member Discount: Enjoy a special discount on all our thrilling walking packages.</li>
+                <li><i class="fas fa-qrcode fa-icon"></i> Unique Discount Code: Receive your very own unique discount code for an extra touch of personalization.</li>
+            </ul>
+        </div>
 
-        <h1>Welcome to Highland Adventures!</h1>
-        <p>Your Gateway to Highland Thrills!</p>
+        <div id="booking-section" class="section">
+            <h2>Booking Made Easy <i class="fas fa-calendar-check fa-icon"></i></h2>
+            <p>Non-members, give us a call at 0000 0000 0000 to secure your spot. But why settle for the standard when you can elevate your experience?</p>
+            <p>Members, Rejoice! Book online as a registered member and watch the prices drop by 10%! It's that simple. Your adventure begins with a click.</p>
+        </div>
 
-        <p>Embark on a journey into the heart of the Scottish Highlands with Highland Adventures, where every step is an adventure waiting to be discovered.</p>
-
-        <h2>Why Join Us?</h2>
-        <p>Become a member today and unlock a world of exclusive benefits:</p>
-        <ul>
-            <li>10% Member Discount: Enjoy a special 10% discount on all our thrilling walking packages.</li>
-            <li>Unique Discount Code: Receive your very own unique discount code for an extra touch of personalization.</li>
-        </ul>
-
-        <h2>Booking Made Easy:</h2>
-        <p>Non-members, give us a call at 0000 0000 0000 to secure your spot. But why settle for the standard when you can elevate your experience?</p>
-
-        <p>Members, Rejoice! Book online as a registered member and watch the prices drop by 10%! It's that simple. Your adventure begins with a click.</p>
-
-        <h2>Stay in the Loop:</h2>
-        <p>Sign up for our newsletter and be the first to hear about:</p>
-        <ul>
-            <li>New Adventures: Be the trailblazer and explore the latest additions to our lineup.</li>
-            <li>Exclusive Offers: Access member-only promotions and limited-time discounts.</li>
-        </ul>
+        <div id="loop-section" class="section">
+            <h2>Stay in the Loop <i class="fas fa-envelope-open-text fa-icon"></i></h2>
+            <p>Sign up for our newsletter and be the first to hear about:</p>
+            <ul>
+                <li><i class="fas fa-mountain fa-icon"></i> New Adventures: Be the trailblazer and explore the latest additions to our lineup.</li>
+                <li><i class="fas fa-gift fa-icon"></i> Exclusive Offers: Access member-only promotions and limited-time discounts.</li>
+            </ul>
+        </div>
 
     <!-- Mailchimp Signup Form -->
     <div id="mc_embed_shell">
@@ -72,8 +80,9 @@
         <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
     </div>
 
-    <p>Ready to Conquer? Join Now! Unleash the adventurer in you. Register as a member today and let the Highland Adventures begin!</p>
-
-    <p>Connect with us on our <a href="https://www.facebook.com/YourBusinessPage" target="_blank">Facebook Business Page!</a>.</p>
+    <div class="section">
+        <p>Ready to Conquer? Join Now! Unleash the adventurer in you. Register as a member today and let the Highland Adventures begin!</p>
+        <p>Connect with us on our <a href="https://www.facebook.com/YourBusinessPage" target="_blank">Facebook Business Page!</a>.</p>
+    </div>
 </div>
 {% endblock %}

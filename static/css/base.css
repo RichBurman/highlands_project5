@@ -1,4 +1,4 @@
-/* index page styling */
+
 body {
     display: flex;
     flex-direction: column;
@@ -43,7 +43,6 @@ main {
 footer {
     order: 3;
     position: relative;
-    /* Change to relative */
     width: 100%;
     background-color: #333;
     color: #fff;
@@ -66,7 +65,103 @@ footer .social-links li {
     margin: 0 10px;
 }
 
-/* index page styling */
+.container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.background-image {
+    width: 100%;
+    height: auto;
+    max-height: 900px; 
+    object-fit: cover;
+    border-radius: 15px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+}
+
+h1, h2, h3 {
+    color: #333; 
+    font-family: 'Montserrat', sans-serif; 
+}
+
+p {
+    color: #555; 
+    font-family: 'Roboto', sans-serif; 
+}
+
+ul {
+    list-style: none; 
+    padding: 0;
+}
+
+.fa-icon {
+    color: #FFD700;
+}
+
+/* Styling for Mailchimp Signup Form */
+#mc_embed_shell {
+    background: rgba(255, 255, 255, 0.7);
+    clear: left;
+    font: 14px 'Roboto', sans-serif;
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px auto; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#mc_embed_signup_scroll {
+    text-align: left; 
+}
+
+.mc-field-group {
+    margin-bottom: 15px;
+}
+
+/* Styling for Subscribe Button */
+#mc-embedded-subscribe {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#mc-embedded-subscribe:hover {
+    background-color: #45a049; 
+}
+
+/* Styling for each section */
+.section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#main-heading-section {
+    text-align: center;
+    margin: 50px 0;
+    padding: 30px; 
+    background-color: #3498db; 
+    color: #fff; 
+    border-radius: 15px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#main-heading-section h1 {
+    font-size: 3rem; 
+    font-family: 'Montserrat', sans-serif; 
+}
+
+#main-heading-section p {
+    font-size: 1.5rem; 
+}
+
+/* styling for index page */
 .content-container {
     margin-top: 70px;
     margin-bottom: 70px;
@@ -84,9 +179,9 @@ ul li img {
 }
 
 /* Style images in package_detail */
-img {
-    max-width: 300px;
-    max-height: 200px;
+.package-detail img {
+    max-width: 700px;
+    max-height: 600px;
 }
 
 /* Styling for message popup, to display under navbar */
@@ -127,10 +222,7 @@ img {
     text-decoration: underline;
 }
 
-
 /* Style for package list */
-
-
 .package-card {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -181,7 +273,6 @@ img {
     margin-right: 5px;
     color: #555; 
 }
-
 
 /* Package Detail */
 .package-detail {
@@ -263,4 +354,15 @@ img {
     border-bottom: 1px solid #ddd; 
     padding-bottom: 15px; 
     margin-bottom: 15px; 
+}
+
+.background-image-container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    margin-bottom: 20px;
+}
+
+.background-image-container img {
+    width: 100%; 
+    height: auto; 
 }
