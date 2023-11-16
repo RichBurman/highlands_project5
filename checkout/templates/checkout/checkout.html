@@ -97,8 +97,9 @@ var submitButton = document.getElementById('submit-button');
 form.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    // Extract client_secret from the element with ID 'id_client_secret'
+    
     var clientSecret = $('#id_client_secret').text().slice(1, -1);
+    console.log('Client Secret:', clientSecret);
 
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
