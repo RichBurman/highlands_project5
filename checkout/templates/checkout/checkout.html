@@ -65,7 +65,7 @@
     <!-- Used to display form errors. -->
     <div id="card-errors" role="alert"></div>
 
-    <p id="client-secret" style="display: none;">{{ client_secret }}</p>
+    <input type="hidden" id="client-secret" value="{{ client_secret }}">
 
 
     <!-- Submit Button -->
@@ -100,7 +100,7 @@
         form.addEventListener('submit', function (event) {
             event.preventDefault();
 
-            var clientSecret = document.getElementsByName('client_secret')[0].value;
+            var clientSecret = document.getElementById('client-secret').value;
             console.log('Client Secret:', clientSecret);
 
             stripe.confirmCardPayment(clientSecret, {
