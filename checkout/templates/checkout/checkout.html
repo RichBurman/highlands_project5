@@ -100,7 +100,7 @@
         form.addEventListener('submit', function (event) {
             event.preventDefault();
 
-            var clientSecret = document.getElementById('client-secret').value;
+            var clientSecret = document.getElementById('client-secret').textContent;
             console.log('Client Secret:', clientSecret);
 
             stripe.confirmCardPayment(clientSecret, {
