@@ -38,33 +38,42 @@
 <body>
     <header class="container-fluid fixed-top"></header>
     <header class="container-fluid fixed-top">
-        <nav>
-            <ul class="horizontal-nav">
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'packages:package_list' %}">View Packages</a></li>
-                <li><a href="{% url 'about_us' %}">About Us</a></li>
-                <li><a href="{% url 'gallery' %}">Gallery</a></li>
-                <li><a href="{% url 'reviews:review_list' %}">Reviews</a></li>
-                {% if user.is_authenticated %}
-                <li><a href="{% url 'cart:cart_view' %}">Cart</a></li>
-                <li><a href="{% url 'reviews:user_reviews' %}">User Reviews</a></li>
-                <li><a href="{% url 'account_logout' %}">Logout</a></li>
-                <li class="nav-item dropdown">
-                    <a class a="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        User Profile Details
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{% url 'user_profile' %}">User Profile</a>
-                        <a class="dropdown-item" href="{% url 'user_profile_edit' %}">Edit Profile</a>
-                        <a class="dropdown-item" href="{% url 'custom_user_edit' %}">Edit Custom User</a>
-                    </div>
-                </li>
-                {% else %}
-                <li><a href="{% url 'account_login' %}">Login</a></li>
-                <li><a href="{% url 'account_signup' %}">Register</a></li>
-                {% endif %}
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand highland-adventures-brand" href="{% url 'home' %}">
+                <i class="fas fa-hiking"></i> Highland Adventures
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'packages:package_list' %}">View Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about_us' %}">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'gallery' %}">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'reviews:review_list' %}">Reviews</a></li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item"><a class="nav-link" href="{% url 'cart:cart_view' %}">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'reviews:user_reviews' %}">User Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'account_logout' %}">Logout</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            User Profile Details
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{% url 'user_profile' %}">User Profile</a>
+                            <a class="dropdown-item" href="{% url 'user_profile_edit' %}">Edit Profile</a>
+                            <a class="dropdown-item" href="{% url 'custom_user_edit' %}">Edit Custom User</a>
+                        </div>
+                    </li>
+                    {% else %}
+                    <li class="nav-item"><a class="nav-link" href="{% url 'account_login' %}">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'account_signup' %}">Register</a></li>
+                    {% endif %}
+                </ul>
+            </div>
         </nav>
     </header>
 
