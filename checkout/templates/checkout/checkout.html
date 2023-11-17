@@ -41,17 +41,18 @@
                 <li class="list-group-item">{{ cart_item.package.title }} - Quantity: {{ cart_item.quantity }}</li>
             {% endfor %}
         </ul>
-        <p class="mb-3">Total Price (without discount): ${{ total_price }}</p>
 
         <!-- Discount Code Section -->
         <div class="form-group">
             <label for="{{ form.discount_code.id_for_label }}">Discount Code:</label>
+            <p>As a registered user, please use the discount code : <strong>HA10</strong> for a 10% discount!</p>
             {{ form.discount_code }}
             <button type="button" id="apply-discount" class="btn btn-primary mt-2">Apply Discount</button>
             <input type="hidden" id="discount-applied" value="false">
         </div>
 
         <!-- Updated Total Price Section -->
+        <p class="mb-3">Total Price (without discount): ${{ total_price }}</p>
         <p class="mb-3">Total Price: $<span id="total-price">{{ total_price }}</span></p>
 
         <!-- Stripe Elements for Card Input Section -->
