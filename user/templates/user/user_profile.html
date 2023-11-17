@@ -1,27 +1,59 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>User Profile</h1>
-<p>Welcome, {{ user.username }}!</p>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h1 class="display-4">User Profile</h1>
+            <p class="lead">Welcome, {{ user.username }}!</p>
 
-<h2>Profile Information</h2>
-<p>First Name: {{ user.first_name }}</p>
-<p>Last Name: {{ user.last_name }}</p>
-<p>Email: {{ user.email }}</p>
-<p>Address Line 1: {{ user.addressline_1 }}</p>
-<p>Address Line 2: {{ user.addressline_2 }}</p>
-<p>County: {{ user.default_county }}</p>
-<p>Country: {{ user.default_country }}</p>
-<p>Phone Number: {{ user.phone_number }}</p>
-<p>Discount Code: {{ user.discount_code }}</p>
-<a href="{% url 'custom_user_edit' %}">Edit User Data</a>
+            <div class="card my-4">
+                <div class="card-header">
+                    <h2 class="mb-0">Profile Information</h2>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <!-- Profile information items -->
+                        <div class="col-md-6">
+                            <dt>First Name:</dt>
+                            <dd>{{ user.first_name }}</dd>
+                            <dt>Last Name:</dt>
+                            <dd>{{ user.last_name }}</dd>
+                            <dt>Email:</dt>
+                            <dd>{{ user.email }}</dd>
+                            <dt>Address Line 1:</dt>
+                            <dd>{{ user.addressline_1 }}</dd>
+                        </div>
+                        <div class="col-md-6">
+                            <dt>Address Line 2:</dt>
+                            <dd>{{ user.addressline_2 }}</dd>
+                            <dt>County:</dt>
+                            <dd>{{ user.default_county }}</dd>
+                            <dt>Country:</dt>
+                            <dd>{{ user.default_country }}</dd>
+                            <dt>Phone Number:</dt>
+                            <dd>{{ user.phone_number }}</dd>
+                        </div>
+                    </dl>
+                    <a href="{% url 'custom_user_edit' %}" class="btn btn-primary">Edit User Data</a>
+                </div>
+            </div>
 
-<h2>User Profile</h2>
-<p>Bio: {{ user_profile.bio }}</p>
-{% if user_profile.profile_picture %}
-<p>Profile Picture: <img src="{{ user_profile.profile_picture.url }}" alt="Profile Picture"></p>
-{% else %}
-<p>No profile picture uploaded.</p>
-{% endif %}
-<a href="{% url 'user_profile_edit' %}">Edit Profile</a>
+            <div class="card my-4">
+                <div class="card-header">
+                    <h2 class="mb-0">User Profile</h2>
+                </div>
+                <div class="card-body">
+                    <p class="lead">Bio: {{ user_profile.bio }}</p>
+                    {% if user_profile.profile_picture %}
+                        <p>Profile Picture: <img src="{{ user_profile.profile_picture.url }}" alt="Profile Picture" class="img-fluid" style="max-width: 200px;"></p>
+                    {% else %}
+                        <p>No profile picture uploaded.</p>
+                    {% endif %}
+                    <a href="{% url 'user_profile_edit' %}" class="btn btn-primary">Edit Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
