@@ -107,11 +107,17 @@ def process_checkout(request):
     cart = Cart.objects.filter(user=request.user)
     total_price = sum(item.package.price * item.quantity for item in cart)
 
+    stripe.api_key = settings.STRIPE_SECRET_KEY
+    stripe_public_key = settings.STRIPE_PUBLIC_KEY
+
     form = CheckoutForm()
+
+    discount_amount = 0
+
 
     # Create a PaymentIntent
     intent = stripe.PaymentIntent.create(
-        amount=int(total_price * 100),
+        amount=int((total_price - discount_amount) * 100),
         currency='gbp',
         description='Order payment',
     )
@@ -121,10 +127,10 @@ def process_checkout(request):
         if form.is_valid():
             print("Form is valid. Creating order...")
 
-            # discount_code = form.cleaned_data.get('discount_code', '')
+            discount_code = form.cleaned_data.get('discount_code', '')
             discount_amount = calculate_discount(total_price, discount_code)
 
-            # Create order
+            
             order = Order.objects.create(
                 user=request.user,
                 total_price=total_price - discount_amount,
@@ -135,22 +141,21 @@ def process_checkout(request):
                 phone_number=form.cleaned_data['phone_number'],
             )
 
-            # Create order items
             for cart_item in cart:
                 OrderItem.objects.create(
                     order=order, package=cart_item.package, quantity=cart_item.quantity
                 )
 
-            # Create payment
             Payment.objects.create(order=order, amount=total_price - discount_amount)
 
-            # Clear the cart
             cart.delete()
 
             messages.success(request, 'Order placed successfully! Your Adventure Begins!')
+            client_secret = intent.client_secret
+            return render(request, 'checkout/checkout_success.html', {'order': order, 'client_secret': client_secret})
 
-            return redirect('checkout:checkout_success', order_id=order.id)
-
+    
+    messages.success(request, 'failed')
     client_secret = intent.client_secret
     return render(request, 'checkout/checkout.html', {'form': form, 'cart': cart, 'total_price': total_price, 'client_secret': client_secret})
 
