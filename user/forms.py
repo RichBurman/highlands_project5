@@ -5,7 +5,7 @@ from .models import CustomUser, UserProfile
 class CustomUserForm(forms.ModelForm):
     class Meta:
         model = CustomUser
-        fields = ['username', 'first_name', 'last_name', 'email', 'addressline_1', 'addressline_2', 'county', 'country', 'phone_number', 'discount_code']
+        fields = ['username', 'first_name', 'last_name', 'email', 'addressline_1', 'addressline_2', 'county', 'country', 'phone_number']
 
 
 class UserProfileForm(forms.ModelForm):
