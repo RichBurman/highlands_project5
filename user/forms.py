@@ -1,9 +1,6 @@
 from django import forms
-from .models import CustomUser, UserProfile
-
-
-from django import forms
 from django_countries.fields import CountryField
+from .models import CustomUser, UserProfile
 
 class CustomUserForm(forms.ModelForm):
     class Meta:
@@ -12,6 +9,8 @@ class CustomUserForm(forms.ModelForm):
 
 
 class UserProfileForm(forms.ModelForm):
+    country = CountryField().formfield()
+
     class Meta:
         model = UserProfile
-        fields = ('bio', 'profile_picture')
+        fields = ('bio', 'profile_picture', 'country')
