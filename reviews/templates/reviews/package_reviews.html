@@ -1,19 +1,32 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Reviews for {{ package.title }}</h1>
-<ul>
-    {% for review in reviews %}
-    <li>
-        {{ review.title }} - <a href="{% url 'display_user_profile' pk=review.user.id %}">{{ review.user }}</a> - {{review.created_at }}
-        <br>
-        <strong>Difficulty Rating:</strong> {{ review.difficulty_rating }}
-        <br>
-        <strong>Overall Rating:</strong> {{ review.overall_rating }}
-        <p>{{ review.text }}</p>
-    </li>
-    {% endfor %}
-</ul>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Reviews for {{ package.title }}</h1>
 
-<a href="{% url 'reviews:review_list' %}" class="btn btn-primary">Back to All Reviews</a>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <ul class="list-group">
+          {% for review in reviews %}
+            <li class="list-group-item mb-3 {% cycle 'even' 'odd' %}">
+              <h4>{{ review.title }}</h4>
+              <small class="text-muted">
+                <i class="fas fa-user"></i> <a href="{% url 'display_user_profile' pk=review.user.id %}">{{ review.user }}</a>
+                &nbsp;&nbsp;&nbsp;
+                <i class="far fa-clock"></i> {{ review.created_at }}
+              </small>
+              
+              <p class="mt-3">
+                <strong><i class="fas fa-star"></i> Difficulty Rating:</strong> {{ review.difficulty_rating|capfirst }}<br>
+                <strong><i class="fas fa-star"></i> Overall Rating:</strong> {{ review.overall_rating|capfirst }}<br>
+              </p>
+              <p>{{ review.text }}</p>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <a href="{% url 'reviews:review_list' %}" class="btn btn-primary mt-3">Back to All Reviews</a>
+  </div>
 {% endblock %}
