@@ -5,8 +5,8 @@
 
 <div class="container mt-5">
     <h1 class="mb-4">Checkout</h1>
-    <form method="post" action="{% url 'checkout:process_checkout' %}" id="payment-form">
-
+    <form method="post" action="{% url 'checkout:checkout' %}" id="payment-form">
+        {% csrf_token %}
         <!-- Shipping Information Section -->
         <h2>Shipping Information</h2>
         <div class="form-group">
@@ -63,8 +63,6 @@
         <!-- Used to display form errors. -->
         <div id="card-errors" class="alert alert-danger mt-3" role="alert"></div>
 
-        <p class="mt-3">Client Secret: {{ client_secret }}</p>
-
         <input type="hidden" id="client-secret" value="{{ client_secret }}">
 
         <!-- Submit Button -->
@@ -99,9 +97,7 @@
         form.addEventListener('submit', function (event) {
             event.preventDefault();
 
-            var clientSecret = document.getElementById('client-secret').textContent;
-            console.log('Client Secret:', clientSecret);
-            console.log('Client Secret from HTML:', document.getElementById('client-secret').value);
+            var clientSecret = document.getElementById('client-secret').value;
 
             stripe.confirmCardPayment(clientSecret, {
                 payment_method: {

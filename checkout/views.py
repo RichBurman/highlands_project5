@@ -61,45 +61,45 @@ def checkout_success(request, order_id):
     return render(request, 'checkout/checkout_success.html', {'order': order})
 
 
-def checkout(request):
-    cart = Cart.objects.filter(user=request.user)
+# def checkout(request):
+#     cart = Cart.objects.filter(user=request.user)
 
-    if not cart.exists():
-        return redirect('cart:cart_view')
+#     if not cart.exists():
+#         return redirect('cart:cart_view')
 
-    total_price = sum(item.package.price * item.quantity for item in cart)
-    discounted_cart = []
+#     total_price = sum(item.package.price * item.quantity for item in cart)
+#     discounted_cart = []
 
-    if request.method == 'POST':
-        form = CheckoutForm(request.POST)
-        if form.is_valid():
-            discount_code = form.cleaned_data.get('discount_code')
-            discount_percentage = get_discount_percentage(discount_code)
-            discount_percentage_decimal = Decimal(discount_percentage)
+#     if request.method == 'POST':
+#         form = CheckoutForm(request.POST)
+#         if form.is_valid():
+#             discount_code = form.cleaned_data.get('discount_code')
+#             discount_percentage = get_discount_percentage(discount_code)
+#             discount_percentage_decimal = Decimal(discount_percentage)
 
-            for cart_item in cart:
-                discounted_price = cart_item.package.price - (cart_item.package.price * (discount_percentage_decimal / 100))
-                discounted_cart.append({
-                    'package': cart_item.package,
-                    'quantity': cart_item.quantity,
-                    'original_price': cart_item.package.price,
-                    'discounted_price': discounted_price,
-                })
+#             for cart_item in cart:
+#                 discounted_price = cart_item.package.price - (cart_item.package.price * (discount_percentage_decimal / 100))
+#                 discounted_cart.append({
+#                     'package': cart_item.package,
+#                     'quantity': cart_item.quantity,
+#                     'original_price': cart_item.package.price,
+#                     'discounted_price': discounted_price,
+#                 })
 
-            order = Order.objects.create(user=request.user, total_price=total_price)
+#             order = Order.objects.create(user=request.user, total_price=total_price)
 
-            for discounted_item in discounted_cart:
-                OrderItem.objects.create(order=order, package=discounted_item['package'], quantity=discounted_item['quantity'])
+#             for discounted_item in discounted_cart:
+#                 OrderItem.objects.create(order=order, package=discounted_item['package'], quantity=discounted_item['quantity'])
 
-            Payment.objects.create(order=order, amount=total_price)
+#             Payment.objects.create(order=order, amount=total_price)
 
-            cart.delete()
+#             cart.delete()
 
-            return redirect('checkout:order_confirmation', order_id=order.id)
-    else:
-        form = CheckoutForm()
+#             return redirect('checkout:order_confirmation', order_id=order.id)
+#     else:
+#         form = CheckoutForm()
 
-    return render(request, 'checkout/checkout.html', {'form': form, 'cart': cart, 'total_price': total_price, 'discounted_cart': discounted_cart})
+#     return render(request, 'checkout/checkout.html', {'form': form, 'cart': cart, 'total_price': total_price, 'discounted_cart': discounted_cart})
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
@@ -107,23 +107,24 @@ def process_checkout(request):
     cart = Cart.objects.filter(user=request.user)
     total_price = sum(item.package.price * item.quantity for item in cart)
 
+    form = CheckoutForm()
+
+    # Create a PaymentIntent
+    intent = stripe.PaymentIntent.create(
+        amount=int(total_price * 100),
+        currency='gbp',
+        description='Order payment',
+    )
+
     if request.method == 'POST':
         form = CheckoutForm(request.POST)
         if form.is_valid():
             print("Form is valid. Creating order...")
 
-            discount_code = form.cleaned_data.get('discount_code', '')
+            # discount_code = form.cleaned_data.get('discount_code', '')
             discount_amount = calculate_discount(total_price, discount_code)
 
-            # Create a PaymentIntent
-            intent = stripe.PaymentIntent.create(
-                amount=int((total_price - discount_amount) * 100),
-                currency='gbp',
-                description='Order payment',
-            )
-
-            client_secret = intent.client_secret
-
+            # Create order
             order = Order.objects.create(
                 user=request.user,
                 total_price=total_price - discount_amount,
@@ -134,22 +135,23 @@ def process_checkout(request):
                 phone_number=form.cleaned_data['phone_number'],
             )
 
+            # Create order items
             for cart_item in cart:
                 OrderItem.objects.create(
                     order=order, package=cart_item.package, quantity=cart_item.quantity
                 )
 
+            # Create payment
             Payment.objects.create(order=order, amount=total_price - discount_amount)
 
+            # Clear the cart
             cart.delete()
 
             messages.success(request, 'Order placed successfully! Your Adventure Begins!')
 
-            return render(request, 'checkout/checkout_success.html', {'order': order, 'client_secret': client_secret})
-    else:
-        form = CheckoutForm()
+            return redirect('checkout:checkout_success', order_id=order.id)
 
-    client_secret = intent.client_secret if 'intent' in locals() else None
+    client_secret = intent.client_secret
     return render(request, 'checkout/checkout.html', {'form': form, 'cart': cart, 'total_price': total_price, 'client_secret': client_secret})
 
 
