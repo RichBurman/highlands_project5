@@ -518,20 +518,19 @@ select {
     text-align-last: center;
   }
   
-  /* Add this CSS to style the small-text class */
   .small-text {
     display: block;
     margin-top: 5px;
     color: #555;
   }
   
-  /* Add this CSS to style the .review-form class */
+  
   .review-form {
     max-width: 400px;
     margin: 0 auto;
   }
   
-  /* Add this CSS to style the .btn class in the form */
+
   .review-form .btn {
     display: block;
     margin-top: 15px;
@@ -539,4 +538,31 @@ select {
 
   textarea {
     resize: none;
+}
+
+/* Styling for cart.html */
+
+.update-form {
+    margin-top: 10px;
+}
+
+.update-form .btn-outline-secondary {
+    color: #000;
+}
+
+.input-group-append {
+    margin-left: -1px;
+}
+
+.shopping-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.shopping-list li {
+    margin-bottom: 10px;
+}
+
+.quantity-input-small {
+    max-width: 80px; 
 }
