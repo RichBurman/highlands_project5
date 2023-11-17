@@ -464,3 +464,79 @@ ul li img {
 .list-group-item.even {
     background-color: #f0f0f0;
   }
+
+  /* styling for Add A Review */ 
+
+
+.review-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    font-weight: bold;
+    color: #3498db;
+}
+
+.form-control {
+    margin-top: 8px;
+}
+
+.small-text {
+    font-size: 14px;
+    color: #555;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover,
+.btn-success:hover {
+    opacity: 0.8;
+}
+
+.btn-back {
+    margin-top: 10px;
+}
+
+.btn-back:hover {
+    opacity: 0.8;
+}
+
+select {
+    text-align-last: center;
+  }
+  
+  /* Add this CSS to style the small-text class */
+  .small-text {
+    display: block;
+    margin-top: 5px;
+    color: #555;
+  }
+  
+  /* Add this CSS to style the .review-form class */
+  .review-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* Add this CSS to style the .btn class in the form */
+  .review-form .btn {
+    display: block;
+    margin-top: 15px;
+  }
+
+  textarea {
+    resize: none;
+}
