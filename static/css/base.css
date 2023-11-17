@@ -596,3 +596,67 @@ select {
 .list-group-item .btn {
     font-size: 0.8rem;
 }
+
+/* styling for Checkout page */
+
+/* Shipping Information Section */
+#payment-form .form-group {
+    margin-bottom: 20px;
+}
+
+#payment-form label {
+    font-weight: bold;
+}
+
+#payment-form input[type="text"],
+#payment-form input[type="tel"],
+#payment-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Order Summary Section */
+#payment-form h2 {
+    margin-top: 30px;
+}
+
+#payment-form ul {
+    padding: 0;
+}
+
+#payment-form li {
+    list-style: none;
+}
+
+#payment-form .mb-3 {
+    margin-bottom: 20px;
+}
+
+/* Discount Code Section */
+#payment-form #apply-discount {
+    margin-top: 10px;
+}
+
+/* Updated Total Price Section */
+#payment-form #total-price {
+    font-weight: bold;
+}
+
+/* Stripe Elements for Card Input Section */
+#payment-form #card-element {
+    margin-top: 30px;
+}
+
+/* Form Errors Section */
+#payment-form #card-errors {
+    margin-top: 10px;
+    color: #dc3545; 
+}
+
+/* Submit Button */
+#payment-form #submit-button {
+    margin-top: 20px;
+}

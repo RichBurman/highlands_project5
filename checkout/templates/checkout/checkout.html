@@ -3,78 +3,74 @@
 {% block content %}
 <div id="alert-container" class="container messages-container"></div>
 
-<h1>Checkout</h1>
-<form method="post" action="{% url 'checkout:process_checkout' %}" id="payment-form">
-    {% csrf_token %}
+<div class="container mt-5">
+    <h1 class="mb-4">Checkout</h1>
+    <form method="post" action="{% url 'checkout:process_checkout' %}" id="payment-form">
 
-    <!-- Shipping Information Section -->
+        <!-- Shipping Information Section -->
+        <h2>Shipping Information</h2>
+        <div class="form-group">
+            <label for="{{ form.addressline_1.id_for_label }}">Address Line 1:</label>
+            {{ form.addressline_1 }}
+        </div>
 
-    <h2>Shipping Information</h2>
-    <div class="form-group">
-        <label for="{{ form.addressline_1.id_for_label }}">Address Line 1:</label>
-        {{ form.addressline_1 }}
-    </div>
+        <div class="form-group">
+            <label for="{{ form.addressline_2.id_for_label }}">Address Line 2:</label>
+            {{ form.addressline_2 }}
+        </div>
 
-    <div class="form-group">
-        <label for="{{ form.addressline_2.id_for_label }}">Address Line 2:</label>
-        {{ form.addressline_2 }}
-    </div>
+        <div class="form-group">
+            <label for="{{ form.county.id_for_label }}">County:</label>
+            {{ form.county }}
+        </div>
 
-    <div class="form-group">
-        <label for="{{ form.county.id_for_label }}">County:</label>
-        {{ form.county }}
-    </div>
+        <div class="form-group">
+            <label for="{{ form.country.id_for_label }}">Country:</label>
+            {{ form.country }}
+        </div>
 
-    <div class="form-group">
-        <label for="{{ form.country.id_for_label }}">Country:</label>
-        {{ form.country }}
-    </div>
+        <div class="form-group">
+            <label for="{{ form.phone_number.id_for_label }}">Phone Number:</label>
+            {{ form.phone_number }}
+        </div>
 
-    <div class="form-group">
-        <label for="{{ form.phone_number.id_for_label }}">Phone Number:</label>
-        {{ form.phone_number }}
-    </div>
+        <!-- Order Summary Section -->
+        <h2>Order Summary</h2>
+        <ul class="list-group mb-3">
+            {% for cart_item in cart %}
+                <li class="list-group-item">{{ cart_item.package.title }} - Quantity: {{ cart_item.quantity }}</li>
+            {% endfor %}
+        </ul>
+        <p class="mb-3">Total Price (without discount): ${{ total_price }}</p>
 
-    <!-- Order Summary Section -->
+        <!-- Discount Code Section -->
+        <div class="form-group">
+            <label for="{{ form.discount_code.id_for_label }}">Discount Code:</label>
+            {{ form.discount_code }}
+            <button type="button" id="apply-discount" class="btn btn-primary mt-2">Apply Discount</button>
+            <input type="hidden" id="discount-applied" value="false">
+        </div>
 
-    <h2>Order Summary</h2>
-    <ul>
-        {% for cart_item in cart %}
-        <li>{{ cart_item.package.title }} - Quantity: {{ cart_item.quantity }}</li>
-        {% endfor %}
-    </ul>
-    <p>Total Price (without discount): ${{ total_price }}</p>
+        <!-- Updated Total Price Section -->
+        <p class="mb-3">Total Price: $<span id="total-price">{{ total_price }}</span></p>
 
-    <!-- Discount Code Section -->
+        <!-- Stripe Elements for Card Input Section -->
+        <div id="card-element" class="form-group">
+            <!-- A Stripe Element will be inserted here. -->
+        </div>
 
-    <div class="form-group">
-        <label for="{{ form.discount_code.id_for_label }}">Discount Code:</label>
-        {{ form.discount_code }}
-        <button type="button" id="apply-discount">Apply Discount</button>
-        <input type="hidden" id="discount-applied" value="false">
-    </div>
+        <!-- Used to display form errors. -->
+        <div id="card-errors" class="alert alert-danger mt-3" role="alert"></div>
 
-    <!-- Updated Total Price Section -->
-    <p>Total Price: $<span id="total-price">{{ total_price }}</span></p>
+        <p class="mt-3">Client Secret: {{ client_secret }}</p>
 
-    <!-- Stripe Elements for Card Input Section -->
-    <div id="card-element">
-        <!-- A Stripe Element will be inserted here. -->
-    </div>
+        <input type="hidden" id="client-secret" value="{{ client_secret }}">
 
-    <!-- Used to display form errors. -->
-    <div id="card-errors" role="alert"></div>
+        <!-- Submit Button -->
+        <button type="submit" id="submit-button" class="btn btn-success">Submit</button>
 
-    <p>Client Secret: {{ client_secret }}</p>
-
-    <input type="hidden" id="client-secret" value="{{ client_secret }}">
-
-
-    <!-- Submit Button -->
-    <button type="submit" id="submit-button">Submit</button>
-
-</form>
-
+    </form>
+</div>
 <script src="https://js.stripe.com/v3/"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
