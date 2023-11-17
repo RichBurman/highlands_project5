@@ -582,3 +582,17 @@ select {
 .gallery-heading-container {
     margin-bottom: 20px; 
 }
+
+/* User Reviews style */
+
+.list-group-item {
+    margin-bottom: 10px;
+}
+
+.list-group-item small {
+    color: #6c757d;
+}
+
+.list-group-item .btn {
+    font-size: 0.8rem;
+}

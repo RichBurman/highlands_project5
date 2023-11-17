@@ -1,19 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Your Reviews</h2>
-    <ul>
-        {% for review in user_reviews %}
-            <li>
-                {{ review.text }} - {{ review.created_at }}
-                {% if review.package %}
-                    (Package: {{ review.package.title }})
-                {% else %}
-                    (No associated package)
-                {% endif %}
-                <a href="{% url 'reviews:review-update' review.id %}">Edit</a>
-                <a href="{% url 'reviews:review-delete' review.id %}">Delete</a>
-            </li>
-        {% endfor %}
-    </ul>
+    <div class="container mt-5">
+        <h2>Your Reviews</h2>
+        <ul class="list-group">
+            {% for review in user_reviews %}
+                <li class="list-group-item {% cycle 'even' 'odd' %}">
+                    <h5>{{ review.package.title }}</h5>
+                    <p class="mb-1">{{ review.created_at }}</p>
+                    <p>{{ review.text }}</p>
+                    <div class="text-center mt-3">
+                        <a href="{% url 'reviews:review-update' review.id %}" class="btn btn-warning btn-sm mx-2">Edit</a>
+                        <a href="{% url 'reviews:review-delete' review.id %}" class="btn btn-danger btn-sm mx-2">Delete</a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 {% endblock %}
