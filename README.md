@@ -166,7 +166,11 @@ Pip - for install python packages
 
 ### Accessibility
 
-- [Describe your accessibility measures here]
+- I have been mindful during the coding to ensure that the website is as accessible and user friendly as possible. I have achieved this by:
+- Using semantic HTML.
+- Using descriptive alt attributes on images on the site.
+- Ensuring that there is a sufficient colour contrast throughout the site.
+- Ensuring menus are accessible by marking the current page as active for screen readers.
 
 ## Deployment & Local Development
 
