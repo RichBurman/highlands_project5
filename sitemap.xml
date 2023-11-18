@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/packages/packages/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/about-us/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/gallery/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/reviews/reviews/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/accounts/login/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/packages/packages/4/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/packages/packages/1/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/packages/packages/2/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/packages/packages/5/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/packages/packages/6/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/reviews/view_package_reviews/4/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/reviews/view_package_reviews/1/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/reviews/view_package_reviews/2/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/reviews/view_package_reviews/5/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/reviews/view_package_reviews/6/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/reviews/view_review/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/user/display_user_profile/1/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/accounts/login/?next=/reviews/user-reviews/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/accounts/login/?next=/user/profile/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/accounts/login/?next=/user/profile/edit/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/accounts/login/?next=/user/user/edit/</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/accounts/signup/?next=%2Freviews%2Fuser-reviews%2F</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/accounts/signup/?next=%2Fuser%2Fprofile%2F</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/accounts/signup/?next=%2Fuser%2Fprofile%2Fedit%2F</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/accounts/signup/?next=%2Fuser%2Fuser%2Fedit%2F</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/accounts/login/?next=%2Freviews%2Fuser-reviews%2F</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/accounts/login/?next=%2Fuser%2Fprofile%2F</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/accounts/login/?next=%2Fuser%2Fprofile%2Fedit%2F</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://highlands-fe23cbc4972e.herokuapp.com/accounts/login/?next=%2Fuser%2Fuser%2Fedit%2F</loc>
+  <lastmod>2023-11-18T12:57:10+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+
+
+</urlset>
