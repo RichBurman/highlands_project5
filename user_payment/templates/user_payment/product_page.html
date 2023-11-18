@@ -23,7 +23,7 @@
     var checkoutButton = document.getElementById('checkout-button');
 
     checkoutButton.addEventListener('click', function () {
-  fetch('{% "user_payment:product_page" %}', {
+  fetch('{% url "user_payment:product_page" %}', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
