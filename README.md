@@ -142,7 +142,27 @@ Google Dev Tools - To troubleshoot and test features, solve issues with responsi
 
 ### Libraries & Programs Used
 
-[Add the libraries and programs you used here]
+Font Awesome - For the icongraphy on the website.
+
+Django Allauth
+
+Stripe 
+
+Cloudinary
+
+Django Star Ratings - but didn't use on project in the end. 
+
+Pillow
+
+Django-countries
+
+gunicorn
+
+dj_database_url
+
+psycopg2
+
+Pip - for install python packages
 
 ### Accessibility
 
