@@ -1,39 +1,207 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome,
+# Project Name
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Am I Responsive Image]()
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+Github link to the project [Github link](https://github.com/your-username/your-project-repo)
 
-## Codeanywhere Reminders
+Live Link to the project website [Live link](https://your-live-link.com)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## CONTENTS
 
-`python3 -m http.server`
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
-
-`http_server`
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- [Project Name](#project-name)
+  - [CONTENTS](#contents)
+  - [User Experience (UX)](#user-experience-ux)
+    - [Key Information for the site](#key-information-for-the-site)
+    - [Business Model](#business-model) 
+    - [User Stories](#user-stories)
+      - [Client Goals](#client-goals)
+      - [First Time Visitor Goals](#first-time-visior-goals)
+      - [Returning and Frequent Visitor Goals](#returning-and-frequent-visitor-goals)
+  - [Design](#design)
+    - [Colour Scheme](#colour-scheme)
+    - [Typography](#typography)
+    - [Imagery](#imagery)
+    - [Wireframes](#wireframes)
+  - [Features](#features)
+    - [Future Implementations](#future-implementations)
+  - [Technologies Used](#technologies-used)
+    - [Languages Used](#languages-used)
+    - [Frameworks](#frameworks)
+    - [Libraries \& Programs Used](#libraries--programs-used)
+    - [Accessibility](#accessibility)
+  - [Deployment \& Local Development](#deployment--local-development)
+    - [Deployment](#deployment)
+      - [**Create the Live Database**](#create-the-live-database)
+      - [**Heroku app setup**](#heroku-app-setup)
+      - [**Preparation for deployment in Codeanywhere**](#preparation-for-deployment-in-codeanywhere)
+    - [Local Development](#local-development)
+      - [How to Fork](#how-to-fork)
+      - [How to Clone](#how-to-clone)
+  - [Testing](#testing)
+    - [Full Testing](#full-testing)
+    - [W3C Validator](#w3c-validator)
+    - [Solved Bugs](#solved-bugs)
+    - [Known Bugs](#known-bugs)
+    - [Lighthouse](#lighthouse)
+      - [Index Page](#index-page)
+      - [My Bookings](#my-bookings)
+      - [New Bookings](#new-bookings)
+      - [Edit Bookings](#edit-bookings)
+      - [Booking Success](#booking-success)
+  - [Credits](#credits)
+    - [Code Used](#code-used)
+    - [Content](#content)
+    - [Media](#media)
+    - [Acknowledgments](#acknowledgments)
 
 ---
 
-Happy coding!
+## User Experience (UX)
+
+- [Add your project description here]
+
+### Key Information for the site
+
+- [Add your key information here]
+
+### Business Model
+
+- [Add your key information here]
+
+### User Stories
+
+![User Stories](media/images/README/userstories.png)
+
+The user stories are split into User and Admin.
+
+[Add your user and admin stories here]
+
+#### Client Goals
+
+- [Add your client goals here]
+
+#### First Time Visitor Goals
+
+- [Add your first-time visitor goals here]
+
+#### Returning and Frequent Visitor Goals
+
+- [Add your returning and frequent visitor goals here]
+
+## Design
+
+### Colour Scheme
+
+![Color Palette](media/images/README/Coolors.png)
+
+- [Add your color scheme information here]
+
+### Typography
+
+- [Add your typography information here]
+
+### Imagery
+
+- [Add your imagery information here]
+
+### Wireframes
+
+- [Add your wireframes information here]
+
+## Features
+
+[Describe your features here]
+
+### Future Implementations
+
+- [Add your future implementations here]
+
+## Technologies Used
+
+### Languages Used
+
+[Add the languages you used here]
+
+### Frameworks
+
+[Add the frameworks you used here]
+
+### Libraries & Programs Used
+
+[Add the libraries and programs you used here]
+
+### Accessibility
+
+- [Describe your accessibility measures here]
+
+## Deployment & Local Development
+
+### Deployment
+
+[Add your deployment information here]
+
+#### **Create the Live Database**
+
+[Add your live database creation steps here]
+
+#### **Heroku app setup**
+
+[Add your Heroku app setup steps here]
+
+#### **Preparation for deployment in Codeanywhere**
+
+[Add your Codeanywhere deployment preparation here]
+
+### Local Development
+
+#### How to Fork
+
+[Add your forking steps here]
+
+#### How to Clone
+
+[Add your cloning steps here]
+
+## Testing
+
+[Add your testing information here]
+
+### Full Testing
+
+[Add your full testing information here]
+
+### W3C Validator
+
+[Add your W3C Validator results here]
+
+### Solved Bugs
+
+[Add your solved bugs information here]
+
+### Known Bugs
+
+[Add your known bugs information here]
+
+### Lighthouse
+
+[Add your Lighthouse testing results here]
+
+## Credits
+
+### Code Used
+
+[Add the code you used here]
+
+### Content
+
+[Add your content information here]
+
+### Media
+
+- [Add your media information here]
+
+### Acknowledgments
+
+- [Add your acknowledgments here]
