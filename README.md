@@ -248,9 +248,30 @@ Github Project
     ![Package List](https://res.cloudinary.com/dbagkfamv/image/upload/v1700344145/packages_list_di1tvj.png)
 
     - Package Detail
-    
+
     ![Package Detail](https://res.cloudinary.com/dbagkfamv/image/upload/v1700344175/package_detail_trlzul.png)
     ![]()
+
+    - About Us
+
+    - Gallery
+
+    - Reviews
+
+    - Cart
+
+    - User Reviews
+
+    - Login/Logout
+
+    - Register
+
+    - User Profile Details
+        - User Profile
+        - Edit User Profile
+        - Edit Personal Details
+
+
 
 
 ### Future Implementations
