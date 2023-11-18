@@ -122,9 +122,21 @@ The user stories are split into User and Admin.
 
 ### Languages Used
 
-[Add the languages you used here]
+HTML, CSS, Javascript, Python and Django
 
 ### Frameworks
+
+Django - A high-level Python web framework that encourages rapid development and clean, pragmatic design.
+
+Google sheets and Google Docs - To draw up user stories and writing up content for html pages.
+
+Codeanywhere - For version control
+
+Github - To save and store the files for the website
+
+Bootstrap - The framework for the website.
+
+Google Dev Tools - To troubleshoot and test features, solve issues with responsiveness and styling.
 
 [Add the frameworks you used here]
 
