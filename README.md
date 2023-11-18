@@ -251,13 +251,53 @@ Github Project
 
     ### Navigation Bar for Registered Users
 
+    The navigation bar on the website is different for different users on the website. The navigation bar for registered users shows the following:
+        - Home - links to Home Page
+        - View Packages - links to view a list of all the hiking packages offered and available to purchase. Users can select a package and go to a package detail section which displays more information on the package and allows the user to add to cart ready for purchasing. 
+        - About Us - links to an About Us page which details about Highland Adventures
+        - Gallery - links to a gallery page where users can view images from our packages
+        - Reviews - links to Reviews of all the packages on the website. Users can read through current reviews on any package they desire and also add a review to any package they desire. 
+        - Cart - links to the cart page, where users can view their cart and what packages they have in their cart for purchase. They can change the quantity, remove the package, or proceed to the checkout. 
+        - User Reviews - links to a page when the user can view their own reviews they have made on the website. This lists all their reviews on all packages. The user can view, edit their review or delete it if they wish. 
+        - Logout - links to a logout page where the user can logout. 
+        - User Profile Details - this has a dropdown menu with 3 options
+            - User Profile - links to a page where the user can view their User Profile and Personal Information. Also this displays to the user their discount code. 
+            - Edit User Profile - links to a page where the user can edit their user profile
+            - Edit Personal Details - links to a page where the user can edit their personal information. 
+
     ![Navigation Bar for Registered Users](https://res.cloudinary.com/dbagkfamv/image/upload/v1700343517/nav_bar_registereduser_hhcvey.png)
 
-    ###  Navigation Bar for Non Registered Users
+    ###  Navigation Bar for Non Registered/Logged In Users
+
+    The navigation bar for registered users shows the following:
+        - Home - links to Home Page
+        - View Packages - links to view a list of all the hiking packages offered and available to purchase. Users can select a package and go to a package detail section which displays more information on the package and allows the user to add to cart ready for purchasing. 
+        - About Us - links to an About Us page which details about Highland Adventures
+        - Gallery - links to a gallery page where users can view images from our packages
+        - Reviews - links to Reviews of all the packages on the website. Users can read through current reviews on any package they desire and also add a review to any package they desire. 
+        
+        
+        - Login - links to a login page where the user can login. 
+        - Register - links to a page where the user can register to become a registered user. 
 
     ![Navigation Bar for non Registered Users](https://res.cloudinary.com/dbagkfamv/image/upload/v1700343635/nav_bar_nonuser_nk7vt2.png)
 
     ###  Navigation Bar for Staff
+
+    The navigation bar for registered Staff users shows the following:
+        - Home - links to Home Page
+        - View Packages - links to view a list of all the hiking packages offered and available to purchase. Users can select a package and go to a package detail section which displays more information on the package and allows the user to add to cart ready for purchasing. 
+        - About Us - links to an About Us page which details about Highland Adventures
+        - Gallery - links to a gallery page where users can view images from our packages
+        - Reviews - links to Reviews of all the packages on the website. Users can read through current reviews on any package they desire and also add a review to any package they desire. 
+        - Cart - links to the cart page, where users can view their cart and what packages they have in their cart for purchase. They can change the quantity, remove the package, or proceed to the checkout. 
+        - User Reviews - links to a page when the user can view their own reviews they have made on the website. This lists all their reviews on all packages. The user can view, edit their review or delete it if they wish. 
+        - Logout - links to a logout page where the user can logout. 
+        - User Profile Details - this has a dropdown menu with 3 options
+            - User Profile - links to a page where the user can view their User Profile and Personal Information. Also this displays to the user their discount code. 
+            - Edit User Profile - links to a page where the user can edit their user profile
+            - Edit Personal Details - links to a page where the user can edit their personal information. 
+        - Admin Login - links to the /admin page where the staff member can login to the admin page for the website. 
 
     ![Staff Navigation Bar](https://res.cloudinary.com/dbagkfamv/image/upload/v1700347435/staff_nav_qy9k7b.png)
 
