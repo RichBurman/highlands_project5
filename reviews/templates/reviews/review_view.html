@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Customer Reviews</h1>
+<h1 class="customer-reviews">Customer Reviews</h1>
 <ul>
     {% for package, reviews in package_reviews.items %}
     <li>{{ package.title }}

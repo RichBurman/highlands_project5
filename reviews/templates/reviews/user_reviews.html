@@ -2,7 +2,7 @@
 
 {% block content %}
     <div class="container mt-5">
-        <h2>Your Reviews</h2>
+        <h2 class="customer-reviews">Your Reviews</h2>
         <ul class="list-group">
             {% for review in user_reviews %}
                 <li class="list-group-item {% cycle 'even' 'odd' %}">
