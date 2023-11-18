@@ -6,6 +6,7 @@ from django.http import HttpResponse
 from user_payment.models import UserPayment
 import stripe
 import time
+from django.http import JsonResponse
 
 
 @login_required(login_url='login')
@@ -13,7 +14,7 @@ def product_page(request):
     stripe.api_key = settings.STRIPE_SECRET_KEY
 
     if request.method == 'POST':
-        # Assuming you have a product name in the request, adjust this accordingly
+       
         product_name = request.POST.get('product_name')
         product_price_id = settings.PRODUCT_PRICES.get(product_name)
 
