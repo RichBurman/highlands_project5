@@ -317,9 +317,20 @@ Heroku was used to deploy the live website. The instruction to achieve this are 
 
 #### How to Fork
 
-[Add your forking steps here]
+To fork the repository:
+
+1. Log in (or sign up) to Github.
+2. Go to the repository for this project, RichBurman/highlands_project5
+3. Click the Fork button in the top right corner.
 
 #### How to Clone
+
+1. Log in (or sign up) to GitHub.
+2. Go to the repository for this project, RichBurman/higlands_project5
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
+
 
 [Add your cloning steps here]
 
