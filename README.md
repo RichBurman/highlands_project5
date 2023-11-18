@@ -254,22 +254,37 @@ Github Project
 
     - About Us
 
+    ![About Us](https://res.cloudinary.com/dbagkfamv/image/upload/v1700344495/aboutus_yz5cyg.png)
+
     - Gallery
+    ![Gallery](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345141/gallery_p3hgqw.png)
 
     - Reviews
+    ![Reviews](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345374/customer_reviews_o1b56a.png)
 
     - Cart
+    ![Cart](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346630/cart_cjchov.png)
 
     - User Reviews
+    ![User Reviews](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346523/user_reviews_wlcamf.png)
 
     - Login/Logout
+        - Login
+        - ![Login](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345098/login_fposb8.png)
+        - Logout
+        - ![Logout](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346454/logout_rlke4p.png)
+       
 
     - Register
+    ![Register](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346576/register_mllzsa.png)
 
     - User Profile Details
         - User Profile
+        ![User Profile](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346710/user_profile_ivrlgi.png)
         - Edit User Profile
+        ![Edit User Profile](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346750/edit_user_profile_jvoc9h.png)
         - Edit Personal Details
+        - ![Edit Personal Details](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346750/edit_user_profile_jvoc9h.png)
 
 
 
