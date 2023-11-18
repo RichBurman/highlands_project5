@@ -171,14 +171,6 @@ Github Project
     - Community - with the review section, users are encouraged to come back and read the reviews on the other packages and this may encourage them to make a purchase, as long as the reviews are positive! 
 
 
-## Design
-
-### Colour Scheme
-
-![Color Palette](media/images/README/Coolors.png)
-
-- [Add your color scheme information here]
-
 ### Typography
 
 - Default fonts were used for the following:
@@ -197,7 +189,38 @@ Github Project
 
 ## Features
 
-[Describe your features here]
+- The website consist of 20 html pages. Below in no particular order:
+    - cart.html
+    - checkout_success.html
+    - checkout.html
+    - about_us.html
+    - gallery.html
+    - index.html (Home Page)
+    - package_detail.html
+    - package_list.html
+    - add_review.html
+    - delete_review.html
+    - package_reviews.html
+    - review_list.html
+    - update_review.html
+    - user_reviews.html
+    - 404.html
+    - base.html
+    - custom_user_edit.html
+    - display_user_profile.html
+    - user_profile_edit.html
+    - user_profile.html
+
+    - Base.html is not accessible as a stand-alone page for the user, as it is used at the base template to host the other html pages (aside from 404.html)
+    - All other pages are accessible to registered users (depending on their journey on the wesbite, i.e. will see checkout_sucess if they successfully make a purchase of a hiking package)
+    - Non registered users are limited to the following pages
+        - index.html (Home Page)
+        - package_list.html
+        - package_detail.html
+        - gallery.html
+        - review_view.html
+    - The reasoning behind this only registered users can make purchases or add reviews on the website and therefore non registered users do not need access to these pages. 
+
 
 ### Future Implementations
 
