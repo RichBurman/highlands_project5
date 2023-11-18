@@ -23,35 +23,29 @@
     var checkoutButton = document.getElementById('checkout-button');
 
     checkoutButton.addEventListener('click', function () {
-  fetch('{% url "user_payment:product_page" %}', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-CSRFToken': document.querySelector('input[name="csrfmiddlewaretoken"]').value,
-    },
-    body: JSON.stringify({}),
-  })
-  .then(function (response) {
-    // Check if the response is a successful status (e.g., 200)
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-
-    return response.json(); // Parse the JSON response
-  })
-  .then(function (session) {
-    return stripe.redirectToCheckout({ sessionId: session.id });
-  })
-  .then(function (result) {
-    if (result.error) {
-      alert(result.error.message);
-    }
-  })
-  .catch(function (error) {
-    console.error('Error:', error);
-  });
-});
-
+      fetch('{% url "user_payment:product_page" %}', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken': document.querySelector('input[name="csrfmiddlewaretoken"]').value,
+        },
+        body: JSON.stringify({}),
+      })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (session) {
+        return stripe.redirectToCheckout({ sessionId: session.id });
+      })
+      .then(function (result) {
+        if (result.error) {
+          alert(result.error.message);
+        }
+      })
+      .catch(function (error) {
+        console.error('Error:', error);
+      });
+    });
   </script>
 
 {% endblock %}
