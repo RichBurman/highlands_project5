@@ -155,7 +155,6 @@ def process_checkout(request):
             return render(request, 'checkout/checkout_success.html', {'order': order, 'client_secret': client_secret})
 
     
-    messages.success(request, 'failed')
     client_secret = intent.client_secret
     return render(request, 'checkout/checkout.html', {'form': form, 'cart': cart, 'total_price': total_price, 'client_secret': client_secret})
 
