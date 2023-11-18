@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEBUG' in os.environ
 
-ALLOWED_HOSTS = ['8000-richburman-highlands-pro-kecrygk8zz.us2.codeanyapp.com', '127.0.0.1', 'highlands.herokuapp.com', 'highlands-fe23cbc4972e.herokuapp.com']
+ALLOWED_HOSTS = ['8000-richburman-highlands-pro-kecrygk8zz.us2.codeanyapp.com', '127.0.0.1', 'highlands.herokuapp.com', 'highlands-fe23cbc4972e.herokuapp.com', '8000-richburman-highlandspro-iq17nkflrhd.ws-eu106.gitpod.io']
 
 
 # Application definition
