@@ -60,15 +60,51 @@ Live Link to the project website [Live link](https://highlands-fe23cbc4972e.hero
 
 ## User Experience (UX)
 
-- [Add your project description here]
+- Highland Adventures is a e-commerce website designed for outdoor hikers and businesses alike, offering a diverse range of hiking packages. It is open for individuals or businesses planning team building events, Highland Adventures offers the perfect hiking package in the Scottish Highlands. 
 
 ### Key Information for the site
 
-- [Add your key information here]
+- A Range of Hiking Packages - available to purchase catering to various preferences and difficulty levels
+- User Friendly Experience - user-friendly website making it easy for users to browse, select and purchase hiking packages
+- Exclusive Discount for Registered Users - Signing up to become a member and you enjoy discounts. Starting with a discount of 10% on all bookings, which shows on the website to those users that are registered. 
+- Secure Account - User accounts and personal is kept safe and secure. 
+- Streamlined ordering process - Simple system to allow users to easily place and order. 
+- Review Pages - Users can share their experience of the hiking packages they have purchased on the reviews. They can also view these reviews prior to making a purchase to see what other users have said about the packages. 
 
 ### Business Model
 
-- [Add your key information here]
+- Highland Adventures
+
+- Highland Adventures operates on a dynamic e-commerce business model, serving both the Business-to-Business (B2B) and Business-to-Consumer (B2C) markets. Our platform is the gateway for outdoor enthusiasts and businesses to explore, purchase, and organize unforgettable hiking experiences in the Scottish Highlands.
+
+- Core Business Intents
+
+- Our business strategy revolves around providing a seamless and enjoyable experience for users, whether they are individual consumers or businesses seeking corporate adventures. Key aspects of our strategy include:
+
+- Curating a Diverse Range of Hiking Packages
+
+- Offering a wide array of hiking packages to cater to various preferences and skill levels.
+
+- User-Friendly Platform
+
+- Ensuring our website is user-friendly, making it easy for users to browse, select, and purchase hiking packages.
+
+- Exclusive Discounts
+
+- Providing registered users with exclusive discounts to incentivize account creation and foster loyalty.
+
+- Secure User Accounts
+
+- Implementing robust security measures to safeguard user accounts and personal information.
+
+- Efficient Order Management
+
+- Streamlining the order placement, processing, and fulfillment process for both individual and corporate clients.
+
+- Community Engagement
+
+- Encouraging user engagement through reviews, ratings, and fostering a sense of community on our platform.
+
 
 ### User Stories
 
