@@ -63,7 +63,6 @@ def checkout_success(request, order_id):
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 def process_checkout(request):
-    print('process_checkout invoked')
     cart = Cart.objects.filter(user=request.user)
     total_price = sum(item.package.price * item.quantity for item in cart)
 
@@ -88,7 +87,7 @@ def process_checkout(request):
     if request.method == 'POST':
         form = CheckoutForm(request.POST)
         if form.is_valid():
-            print("Form is valid. Creating order...")
+            
 
             discount_code = form.cleaned_data.get('discount_code', '')
             discount_amount = calculate_discount(total_price, discount_code)
@@ -119,8 +118,9 @@ def process_checkout(request):
             client_secret = intent.client_secret
             return render(request, 'checkout/checkout_success.html', {'order': order, 'client_secret': client_secret, 'public_key': stripe_public_key})
         else:
-            print('form is not valid')
-            print(form.errors)
+            messages.error(request, 'Error processing your order. Please try again.')
+            return render(request, 'checkout/checkout.html', {'form': form, 'cart': cart, 'total_price': total_price, 'client_secret': client_secret, 'public_key': stripe_public_key})
+            
             
     
     client_secret = intent.client_secret
