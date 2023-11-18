@@ -2,7 +2,7 @@
 
 # Project Name
 
-![Am I Responsive Image]()
+![Am I Responsive Image](https://res.cloudinary.com/dbagkfamv/image/upload/v1700340031/am_I_responsive_qf6uyg.png)
 
 Github link to the project [Github link](https://github.com/RichBurman/highlands_project5)
 
