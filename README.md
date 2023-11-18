@@ -221,6 +221,20 @@ Github Project
         - review_view.html
     - The reasoning behind this only registered users can make purchases or add reviews on the website and therefore non registered users do not need access to these pages. 
 
+    - Home Page
+
+    ![Home Page](https://res.cloudinary.com/dbagkfamv/image/upload/v1700343694/homepage1_m8ciea.png)
+
+    ![Home Page Image 2](https://res.cloudinary.com/dbagkfamv/image/upload/v1700343842/homepage2_eqmd2d.png)
+
+    ![Home Page Image 3](https://res.cloudinary.com/dbagkfamv/image/upload/v1700343841/homepage3_ql4apm.png)
+
+    - The Navigation bar
+
+    ![Navigation Bar for Registered Users](https://res.cloudinary.com/dbagkfamv/image/upload/v1700343517/nav_bar_registereduser_hhcvey.png)
+
+    ![Navigation Bar for non Registered Users](https://res.cloudinary.com/dbagkfamv/image/upload/v1700343635/nav_bar_nonuser_nk7vt2.png)
+
 
 ### Future Implementations
 
