@@ -225,15 +225,32 @@ Github Project
 
     ![Home Page](https://res.cloudinary.com/dbagkfamv/image/upload/v1700343694/homepage1_m8ciea.png)
 
+    - Home Page Image 2
+
     ![Home Page Image 2](https://res.cloudinary.com/dbagkfamv/image/upload/v1700343842/homepage2_eqmd2d.png)
+
+    - Home Page Image 3
 
     ![Home Page Image 3](https://res.cloudinary.com/dbagkfamv/image/upload/v1700343841/homepage3_ql4apm.png)
 
     - The Navigation bar
 
+    - Navigation Bar for Registered Users
+
     ![Navigation Bar for Registered Users](https://res.cloudinary.com/dbagkfamv/image/upload/v1700343517/nav_bar_registereduser_hhcvey.png)
 
+    - Navigation Bar for Non Registered Users
+
     ![Navigation Bar for non Registered Users](https://res.cloudinary.com/dbagkfamv/image/upload/v1700343635/nav_bar_nonuser_nk7vt2.png)
+
+    - Package List
+
+    ![Package List](https://res.cloudinary.com/dbagkfamv/image/upload/v1700344145/packages_list_di1tvj.png)
+
+    - Package Detail
+    
+    ![Package Detail](https://res.cloudinary.com/dbagkfamv/image/upload/v1700344175/package_detail_trlzul.png)
+    ![]()
 
 
 ### Future Implementations
