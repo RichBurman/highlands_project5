@@ -223,17 +223,29 @@ Github Project
 
     ### Home Page
 
-    - 
+    - This is the index/landing page for the website. 
+    - It had a clear heading and brief information section informing the user what the website is about. 
+    - It has a large image of Ben Nevis to draw the user into the website and capture their attention. 
 
     ![Home Page](https://res.cloudinary.com/dbagkfamv/image/upload/v1700343694/homepage1_m8ciea.png)
 
     ### Home Page Image 2
+
+    - This section of the home page is broken into sections to provide the user with information on the following:
+        - Brief information section - Explains what we offer on the website
+        - Why Join Us? - Explains the benefits of becoming a registered user.
+        - Booking Made Easy - Explains the ease of booking a package with us. 
+        - Stay in the Loop - Explains about signing up for our newsletter
 
     ![Home Page Image 2](https://res.cloudinary.com/dbagkfamv/image/upload/v1700343842/homepage2_eqmd2d.png)
 
     ### Home Page Image 3
 
     ![Home Page Image 3](https://res.cloudinary.com/dbagkfamv/image/upload/v1700343841/homepage3_ql4apm.png)
+
+    - This is the sign up for to the MailChimp Newsletter for our website. 
+    - Below this is a link to our Facebook Business Page
+    - ![Facebook Business Page](https://res.cloudinary.com/dbagkfamv/image/upload/v1700340288/facebook_business_page_idefss.png) - I have left the link on the website to Facebook.com to prevent access to the business page, due to this being a project and not a live business. 
 
     ### The Navigation bar
 
