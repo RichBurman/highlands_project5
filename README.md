@@ -105,14 +105,41 @@ Live Link to the project website [Live link](https://highlands-fe23cbc4972e.hero
 
 - Encouraging user engagement through reviews, ratings, and fostering a sense of community on our platform.
 
+- We have a fantastic facebook business page! 
+
+![Facebook Business Page](https://res.cloudinary.com/dbagkfamv/image/upload/v1700340288/facebook_business_page_idefss.png)
+
 
 ### User Stories
 
-![User Stories](media/images/README/userstories.png)
+![User Stories](https://res.cloudinary.com/dbagkfamv/image/upload/v1700340281/user_stories1_jzndtw.png)
 
-The user stories are split into User and Admin.
+## User Features
 
-[Add your user and admin stories here]
+1. **I want to** browse a list of available hiking packages, **so that I can** select which ones I would like to purchase.
+2. **I want to** view the details of a specific hiking package, **so that I can** make an informed decision on which one I would like to purchase.
+3. **I want to** register an account on the website, **so that I can** access exclusive discounts and have a profile.
+4. **I want to** log in and out of my account, **so that I can** access my account and enable secure interactions when logged in.
+5. **I want to** update my profile information (name, email, address, phone number, etc.), **so that I can** ensure personal information is up to date and improve the user experience.
+6. **I want to** add hiking packages to my shopping cart, **so that I can** use the items when checking out and purchasing.
+7. **I want to** view the contents of my shopping cart, **so that I can** review my choices and make adjustments if needed.
+8. **I want to** place an order for the hiking package in my cart, **so that I can** complete the booking process by confirming and buying the package.
+9. **I want to** submit reviews for hiking packages I have purchased or experienced, **so that I can** share my experiences about a package and provide helpful feedback to users and administrators.
+10. **I want to** edit and delete my own reviews, **so that I can** make corrections to a review or delete it altogether.
+11. **I want to** see ratings on reviews to quickly gauge the quality of a hiking package, **so that I can** quickly assess the quality or popularity of packages to aid my decision-making.
+
+## Admin Features
+
+1. **I want to** log in and log out of my admin account, **so that I can** have secure access to the website admin features while keeping this information protected.
+2. **I want to** manage the list of available hiking packages, including adding, editing, and deleting packages, **so that I can** edit and maintain the list, ensuring it is up to date and correct.
+3. **I want to** view a list of registered users and their profile information, **so that I can** address inquiries or issues and ensure a safe, secure, user-friendly experience.
+4. **I want to** access and manage user orders, including viewing details and updating the status of an order, **so that I can** oversee and process orders, track sales, and address any issues.
+5. **I want to** access and manage user reviews, including the ability to edit and delete reviews, **so that I can** ensure reviews adhere to community guidelines and address anything inappropriate.
+6. **I want to** receive notifications or emails when a new order is placed or when a user submits a review, **so that I can** be kept informed of important events happening on the website and respond in a timely fashion.
+7. **I want to** view statistics and analytics on website usage, e.g., popular packages, sales trends, etc., **so that I can** make decisions based on the data to enhance the website offerings and user experience.
+
+
+
 
 #### Client Goals
 
