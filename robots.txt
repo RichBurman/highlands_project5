@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /account/
+Disallow: /cart/
+Disallow: /checkout/
+Sitemap: https://highlands-fe23cbc4972e.herokuapp.com/sitemap.xml
