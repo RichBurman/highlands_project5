@@ -60,47 +60,6 @@ def checkout_success(request, order_id):
 
     return render(request, 'checkout/checkout_success.html', {'order': order})
 
-
-# def checkout(request):
-#     cart = Cart.objects.filter(user=request.user)
-
-#     if not cart.exists():
-#         return redirect('cart:cart_view')
-
-#     total_price = sum(item.package.price * item.quantity for item in cart)
-#     discounted_cart = []
-
-#     if request.method == 'POST':
-#         form = CheckoutForm(request.POST)
-#         if form.is_valid():
-#             discount_code = form.cleaned_data.get('discount_code')
-#             discount_percentage = get_discount_percentage(discount_code)
-#             discount_percentage_decimal = Decimal(discount_percentage)
-
-#             for cart_item in cart:
-#                 discounted_price = cart_item.package.price - (cart_item.package.price * (discount_percentage_decimal / 100))
-#                 discounted_cart.append({
-#                     'package': cart_item.package,
-#                     'quantity': cart_item.quantity,
-#                     'original_price': cart_item.package.price,
-#                     'discounted_price': discounted_price,
-#                 })
-
-#             order = Order.objects.create(user=request.user, total_price=total_price)
-
-#             for discounted_item in discounted_cart:
-#                 OrderItem.objects.create(order=order, package=discounted_item['package'], quantity=discounted_item['quantity'])
-
-#             Payment.objects.create(order=order, amount=total_price)
-
-#             cart.delete()
-
-#             return redirect('checkout:order_confirmation', order_id=order.id)
-#     else:
-#         form = CheckoutForm()
-
-#     return render(request, 'checkout/checkout.html', {'form': form, 'cart': cart, 'total_price': total_price, 'discounted_cart': discounted_cart})
-
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 def process_checkout(request):

@@ -366,15 +366,23 @@ To fork the repository:
 
 ### Code Used
 
-[Add the code you used here]
+Some of the code was used for the base.html from the [Boutique_ado](https://github.com/Code-Institute-Org/boutique_ado_v1) walkthrough. 
 
 ### Content
 
-[Add your content information here]
+Content for the website was written by Richard Burman
+Research using [w3c](https://www.w3schools.com/), [bootstrap](https://getbootstrap.com/), [Stripe](https://stripe.com/gb)
 
 ### Media
 
-- [Add your media information here]
+- Some images were taken from Unsplash
+- 
+- All images were compressed using Optimizilla to aid website performance.
+- Screenshots taken from the following website for this README
+- Lighthouse
+- Jigsaw validator
+- W3C validator
+- Am I Responsive?
 
 ### Acknowledgments
 

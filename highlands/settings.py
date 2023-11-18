@@ -171,8 +171,8 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Stripe 
 STRIPE_CURRENCY = 'gbp'
-STRIPE_PUBLIC_KEY = 'pk_test_51OCjleAlMexvtTh6jF3VgmQ3nxfXbOJFidXa2RyQonGasXz8RxMWULqBek05FVxZG4lNVT0mAVbW7yIpMx20M9Q400aVsmlqn2'
-STRIPE_SECRET_KEY = 'sk_test_51OCjleAlMexvtTh64qkRflDwlV4Vl5oK9ntUhywhHu8spKCYAukbcJQthIQWZ7qn6YH9sy5YrzolbvxviUOtaqlj00Vpn5Lu30'
+STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
 
 
 # Default primary key field type
