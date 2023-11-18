@@ -181,4 +181,3 @@ def validate_discount(request, discount_code):
         return JsonResponse({'valid': True, 'discount_percentage': float(code.discount_percentage)})
     except DiscountCode.DoesNotExist:
         return JsonResponse({'valid': False})
-
