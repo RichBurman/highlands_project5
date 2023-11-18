@@ -75,6 +75,11 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'account_login' %}">Login</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'account_signup' %}">Register</a></li>
                     {% endif %}
+                    {% if user.is_staff %}
+                    <li class="nav-item {% if request.resolver_match.url_name == 'admin:index' %}active{% endif %}">
+                        <a class="nav-link" href="{% url 'admin:index' %}">Admin Login</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>

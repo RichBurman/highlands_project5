@@ -287,6 +287,11 @@ Github Project
         - ![Edit Personal Details](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346750/edit_user_profile_jvoc9h.png)
 
 
+    - Admin Features
+
+    - 
+
+
 
 
 ### Future Implementations
