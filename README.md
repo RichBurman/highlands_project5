@@ -4,9 +4,9 @@
 
 ![Am I Responsive Image]()
 
-Github link to the project [Github link](https://github.com/your-username/your-project-repo)
+Github link to the project [Github link](https://github.com/RichBurman/highlands_project5)
 
-Live Link to the project website [Live link](https://your-live-link.com)
+Live Link to the project website [Live link](https://highlands-fe23cbc4972e.herokuapp.com/)
 
 ## CONTENTS
 
@@ -100,11 +100,15 @@ The user stories are split into User and Admin.
 
 ### Typography
 
-- [Add your typography information here]
+- Default fonts were used for the following:
+- Headings
+- Body
+- Messages
 
 ### Imagery
 
-- [Add your imagery information here]
+- Some Images were used from the [Unsplash](https://unsplash.com/) website.
+- All other images are owned by Author Richard Burman
 
 ### Wireframes
 
