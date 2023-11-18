@@ -134,6 +134,8 @@ def process_checkout(request):
             discount_code = form.cleaned_data.get('discount_code', '')
             discount_amount = calculate_discount(total_price, discount_code)
 
+            total_amount = total_price - discount_amount
+
             
             order = Order.objects.create(
                 user=request.user,
