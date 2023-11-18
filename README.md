@@ -221,68 +221,70 @@ Github Project
         - review_view.html
     - The reasoning behind this only registered users can make purchases or add reviews on the website and therefore non registered users do not need access to these pages. 
 
-    - Home Page
+    ### Home Page
+
+    - 
 
     ![Home Page](https://res.cloudinary.com/dbagkfamv/image/upload/v1700343694/homepage1_m8ciea.png)
 
-    - Home Page Image 2
+    ### Home Page Image 2
 
     ![Home Page Image 2](https://res.cloudinary.com/dbagkfamv/image/upload/v1700343842/homepage2_eqmd2d.png)
 
-    - Home Page Image 3
+    ### Home Page Image 3
 
     ![Home Page Image 3](https://res.cloudinary.com/dbagkfamv/image/upload/v1700343841/homepage3_ql4apm.png)
 
-    - The Navigation bar
+    ### The Navigation bar
 
-    - Navigation Bar for Registered Users
+    ### Navigation Bar for Registered Users
 
     ![Navigation Bar for Registered Users](https://res.cloudinary.com/dbagkfamv/image/upload/v1700343517/nav_bar_registereduser_hhcvey.png)
 
-    - Navigation Bar for Non Registered Users
+    ###  Navigation Bar for Non Registered Users
 
     ![Navigation Bar for non Registered Users](https://res.cloudinary.com/dbagkfamv/image/upload/v1700343635/nav_bar_nonuser_nk7vt2.png)
 
-    - Navigation Bar for Staff
+    ###  Navigation Bar for Staff
 
     ![Staff Navigation Bar](https://res.cloudinary.com/dbagkfamv/image/upload/v1700347435/staff_nav_qy9k7b.png)
 
-    - Package List
+    ###  Package List
 
     ![Package List](https://res.cloudinary.com/dbagkfamv/image/upload/v1700344145/packages_list_di1tvj.png)
 
-    - Package Detail
+    ###  Package Detail
 
     ![Package Detail](https://res.cloudinary.com/dbagkfamv/image/upload/v1700344175/package_detail_trlzul.png)
     ![]()
 
-    - About Us
+    ###  About Us
 
     ![About Us](https://res.cloudinary.com/dbagkfamv/image/upload/v1700344495/aboutus_yz5cyg.png)
 
-    - Gallery
+    ###  Gallery
     ![Gallery](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345141/gallery_p3hgqw.png)
 
-    - Reviews
+    ###  Reviews
     ![Reviews](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345374/customer_reviews_o1b56a.png)
 
-    - Cart
+    ###  Cart
     ![Cart](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346630/cart_cjchov.png)
 
-    - User Reviews
+    ###  User Reviews
     ![User Reviews](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346523/user_reviews_wlcamf.png)
 
-    - Login/Logout
+    ###  Login/Logout
         - Login
         - ![Login](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345098/login_fposb8.png)
         - Logout
         - ![Logout](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346454/logout_rlke4p.png)
        
 
-    - Register
+    ###  Register
     ![Register](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346576/register_mllzsa.png)
 
-    - User Profile Details
+    ###  User Profile Details
         - User Profile
         ![User Profile](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346710/user_profile_ivrlgi.png)
         - Edit User Profile
@@ -291,61 +293,61 @@ Github Project
         - ![Edit Personal Details](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346750/edit_user_profile_jvoc9h.png)
 
 
-    - Admin Features
+    ## Admin Features
 
-     - Navigation Bar for Staff
+    ###  Navigation Bar for Staff
 
     ![Staff Navigation Bar](https://res.cloudinary.com/dbagkfamv/image/upload/v1700347435/staff_nav_qy9k7b.png)
 
-    - Admin Sign In
+    ###  Admin Sign In
     ![Admin Sign In](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345691/admin_signin_vfydef.png)
 
-    - Admin View
+    ###  Admin View
     ![Admin View](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345694/admin_view_xcxmfy.png)
 
-    - Admin Discount View
+    ###  Admin Discount View
     ![Admin Discount View](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345693/discount_admin_s70wk8.png)
 
-    - Admin Order Items
+    ###  Admin Order Items
     ![Admin Order Items](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345690/order_items_admin_cblvmd.png)
 
-    - Detailed View
+    #### Detailed View
     ![Detailed View Order Item](https://res.cloudinary.com/dbagkfamv/image/upload/v1700347890/detail_order_item_udxf0y.png)
 
-    - Admin Orders
+    ###  Admin Orders
     ![Admin Orders](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345688/orders_admin_iqafey.png)
 
-     - Detailed View
+    #### Detailed View
     ![Detailed View Order ](https://res.cloudinary.com/dbagkfamv/image/upload/v1700347953/detail_order_runngi.png)
 
-    - Admin Payments
+    ###  Admin Payments
     ![Admin Payments](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345686/payment_admin_colzin.png)
 
-     - Detailed View
+    ####  Detailed View
     ![Detailed View Payment ](https://res.cloudinary.com/dbagkfamv/image/upload/v1700348031/detail_payment_ed4xgl.png)
 
-    - Admin Packages
+    ###  Admin Packages
     ![Admin Packages](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345696/packages_admin_at0g2f.png)
 
-     - Detailed View
+    ####  Detailed View
     ![Detailed View Packages ](https://res.cloudinary.com/dbagkfamv/image/upload/v1700348122/detail_package_dkkeyg.png)
 
-    - Admin Reviews
+    ###  Admin Reviews
     ![Admin Reviews](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345685/review_admin_gcwdrm.png)
 
-    - Detailed View
+    ####  Detailed View
     ![Detailed View Review ](https://res.cloudinary.com/dbagkfamv/image/upload/v1700348179/detail_review_nzssmi.png)
 
-    - Admin User Profiles
+    ###  Admin User Profiles
     ![Admin User Profiles](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345683/user_profile_admin_drdfcz.png)
 
-    - Detailed View
+    ####  Detailed View
     ![Detailed View User Profile ](https://res.cloudinary.com/dbagkfamv/image/upload/v1700348228/detail_userprofile_jsnyu5.png)
 
-    - Admin Users
+    ###  Admin Users
     ![Admin Users](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345682/users_admin_jmzbu9.png)
 
-    - Detailed View
+    ####  Detailed View
     ![Detailed View User](https://res.cloudinary.com/dbagkfamv/image/upload/v1700348296/detail_user_n3azrs.png)
 
 
