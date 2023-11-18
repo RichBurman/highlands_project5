@@ -104,11 +104,15 @@ def checkout_success(request, order_id):
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 def process_checkout(request):
+    print('process_checkout invoked')
     cart = Cart.objects.filter(user=request.user)
     total_price = sum(item.package.price * item.quantity for item in cart)
 
     stripe.api_key = settings.STRIPE_SECRET_KEY
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
+
+    stripe_public_key = settings.STRIPE_PUBLIC_KEY
+    stripe_secret_key = settings.STRIPE_SECRET_KEY
 
     form = CheckoutForm()
 
@@ -152,11 +156,14 @@ def process_checkout(request):
 
             messages.success(request, 'Order placed successfully! Your Adventure Begins!')
             client_secret = intent.client_secret
-            return render(request, 'checkout/checkout_success.html', {'order': order, 'client_secret': client_secret})
-
+            return render(request, 'checkout/checkout_success.html', {'order': order, 'client_secret': client_secret, 'public_key': stripe_public_key})
+        else:
+            print('form is not valid')
+            print(form.errors)
+            
     
     client_secret = intent.client_secret
-    return render(request, 'checkout/checkout.html', {'form': form, 'cart': cart, 'total_price': total_price, 'client_secret': client_secret})
+    return render(request, 'checkout/checkout.html', {'form': form, 'cart': cart, 'total_price': total_price, 'client_secret': client_secret, 'public_key': stripe_public_key})
 
 
 

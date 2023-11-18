@@ -65,6 +65,7 @@
         <div id="card-errors" class="alert alert-danger mt-3" role="alert"></div>
 
         <input type="hidden" id="client-secret" value="{{ client_secret }}">
+        <input type="hidden" id="public-secret" value="{{ public_key }}">
 
         <!-- Submit Button -->
         <button type="submit" id="submit-button" class="btn btn-success">Submit</button>
@@ -74,7 +75,8 @@
 <script src="https://js.stripe.com/v3/"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        var stripe = Stripe('pk_test_51OCjleAlMexvtTh6jF3VgmQ3nxfXbOJFidXa2RyQonGasXz8RxMWULqBek05FVxZG4lNVT0mAVbW7yIpMx20M9Q400aVsmlqn2'); 
+        const publicKey = document.getElementById('public-secret').value;
+        var stripe = Stripe(publicKey); 
         var elements = stripe.elements();
 
         var card = elements.create('card');
@@ -108,6 +110,7 @@
                 console.log('Stripe confirmCardPayment callback:', result);
 
                 if (result.error) {
+                    console.log('stripe error');
                     // Show error 
                     var errorElement = document.getElementById('card-errors');
                     errorElement.textContent = result.error.message;
@@ -115,6 +118,7 @@
                     // Re-enable the submit button on error
                     submitButton.disabled = false;
                 } else {
+                    console.log('stripe succeeded.')
                     // The payment succeeded!
                     form.submit();
                 }

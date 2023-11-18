@@ -8,8 +8,4 @@ class CheckoutForm(forms.Form):
     country = CountryField().formfield()
     phone_number = forms.CharField()
 
-    card_number = forms.CharField()
-    card_expiry = forms.CharField()
-    card_cvc = forms.CharField()
-    terms_and_conditions = forms.BooleanField()
     discount_code = forms.CharField(required=False)
