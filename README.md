@@ -301,11 +301,20 @@ Github Project
 
     ![Staff Navigation Bar](https://res.cloudinary.com/dbagkfamv/image/upload/v1700347435/staff_nav_qy9k7b.png)
 
+    ### Footer 
+
+    - The footer is displayed on every page on the website to allow users to navigate to the social links for Highland Adventures. 
+        - Facebook - This would link to the Highland Adventure business page. I have linked this to facebook.com, as this is a project and not a live business. 
+        - Twitter - This would link to the Highland Adventure Twitter page. I have linked this to twitter.com - as this is a project and not a live business. 
+        - Instagram - This would link to the Highland Adventure Instagram page. I have linked this to Instagram.com - as this is a project and not a live business. 
+
+    ![Footer](https://res.cloudinary.com/dbagkfamv/image/upload/v1700343840/footer_qxrhkn.png)
+
     ###  View Packages 
 
     - View Packages displays all the packages available for the user to purchase.
     - Each package displays:
-        - An image from the walking package to draw the user in.
+        - An image from the walking package to draw the user in. When the user hovers over the image, the image enlargens to draw the user in. 
         - A description of the package 
         - A difficuly rating for the package
         - The price of the package
