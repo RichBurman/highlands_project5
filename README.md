@@ -138,20 +138,38 @@ Live Link to the project website [Live link](https://highlands-fe23cbc4972e.hero
 6. **I want to** receive notifications or emails when a new order is placed or when a user submits a review, **so that I can** be kept informed of important events happening on the website and respond in a timely fashion.
 7. **I want to** view statistics and analytics on website usage, e.g., popular packages, sales trends, etc., **so that I can** make decisions based on the data to enhance the website offerings and user experience.
 
+Github Project
 
+![Github Project](https://res.cloudinary.com/dbagkfamv/image/upload/v1700340872/Github_Project_bzjxkl.png)
 
 
 #### Client Goals
 
-- [Add your client goals here]
+- My client goals for this website are the following:
+    - Increase sales for the client selling the hiking packages to an online market.
+    - Enchance User Experience - Making a user friendly website were users can navigate easily and complete any purchases with ease. 
+    - Build Brand Awareness - With the website, the mailchimp newsletter set up and a facebook business page, this opens up Highlands Adventures to a wide range of new market of potential customers. 
+    - Customer Loyalty - Offering a online discount on orders encourages users to sign up to the site, which encourages loyalty and repeat business
+    - Ensuring Security and Data Protection - Ensuring the client meets security and data protection that is needed for online transactions and hosting a secure environment. 
+    - Improving the SEO Ranking - Adding robots.txt and sitemap.xml and key meta data to the website encourages a higher ranking on SEO. 
 
 #### First Time Visitor Goals
 
-- [Add your first-time visitor goals here]
+- My goals for users visiting the website for the first time are the following:
+    - The website capturing the attention of the user and that they fully understand easily what the website is about and what it offers. 
+    - Easy Navigation around the website, making it easy to find the information they want. 
+    - Highlight the key features of Highland Adventures, the packages, the locations, the discount available
+    - Encourage them to become a memeber, with offering them exclusive discount for purchasing packages online. 
+    - Encouraging the use of the social media links, where users may be able to find out more information about Highland Adventures, but crictical share Highland Adventures to friends and family which hopefully results in more visitors to the website and potential new customers and therefore more sales. 
+    - Encouraging the user to read reviews of previous users experiences and encouraging more sales.
 
 #### Returning and Frequent Visitor Goals
 
-- [Add your returning and frequent visitor goals here]
+-  My goals for returning users are the following:
+    - Encouraging users to book new packages after their first booking. With the addition of the review section, users will return to the site to fill in their review of their package and hopefully book another one! 
+    - New packages would be highlighted to returning users on the home page and in the packages page. Also with the newsletter and Facebook business page, this is another method of marketing to the user if they haven't recently visited the website. 
+    - Community - with the review section, users are encouraged to come back and read the reviews on the other packages and this may encourage them to make a purchase, as long as the reviews are positive! 
+
 
 ## Design
 
