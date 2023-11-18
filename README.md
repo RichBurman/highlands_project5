@@ -301,7 +301,15 @@ Github Project
 
     ![Staff Navigation Bar](https://res.cloudinary.com/dbagkfamv/image/upload/v1700347435/staff_nav_qy9k7b.png)
 
-    ###  Package List
+    ###  View Packages 
+
+    - View Packages displays all the packages available for the user to purchase.
+    - Each package displays:
+        - An image from the walking package to draw the user in.
+        - A description of the package 
+        - A difficuly rating for the package
+        - The price of the package
+
 
     ![Package List](https://res.cloudinary.com/dbagkfamv/image/upload/v1700344145/packages_list_di1tvj.png)
 
