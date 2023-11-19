@@ -84,14 +84,14 @@ Live Link to the project website [Live link](https://highlands-fe23cbc4972e.hero
 - User Friendly Experience - user-friendly website making it easy for users to browse, select and purchase hiking packages
 - Exclusive Discount for Registered Users - Signing up to become a member and you enjoy discounts. Starting with a discount of 10% on all bookings, which shows on the website to those users that are registered. 
 - Secure Account - User accounts and personal is kept safe and secure. 
-- Streamlined ordering process - Simple system to allow users to easily place and order. 
-- Review Pages - Users can share their experience of the hiking packages they have purchased on the reviews. They can also view these reviews prior to making a purchase to see what other users have said about the packages. 
+- Streamlined ordering process - Simple system to allow users to easily place an order. 
+- Review Pages - Users can share their personal experience of the hiking packages they have purchased on the reviews. They can also view these reviews prior to making a purchase to see what other users have said about the packages. 
 
 ### Business Model
 
 - Highland Adventures
 
-- Highland Adventures operates on a dynamic e-commerce business model, serving both the Business-to-Business (B2B) and Business-to-Consumer (B2C) markets. Our platform is the gateway for outdoor enthusiasts and businesses to explore, purchase, and organize unforgettable hiking experiences in the Scottish Highlands.
+- Highland Adventures operates on a dynamic e-commerce business model, serving both the Business-to-Business (B2B) and Business-to-Consumer (B2C) markets. Our platform is the gateway for outdoor enthusiasts and businesses to explore, purchase, and organise unforgettable hiking experiences in the Scottish Highlands.
 
 - Core Business Intents
 
@@ -107,7 +107,7 @@ Live Link to the project website [Live link](https://highlands-fe23cbc4972e.hero
 
 - Exclusive Discounts
 
-- Providing registered users with exclusive discounts to incentivize account creation and foster loyalty.
+- Providing registered users with exclusive discounts to incentivise account creation and foster loyalty.
 
 - Secure User Accounts
 
@@ -175,9 +175,9 @@ Github Project
     - The website capturing the attention of the user and that they fully understand easily what the website is about and what it offers. 
     - Easy Navigation around the website, making it easy to find the information they want. 
     - Highlight the key features of Highland Adventures, the packages, the locations, the discount available
-    - Encourage them to become a memeber, with offering them exclusive discount for purchasing packages online. 
-    - Encouraging the use of the social media links, where users may be able to find out more information about Highland Adventures, but crictical share Highland Adventures to friends and family which hopefully results in more visitors to the website and potential new customers and therefore more sales. 
-    - Encouraging the user to read reviews of previous users experiences and encouraging more sales.
+    - Encourage them to become a member, with offering them exclusive discount for purchasing packages online. 
+    - Encouraging the use of the social media links, where users may be able to find out more information about Highland Adventures, but crucually share Highland Adventures to friends and family which hopefully results in more visitors to the website and potential new customers and therefore more sales. 
+    - Encouraging the user to read reviews of previous users experiences and encourage more sales.
 
 #### Returning and Frequent Visitor Goals
 
@@ -266,7 +266,7 @@ Github Project
 
     ### Navigation Bar for Registered Users
 
-    The navigation bar on the website is different for different users on the website. The navigation bar for registered users shows the following:
+    - The navigation bar on the website is different for different users on the website. The navigation bar for registered users shows the following:
         - Home - links to Home Page
         - View Packages - links to view a list of all the hiking packages offered and available to purchase. Users can select a package and go to a package detail section which displays more information on the package and allows the user to add to cart ready for purchasing. 
         - About Us - links to an About Us page which details about Highland Adventures
@@ -284,14 +284,12 @@ Github Project
 
     ###  Navigation Bar for Non Registered/Logged In Users
 
-    The navigation bar for registered users shows the following:
+    - The navigation bar for registered users shows the following:
         - Home - links to Home Page
         - View Packages - links to view a list of all the hiking packages offered and available to purchase. Users can select a package and go to a package detail section which displays more information on the package and allows the user to add to cart ready for purchasing. 
         - About Us - links to an About Us page which details about Highland Adventures
         - Gallery - links to a gallery page where users can view images from our packages
         - Reviews - links to Reviews of all the packages on the website. Users can read through current reviews on any package they desire and also add a review to any package they desire. 
-        
-        
         - Login - links to a login page where the user can login. 
         - Register - links to a page where the user can register to become a registered user. 
 
@@ -299,7 +297,7 @@ Github Project
 
     ###  Navigation Bar for Staff
 
-    The navigation bar for registered Staff users shows the following:
+    - The navigation bar for registered Staff users shows the following:
         - Home - links to Home Page
         - View Packages - links to view a list of all the hiking packages offered and available to purchase. Users can select a package and go to a package detail section which displays more information on the package and allows the user to add to cart ready for purchasing. 
         - About Us - links to an About Us page which details about Highland Adventures
@@ -332,7 +330,7 @@ Github Project
         - An image from the walking package to draw the user in. When the user hovers over the image, the image enlargens to draw the user in. 
         - A description of the package 
         - A difficuly rating for the package
-        - The price of the package
+        - The price of the package (Before any discount applied)
 
 
     ![Package List](https://res.cloudinary.com/dbagkfamv/image/upload/v1700344145/packages_list_di1tvj.png)
@@ -345,8 +343,8 @@ Github Project
         - It displays the description of the package to the user. 
         - It displays the difficulty rating of the package. 
         - It displays the price of the package. 
-        - It displays a Add to Cart button - which if the user clicks, will add the package to the cart. When a user clicks on this button, it add the package to the cart and redirect them to the cart page to view their cart. 
-        - It displays a selection of Customer Reviews for the package. The user can read through the reviews from fellow users to see what they experience of the package was. It provides the user with a fantastic user experience. The user can click on the username of the user who wrote the review, to view their User Profile, where they can see the user bio, profile picture and all the reviews they have added to the website. 
+        - It displays a Add to Cart button - which if the user clicks, will add the package to the cart. When a user clicks on this button, it adds the package to the cart and redirects them to the cart page to view their cart. 
+        - It displays a selection of Customer Reviews for the package. The user can read through the reviews from fellow users to see what their experience of the package was. It provides the user with a fantastic user experience. The user can click on the username of the user who wrote the review, to view their User Profile, where they can see the user bio, profile picture and all the reviews they have added to the website. 
 
     ![Package Detail](https://res.cloudinary.com/dbagkfamv/image/upload/v1700344175/package_detail_trlzul.png)
     ![]()
@@ -359,14 +357,14 @@ Github Project
 
     ###  Gallery
 
-    - The Gallery displays a selection of images from the packages to the user to view. It is offers a good user experience as they can view the images and this may encourage them to purchase a package to see the mountains with their own eyes!
+    - The Gallery displays a selection of images from the packages to the user to view. It offers a good user experience as they can view the images and this may encourage them to purchase a package to see the mountains with their own eyes!
 
     ![Gallery](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345141/gallery_p3hgqw.png)
 
     ###  Reviews
 
-    - The Reviews displays all of the packages to the user, but the user can select to view the reviews for each package by clicking on the View Review button. This will take the user to a page which displays all the user reviews on that package. 
-    - There is also a Add a Review button. This is only visible to registered users and allows the user to add a review to that package. The user can select the following:
+    - The Reviews page displays all of the packages to the user, but the user can select to view the reviews for each package by clicking on the View Review button. This will take the user to a page which displays all the user reviews on that specific package. 
+    - There is also a Add a Review button. This is only visible to registered users and allows the user to add a review for a specific package. The user can select the following:
         - Difficult Rating - how difficult they found the walking package
         - Overall Rating - the overall rating for the walking package
         - Review - a textbox which allows the user to type in their review of the package and add their own detail. 
@@ -383,11 +381,11 @@ Github Project
             - Quantity - this can be adjust by the user inputting a number and clicking on Update Quantity button.
             - Update Quantity button - saves any changes the user makes to the quantity. 
             - Remove button - the user can click this button and it will remove the package from the cart. 
-            - Total Price - this display the total price of all the packages in the cart. 
+            - Total Price - this displays the total price of all the packages in the cart. 
             - Displays a list of the packages and quantities of each. 
-            - Proceed to Checkout Button - the user can click on this button and it will take the items in the cart and take the user to the checkout page where they can process the order. 
+            - Proceed to Checkout Button - the user can click on this button and it will take the item(s) in the cart and take the user to the checkout page where they can process the order. 
 
-        - If the user has not added any packages to the cart and click on the cart button in the navigation bar, they will find the cart to be empty and this is displayed to the user. 
+        - If the user has not added any packages to the cart and clicks on the cart button in the navigation bar, they will find the cart to be empty and this is displayed to the user. 
 
         ![Empty Cart](https://res.cloudinary.com/dbagkfamv/image/upload/v1700353459/empty_cart_qhvoiy.png)
 
@@ -403,9 +401,9 @@ Github Project
         - Country
         - Order Summary - Display the items the user is purchasing and quantity. 
         - Discount Code - where the user can input a discount code to apply discount
-        - Apply Discount button - this process the discount on the total price
+        - Apply Discount button - this processes the discount on the total price
         - Card detail field - this is a stripe field where the user inputs their card details.
-        - Submit button - this process the purchase through to stripe. If the form is valid, the order will be submiited. The user will be redirect to order confirmation page. 
+        - Submit button - this processes the purchase through to stripe. If the form is valid, the order will be submiited. The user will be redirected to order confirmation page. 
 
      ![Checkout](https://res.cloudinary.com/dbagkfamv/image/upload/v1700357773/all_fields__needed_e7epm7.png)
 
@@ -431,7 +429,7 @@ Github Project
 
     ###  User Reviews
 
-    - User Review displays to the user all of the reviews they have added to the website, if they have submitte any reviews. It displays the following: 
+    - User Reviews displays for the user all of the reviews they have personally added to the website. If they haven't submitted any reviews this will show as empty. It displays the following: 
         - The package title of the review
         - The date and time the review was created
         - The review text
@@ -442,7 +440,7 @@ Github Project
 
     ###  Login/Logout - Set Up using AllAuth
 
-    - This allows the user to login/logout into the website if they are not logged in or logged out. 
+    - This allows the user to login/logout of the website if they are not logged in or logged out. 
     - Login
     - ![Login](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345098/login_fposb8.png)
     - Logout
@@ -464,7 +462,7 @@ Github Project
     ###  User Profile Details
     - User Profile
 
-    - User Profile - links to a page where the user can view their User Profile and Personal Information. Also this displays to the user their discount code. 
+    - User Profile - links to a page where the user can view their User Profile and Personal Information. This also displays to the user a discount code. 
 
     ![User Profile](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346710/user_profile_ivrlgi.png)
     - Edit User Profile
