@@ -344,14 +344,25 @@ Github Project
 
     ###  Gallery
 
-    The Gallery displays a selection of images from the packages to the user to view. It is offers a good user experience as they can view the images and this may encourage them to purchase a package to see the mountains with their own eyes!
-    
+    - The Gallery displays a selection of images from the packages to the user to view. It is offers a good user experience as they can view the images and this may encourage them to purchase a package to see the mountains with their own eyes!
+
     ![Gallery](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345141/gallery_p3hgqw.png)
 
     ###  Reviews
+
+    - The Reviews displays all of the packages to the user, but the user can select to view the reviews for each package by clicking on the View Review button. This will take the user to a page which displays all the user reviews on that package. 
+    - There is also a Add a Review button. This is only visible to registered users and allows the user to add a review to that package. The user can select the following:
+        - Difficult Rating - how difficult they found the walking package
+        - Overall Rating - the overall rating for the walking package
+        - Review - a textbox which allows the user to type in their review of the package and add their own detail. 
+        - Submit Button - the user clicks to submit their review. 
     ![Reviews](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345374/customer_reviews_o1b56a.png)
+    ![Reviews of a Package](https://res.cloudinary.com/dbagkfamv/image/upload/v1700352700/Reviews_for__package_j9mfxz.png)
+    ![Add a Review](https://res.cloudinary.com/dbagkfamv/image/upload/v1700352796/add_review_sknbk0.png)
 
     ###  Cart
+
+    
     ![Cart](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346630/cart_cjchov.png)
 
     ###  User Reviews
