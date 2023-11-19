@@ -942,7 +942,12 @@ All css pages passed W3C testing.
 
 ### Lighthouse
 
-[Add your Lighthouse testing results here]
+- The lighthouse scores show the following:
+
+![Lighthouse](https://res.cloudinary.com/dbagkfamv/image/upload/v1700360138/lighthouse1_qigzqp.png)
+
+- Image Size is affecting the performance. However, the quantity of the images add to the user experience. 
+![Lighthouse 2](https://res.cloudinary.com/dbagkfamv/image/upload/v1700360132/lighthouse2_tv6ytq.png)
 
 ## Credits
 
