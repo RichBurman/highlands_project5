@@ -929,7 +929,8 @@ To fork the repository:
 
 ### W3C Validator
 
-[Add your W3C Validator results here]
+All html pages passed W3C testing. (Apart from Parse Errors)
+All css pages passed W3C testing. 
 
 ### Solved Bugs
 
