@@ -377,9 +377,36 @@ Github Project
 
     ### Checkout 
 
-    - 
+    - The checkout allows the user to process the payment of the items from the cart. The checkout contains a form with the following:
+        - Address Line 1
+        - Address Line 2
+        - County
+        - Country
+        - Order Summary - Display the items the user is purchasing and quantity. 
+        - Discount Code - where the user can input a discount code to apply discount
+        - Apply Discount button - this process the discount on the total price
+        - Card detail field - this is a stripe field where the user inputs their card details.
+        - Submit button - this process the purchase through to stripe. If the form is valid, the order will be submiited. The user will be redirect to order confirmation page. 
 
      ![Checkout](https://res.cloudinary.com/dbagkfamv/image/upload/v1700357773/all_fields__needed_e7epm7.png)
+
+     ### Order Confirmation
+
+     - This is the order confirmation and displays to the user the following:
+        - Order Details
+            - User 
+            - Total Price
+            - Items Ordered
+        - Shipping Information 
+            - Address Line 1
+            - Address Line 2
+            - County
+            - Country
+            - Phone Number
+        
+        - This provides the user with confirmation that the order has been processed and payment has been taken. 
+
+     ![Order Confirmed](https://res.cloudinary.com/dbagkfamv/image/upload/v1700358553/checkout_success_lzx5df.png)
 
     - 
 
