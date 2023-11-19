@@ -20,10 +20,8 @@ Live Link to the project website [Live link](https://highlands-fe23cbc4972e.hero
       - [First Time Visitor Goals](#first-time-visior-goals)
       - [Returning and Frequent Visitor Goals](#returning-and-frequent-visitor-goals)
   - [Design](#design)
-    - [Colour Scheme](#colour-scheme)
     - [Typography](#typography)
     - [Imagery](#imagery)
-    - [Wireframes](#wireframes)
   - [Features](#features)
     - [Future Implementations](#future-implementations)
   - [Technologies Used](#technologies-used)
@@ -170,6 +168,7 @@ Github Project
     - New packages would be highlighted to returning users on the home page and in the packages page. Also with the newsletter and Facebook business page, this is another method of marketing to the user if they haven't recently visited the website. 
     - Community - with the review section, users are encouraged to come back and read the reviews on the other packages and this may encourage them to make a purchase, as long as the reviews are positive! 
 
+## Design
 
 ### Typography
 
@@ -183,9 +182,6 @@ Github Project
 - Some Images were used from the [Unsplash](https://unsplash.com/) website.
 - All other images are owned by Author Richard Burman
 
-### Wireframes
-
-- [Add your wireframes information here]
 
 ## Features
 
@@ -586,7 +582,30 @@ Github Project
 
 ### Future Implementations
 
-- [Add your future implementations here]
+- Please find below a detailed list of future implementations for the website. 
+
+- Discount code functionality
+    - As detailed in the bugs section below, sadly the discount code functionality is not operating in full. The discount codes work, when a user enters the discount code and applies it at the checkout. However, Stripe will take the full total price and not the discounted price, but the website will process and display to the user that the discount price has been paid! This would lead to extremely poor user experience and would need to be fixed or address prior the website going live. 
+- Users only being able to submit reviews on packages they have an order history of purchasing
+    - At the momemnt a user can submit a review on any package, whether they have purchased it or not. I would like to set up where the user can only submit a review on packages they have purchased. The reasoning behind this is to enchance the user experience, as the user will only be reading reviews from users who have purchased the packages. 
+- Admin approving reviews before they are visible on the reviews. 
+    - Currently users can submit their review and this will go live on the site. It would be good to set up, where the review has to go through to admin staff first, where the review can be approved by staff, before it is live on the site. 
+- Cart in Nav Bar showing item numbers
+    - It would be good when a user adds an item to the cart, it displays the total quantity in the nav bar next to the cart. It would allow the user to see on any page on the website, how many items are in their cart, without having to go to the cart. 
+- Email the user when they register and delivering them unique discount codes.
+    - This would enhance the user experience and allow the discount codes to change. Also, it would be good if discount codes had expiry dates or limited uses, to encourage sales and also prevent too many discounts. 
+- Webhooks and adapting the database
+    - The website currently does not have webhooks set up. When an order is processed to Stripe, the payment goes through and the database is updated via the website code. For a more detailed and synced database to Stripe, the use of webhooks would be a huge benefit. Also for user experience, for admin and users, as it is easier to see all the information about orders in the database and not having to compare to Stripe. 
+
+- Information email to User when they register or complete a purchase.
+    - When the user registers as a user, it would be good User experience, if they receieved a personal email welcoming them to the site. 
+    - When the user completes an order, it would be good User experience, if they receieved an email with their order confirmation. 
+- Orders having Order Numbers for the user and admin
+    - This would allow orders to be found at ease for admin and also give the user a unique order number if they need to enquire about their order. 
+- Register an user account using social media
+    - User being able to create an account via social media, e.g. facebook, twitter etc. This would be good user experience, as users can create accounts very quickly and also offered marketing oppportunities for Highlands Adventures. 
+- Payment via ApplePay, Pay Pal etc
+    - Currently payment is card only. It would be good to offer more methods of payment to the user to improve user experience. 
 
 ## Technologies Used
 
