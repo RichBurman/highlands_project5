@@ -194,6 +194,7 @@ Github Project
 - Headings
 - Body
 - Messages
+- Font Awesome
 
 ### Imagery
 
@@ -664,6 +665,8 @@ Github Project
 
 ## Technologies Used
 
+- Included a robots.txt and sitemap.xml (www.xml-sitemaps.com). 
+
 ### Languages Used
 
 HTML, CSS, Javascript, Python and Django
@@ -682,7 +685,6 @@ Bootstrap - The framework for the website.
 
 Google Dev Tools - To troubleshoot and test features, solve issues with responsiveness and styling.
 
-[Add the frameworks you used here]
 
 ### Libraries & Programs Used
 
@@ -707,6 +709,10 @@ dj_database_url
 psycopg2
 
 Pip - for install python packages
+
+www.xml-sitemaps.com to create sitemap.xml
+
+Font Awesome
 
 ### Accessibility
 
@@ -845,17 +851,8 @@ Heroku was used to deploy the live website. The instruction to achieve this are 
 6. Find Manual Deploy and click Deploy Branch.
 7. Click on Open App at the top right of the screen to view the live site.
 
-#### **Create the Live Database**
-
-[Add your live database creation steps here]
-
-#### **Heroku app setup**
-
-[Add your Heroku app setup steps here]
 
 #### **Preparation for deployment in Codeanywhere**
-
-[Add your Codeanywhere deployment preparation here]
 
 ### Local Development
 
