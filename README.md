@@ -432,57 +432,153 @@ Github Project
 
     ###  Navigation Bar for Staff
 
+    - The navigation bar for registered Staff users shows the following:
+        - Home - links to Home Page
+        - View Packages - links to view a list of all the hiking packages offered and available to purchase. Users can select a package and go to a package detail section which displays more information on the package and allows the user to add to cart ready for purchasing. 
+        - About Us - links to an About Us page which details about Highland Adventures
+        - Gallery - links to a gallery page where users can view images from our packages
+        - Reviews - links to Reviews of all the packages on the website. Users can read through current reviews on any package they desire and also add a review to any package they desire. 
+        - Cart - links to the cart page, where users can view their cart and what packages they have in their cart for purchase. They can change the quantity, remove the package, or proceed to the checkout. 
+        - User Reviews - links to a page when the user can view their own reviews they have made on the website. This lists all their reviews on all packages. The user can view, edit their review or delete it if they wish. 
+        - Logout - links to a logout page where the user can logout. 
+        - User Profile Details - this has a dropdown menu with 3 options
+            - User Profile - links to a page where the user can view their User Profile and Personal Information. Also this displays to the user their discount code. 
+            - Edit User Profile - links to a page where the user can edit their user profile
+            - Edit Personal Details - links to a page where the user can edit their personal information. 
+        - Admin Login - links to the /admin page where the staff member can login to the admin page for the website. 
+
     ![Staff Navigation Bar](https://res.cloudinary.com/dbagkfamv/image/upload/v1700347435/staff_nav_qy9k7b.png)
 
     ###  Admin Sign In
+
+    - This is where staff will sign in to the access the Django Admin section of the website, where they can access the database for the website. 
     ![Admin Sign In](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345691/admin_signin_vfydef.png)
 
     ###  Admin View
+
+    - This is where the adim staff can access all the site admin for the website. It has the following items:
+
+    - Email addresses
+    - Groups
+    - Discount codes
+    - Order items
+    - Orders
+    - Payments
+    - Packages
+    - Reviews
+    - Sites
+    - Social accounts
+    - social application tokens
+    - social applications
+    - User profiles
+    - Users 
+
+    - The admin can enter any of these sections and create, read, edit and delete any item in any of these sections. 
+
     ![Admin View](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345694/admin_view_xcxmfy.png)
 
     ###  Admin Discount View
+
+    - This is where admin staff can create, read, edit and delete any discount codes for the website. It has a two fields:
+    - Code - the admin can set the discount code. Currently the discount code for all registered user is HA10, which is showed on the checkout page and User Profile page to registered users. 
+    - Discount percentage - the admin can set the percentage of the discount. 
+
     ![Admin Discount View](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345693/discount_admin_s70wk8.png)
 
+    #### Detailed View
+
+    ![Admin Discount View Discount](https://res.cloudinary.com/dbagkfamv/image/upload/v1700354543/discount_detail_qw3l3g.png)
+
     ###  Admin Order Items
+
+    - The admin staff can see what items have been ordered on each order. It contains: 
+        - Order - who the order belongs to
+        - Package - which package was ordered by the user
+        - Quantity - what quantity of the package was ordered. 
+
+
     ![Admin Order Items](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345690/order_items_admin_cblvmd.png)
 
     #### Detailed View
     ![Detailed View Order Item](https://res.cloudinary.com/dbagkfamv/image/upload/v1700347890/detail_order_item_udxf0y.png)
 
     ###  Admin Orders
+
+    - The admin staff can see what the order was for each user. It contains:
+        - User - which user placed the order
+        - Total Price - the total price of the order
+        - Address Line 1 - User first line of address
+        - Address Line 2 - User second line of address
+        - County - User County
+        - Country - User Country - this is set using CountryField, so the user can select from all the countries. 
+        - Phone Number - User phone number
     ![Admin Orders](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345688/orders_admin_iqafey.png)
 
     #### Detailed View
     ![Detailed View Order ](https://res.cloudinary.com/dbagkfamv/image/upload/v1700347953/detail_order_runngi.png)
 
     ###  Admin Payments
+
+    - The admin staff can see the payments for all order that have been processed. It contains:
+        - Order - Who the order is for. 
+        - Amount - how much the order is for. 
     ![Admin Payments](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345686/payment_admin_colzin.png)
 
     ####  Detailed View
     ![Detailed View Payment ](https://res.cloudinary.com/dbagkfamv/image/upload/v1700348031/detail_payment_ed4xgl.png)
 
     ###  Admin Packages
+
+    - The admin staff can create, edit, view and delete all the packages that are on the website. It contains a list of all the package and if the admin click on a package they can see the following:
+        - Title - the title of the package
+        - Description - Package Description
+        - Price - The price of the package
+        - Image - The image for the package
+        - Difficulty Rating - the setting of difficult for the package, the options are:
+            - Easy
+            - Moderate
+            - Difficult
+            - Challenging
+
     ![Admin Packages](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345696/packages_admin_at0g2f.png)
 
     ####  Detailed View
     ![Detailed View Packages ](https://res.cloudinary.com/dbagkfamv/image/upload/v1700348122/detail_package_dkkeyg.png)
 
     ###  Admin Reviews
+
+    - The admin staff can view, edit, create and delete the reviews for all the packages on the website here. If the admin staff click on one of the reviews, they can see the following: 
+        - User - which user created the review
+        - Package - which package the review is for
+        - Text - what text is entered in the textbox for the review
+        - Difficulty Rating - what difficulty rating was set by the user
+        - Overall Rating - what overall rating was set by the user. 
     ![Admin Reviews](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345685/review_admin_gcwdrm.png)
 
     ####  Detailed View
     ![Detailed View Review ](https://res.cloudinary.com/dbagkfamv/image/upload/v1700348179/detail_review_nzssmi.png)
 
     ###  Admin User Profiles
+
+    - The admin staff can view, edit, create and delete the user profiles for all the users on the website. If they click on one of the user profiles they can see the following: 
+
+        - User - which user profile this is. 
+        - Bio - the text the user entered for their bio. 
+        - Profile Picture - the profile picture the user submited for their profile picture. 
     ![Admin User Profiles](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345683/user_profile_admin_drdfcz.png)
 
     ####  Detailed View
     ![Detailed View User Profile ](https://res.cloudinary.com/dbagkfamv/image/upload/v1700348228/detail_userprofile_jsnyu5.png)
 
     ###  Admin Users
+
+    - The admin staff can view, edit, create and delete the users on the website here. This displays the username, first and last name, email, phone number, staff status and superuser status.
+        - 
     ![Admin Users](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345682/users_admin_jmzbu9.png)
 
     ####  Detailed View
+
+    - If they click on one of the users they can see the following: 
     ![Detailed View User](https://res.cloudinary.com/dbagkfamv/image/upload/v1700348296/detail_user_n3azrs.png)
 
 
