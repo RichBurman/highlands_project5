@@ -372,11 +372,23 @@ Github Project
             - Displays a list of the packages and quantities of each. 
             - Proceed to Checkout Button - the user can click on this button and it will take the items in the cart and take the user to the checkout page where they can process the order. 
 
+        - If the user has not added any packages to the cart and click on the cart button in the navigation bar, they will find the cart to be empty and this is displayed to the user. 
+
+        ![Empty Cart](https://res.cloudinary.com/dbagkfamv/image/upload/v1700353459/empty_cart_qhvoiy.png)
+
 
     ![Cart](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346630/cart_cjchov.png)
 
     ###  User Reviews
+
+    - User Review displays to the user all of the reviews they have added to the website, if they have submitte any reviews. It displays the following: 
+        - The package title of the review
+        - The date and time the review was created
+        - The review text
+        - Edit and Delete Buttons - the user can click on the edit button to navigate to a page to edit the review. If the user clicks on the delete review, it will navigate the user to a page where they can delete the review. 
     ![User Reviews](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346523/user_reviews_wlcamf.png)
+    ![Edit Review](https://res.cloudinary.com/dbagkfamv/image/upload/v1700353664/Edit_Review_dei62z.png)
+    ![Delete Review](https://res.cloudinary.com/dbagkfamv/image/upload/v1700353645/delete_review_inmjkk.png)
 
     ###  Login/Logout
     - Login
