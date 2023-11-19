@@ -330,7 +330,7 @@ Github Project
         - It displays the description of the package to the user. 
         - It displays the difficulty rating of the package. 
         - It displays the price of the package. 
-        - It displays a Add to Cart button - which if the user clicks, will add the package to the cart. 
+        - It displays a Add to Cart button - which if the user clicks, will add the package to the cart. When a user clicks on this button, it add the package to the cart and redirect them to the cart page to view their cart. 
         - It displays a selection of Customer Reviews for the package. The user can read through the reviews from fellow users to see what they experience of the package was. It provides the user with a fantastic user experience. The user can click on the username of the user who wrote the review, to view their User Profile, where they can see the user bio, profile picture and all the reviews they have added to the website. 
 
     ![Package Detail](https://res.cloudinary.com/dbagkfamv/image/upload/v1700344175/package_detail_trlzul.png)
@@ -362,7 +362,17 @@ Github Project
 
     ###  Cart
 
-    
+    - Cart displays to the user their cart. It display the following to the user:
+        - A list of the items in the cart
+            - Package Title
+            - Quantity - this can be adjust by the user inputting a number and clicking on Update Quantity button.
+            - Update Quantity button - saves any changes the user makes to the quantity. 
+            - Remove button - the user can click this button and it will remove the package from the cart. 
+            - Total Price - this display the total price of all the packages in the cart. 
+            - Displays a list of the packages and quantities of each. 
+            - Proceed to Checkout Button - the user can click on this button and it will take the items in the cart and take the user to the checkout page where they can process the order. 
+
+
     ![Cart](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346630/cart_cjchov.png)
 
     ###  User Reviews
