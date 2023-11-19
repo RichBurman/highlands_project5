@@ -966,6 +966,10 @@ All css pages passed W3C testing.
 
  I have tried to change the structure of the process_checkout view, but I have been unable to solve this bug. 
 
+ #### user_payment app
+
+ - When I was having trouble trying to get Stripe payments to work, as explained in my solved bugs, I tried to use Stripe Checkout. I created a new app which is user_payment, which is still included in the code. If I delete this app and trying to remove all the links to it, it would prevent the website for loading and give various different errors. I had to go back to previous commit messages to have the user_payment app back and then the website/project would load. I want to remove the app as it isn't used, to my knowledge on the page. 
+
  #### Database 
 
  The database is not linked to Stripe using webhooks, which means the database is not as accurate as it could and should be. Due to the discount code bug, I run out of time to adapt the database structure and set up webhooks. 
