@@ -902,6 +902,8 @@ To fork the repository:
 - But the Stripe payment was £150.00. Stripe is not taking the discounted price. 
  ![Full Pay Stripe](https://res.cloudinary.com/dbagkfamv/image/upload/v1700358547/stripe_payment_ufaxti.png)
 
+ ### Database
+
  - Database Updated when ordered is processed. 
 
  - All orders that are processed are updated to the database. This has been checked for orders on every package type with various quantities and using different user types. 
@@ -934,11 +936,26 @@ All css pages passed W3C testing.
 
 ### Solved Bugs
 
-[Add your solved bugs information here]
+- I had a serious bug when the checkout form would not submit through to Stripe. The issue was, I had deleted card details from the checkout.html which was previously on the checkout.html, but I had not removed these details from the checkout form in forms.py in the checkout app. The form was constantly showing as invalid, because it was still requiring those payment details to complete the validation of the form. This took over two days to work out and fix. 
 
 ### Known Bugs
 
-[Add your known bugs information here]
+#### Discount Code Bug
+
+ - When the order is processed to Stripe, full payment is taken, not the discount price. 
+ 
+ - The order confirmation shows the total price was £135.00
+ ![Discounted Price](https://res.cloudinary.com/dbagkfamv/image/upload/v1700358553/checkout_success_lzx5df.png)
+- But the Stripe payment was £150.00. Stripe is not taking the discounted price. 
+ ![Full Pay Stripe](https://res.cloudinary.com/dbagkfamv/image/upload/v1700358547/stripe_payment_ufaxti.png)
+
+ I have tried to change the structure of the process_checkout view, but I have been unable to solve this bug. 
+
+ #### Database 
+
+ The database is not linked to Stripe using webhooks, which means the database is not as accurate as it could and should be. Due to the discount code bug, I run out of time to adapt the database structure and set up webhooks. 
+
+ 
 
 ### Lighthouse
 
