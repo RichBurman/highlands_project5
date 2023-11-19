@@ -390,14 +390,25 @@ Github Project
     ![Edit Review](https://res.cloudinary.com/dbagkfamv/image/upload/v1700353664/Edit_Review_dei62z.png)
     ![Delete Review](https://res.cloudinary.com/dbagkfamv/image/upload/v1700353645/delete_review_inmjkk.png)
 
-    ###  Login/Logout
+    ###  Login/Logout - Set Up using AllAuth
+
+    - This allows the user to login/logout into the website if they are not logged in or logged out. 
     - Login
     - ![Login](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345098/login_fposb8.png)
     - Logout
     - ![Logout](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346454/logout_rlke4p.png)
        
 
-    ###  Register
+    ###  Register - Set Up using AllAuth
+
+    - This allows the user to register and sign up to become a registered user on the website.The user has to enter the following:
+    - Email Address
+    - Email Address again
+    - Username 
+    - Password
+    - Password again
+
+    - Once this information is entered, the user will be sent an email asking them to verify their email address and once that is complete, they will be registered on the site and their details added to the database. 
     ![Register](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346576/register_mllzsa.png)
 
     ###  User Profile Details
