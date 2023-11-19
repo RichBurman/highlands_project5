@@ -606,6 +606,8 @@ Github Project
     - User being able to create an account via social media, e.g. facebook, twitter etc. This would be good user experience, as users can create accounts very quickly and also offered marketing oppportunities for Highlands Adventures. 
 - Payment via ApplePay, Pay Pal etc
     - Currently payment is card only. It would be good to offer more methods of payment to the user to improve user experience. 
+- Validation on checkout form 
+    - Currently there is no validation on the checkout form, apart from that field needs to be filed. This is bad user experience and validation needs to be added to ensure valid data is entered in the form. 
 
 ## Technologies Used
 
@@ -821,15 +823,20 @@ To fork the repository:
 5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
 
 
-[Add your cloning steps here]
 
 ## Testing
 
-[Add your testing information here]
+- Testing was ongoing throughout the entire build. I utilised Chrome developer tools while building to pinpoint and troubleshoot any issues as I went along.
 
 ### Full Testing
 
-[Add your full testing information here]
+- To fully test the website I performed the following tests using a number of different browsers, as well as testing on a MacBook Pro 16" and a iPhone 13 Pro Max.
+
+- I also went through each page using google chrome developer tools to ensure that they responsive on all different screen sizes.
+
+### Links
+
+- All navigation links on the entire website work as expected, opening in the same window. The footer links work as expected, but open in a seperate window. 
 
 ### W3C Validator
 
