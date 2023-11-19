@@ -400,7 +400,7 @@ Github Project
         - County
         - Country
         - Order Summary - Display the items the user is purchasing and quantity. 
-        - Discount Code - where the user can input a discount code to apply discount
+        - Discount Code - where the user can input a discount code to apply discount (This has now been hidden from the user, due to an error processing discounted payment, please see known bugs)
         - Apply Discount button - this processes the discount on the total price
         - Card detail field - this is a stripe field where the user inputs their card details.
         - Submit button - this processes the purchase through to stripe. If the form is valid, the order will be submiited. The user will be redirected to order confirmation page. 
@@ -963,6 +963,10 @@ All css pages passed W3C testing.
  ![Full Pay Stripe](https://res.cloudinary.com/dbagkfamv/image/upload/v1700358547/stripe_payment_ufaxti.png)
 
  I have tried to change the structure of the process_checkout view, but I have been unable to solve this bug. 
+
+ In the meantime, I have hidden the discount code section on the checkout.html, to prevent the user from inputting discount codes, to enhance the user experience. So if they process an order it will be at the full price and no discount will be applied. Please see the image below, how the checkout page now looks. 
+
+ ![Discount Input Removed Checkout.html](https://res.cloudinary.com/dbagkfamv/image/upload/v1700386530/remove_discount_code_ys44hj.png)
 
  #### user_payment app
 
