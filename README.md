@@ -1,6 +1,6 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-# Project Name
+# Highland Adventures
 
 ![Am I Responsive Image](https://res.cloudinary.com/dbagkfamv/image/upload/v1700340031/am_I_responsive_qf6uyg.png)
 
@@ -10,12 +10,14 @@ Live Link to the project website [Live link](https://highlands-fe23cbc4972e.hero
 
 ## CONTENTS
 
-- [Project Name](#project-name)
+- [Highland Adventures](#Highland-Adventures)
   - [CONTENTS](#contents)
   - [User Experience (UX)](#user-experience-ux)
     - [Key Information for the site](#key-information-for-the-site)
     - [Business Model](#business-model) 
     - [User Stories](#user-stories)
+      - [User Features](#user-features) 
+      - [Admin Features](#admin-features)
       - [Client Goals](#client-goals)
       - [First Time Visitor Goals](#first-time-visior-goals)
       - [Returning and Frequent Visitor Goals](#returning-and-frequent-visitor-goals)
@@ -23,6 +25,22 @@ Live Link to the project website [Live link](https://highlands-fe23cbc4972e.hero
     - [Typography](#typography)
     - [Imagery](#imagery)
   - [Features](#features)
+    - [Home Page](#home-page)
+    - [The Navigation Bar](#the-navigation-bar)
+    - [Footer](#footer)
+    - [View Packages](#view-packages)
+    - [Package Detail](#package-detail)
+    - [About Us](#about-us)
+    - [Gallery](#gallery)
+    - [Review](#reviews)
+    - [Cart](#cart)
+    - [Checkout](#checkout)
+    - [Order Confirmation](#order-confirmation)
+    - [User Reviews](#user-reviews)
+    - [Login/Logout](#loginlogout---set-up-using-allauth)
+    - [Register](#register---set-up-using-allauth)
+    - [User Profile Details](#user-profile-details)
+    - [Admin Features](#admin-features)
     - [Future Implementations](#future-implementations)
   - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
@@ -968,11 +986,6 @@ All css pages passed W3C testing.
 
 ## Credits
 
-- I would like to thank the following:
-    - A huge thank you to my family for your huge support and understanding throughout the project! Thank you
-    - A big thanks to my mentor! You have been fantastic thank you
-    - Thank you to Student support, who helped with issues with Stripe not taking payments. 
-    - Thank you to fellow students in Slack for your support and help at times. 
 
 ### Code Used
 
@@ -996,4 +1009,8 @@ Research using [w3c](https://www.w3schools.com/), [bootstrap](https://getbootstr
 
 ### Acknowledgments
 
-- [Add your acknowledgments here]
+- I would like to thank the following:
+    - A huge thank you to my family for your huge support and understanding throughout the project! Thank you
+    - A big thanks to my mentor! You have been fantastic thank you
+    - Thank you to Student support, who helped with issues with Stripe not taking payments. 
+    - Thank you to fellow students in Slack for your support and help at times. 
