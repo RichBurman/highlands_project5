@@ -375,6 +375,14 @@ Github Project
 
     ![Cart](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346630/cart_cjchov.png)
 
+    ### Checkout 
+
+    - 
+
+     ![Checkout](https://res.cloudinary.com/dbagkfamv/image/upload/v1700357773/all_fields__needed_e7epm7.png)
+
+    - 
+
     ###  User Reviews
 
     - User Review displays to the user all of the reviews they have added to the website, if they have submitte any reviews. It displays the following: 
@@ -833,6 +841,60 @@ To fork the repository:
 - To fully test the website I performed the following tests using a number of different browsers, as well as testing on a MacBook Pro 16" and a iPhone 13 Pro Max.
 
 - I also went through each page using google chrome developer tools to ensure that they responsive on all different screen sizes.
+
+### Packages and Cart
+
+ - All packages can be added to the cart for the package detail page.  
+ - In the Cart
+    - package quantities can be updated using the update quantity button
+    - packages can be removed using the remove button
+    - The user can proceed to the checkout and all items from the cart will be transfereed succesfully to the checkout. 
+
+### Checkout
+
+- All fields allow input
+- Once all fields are completed, the order can be submited to Stripe. 
+
+- The discode code field accepts the discount code and when Apply Discount button clicked, it subtracts the discount. 
+
+![Discount Code entered](https://res.cloudinary.com/dbagkfamv/image/upload/v1700358305/eneter_discount_code_pmybev.png)
+![Discount worked](https://res.cloudinary.com/dbagkfamv/image/upload/v1700358321/discount_success_funpui.png)
+![Discount Message](https://res.cloudinary.com/dbagkfamv/image/upload/v1700358294/discount_message_mxlb7k.png)
+
+ - The checkout form has validation to make sure all the boxes are filled in, before the form is submited. The form needs validation on what is inputted in each box, as currently there is no validation on what can be entered into the fields. 
+ ![](https://res.cloudinary.com/dbagkfamv/image/upload/v1700357709/form_complete_iqesnm.png)
+- All fields on the checkout need to be complete before the order can be submitted. 
+ ![All Fields needed](https://res.cloudinary.com/dbagkfamv/image/upload/v1700357773/all_fields__needed_e7epm7.png)
+
+ ## Problem with Discount Code
+
+ - When the order is processed to Stripe, full payment is taken, not the discount price. 
+ 
+ - The order confirmation shows the total price was £135.00
+ ![Discounted Price](https://res.cloudinary.com/dbagkfamv/image/upload/v1700358553/checkout_success_lzx5df.png)
+- But the Stripe payment was £150.00. Stripe is not taking the discounted price. 
+ ![Full Pay Stripe](https://res.cloudinary.com/dbagkfamv/image/upload/v1700358547/stripe_payment_ufaxti.png)
+
+ - Database Updated when ordered is processed. 
+
+ - All orders that are processed are updated to the database. This has been checked for orders on every package type with various quantities and using different user types. 
+
+ ### Users
+
+ - New users can be registered. 
+ - Admin can add new users, staff users and superuser is the admin. 
+
+ ### User Profile and User Personal Information
+
+ - All user profile and user personal information can be edited and works as expected. 
+
+ ### User Reviews
+
+ - All user reviews worked as expected, can be viewed and by user or admin. User reviews can be edited/deleted by the user who created them and also by Admin. 
+
+### Admin
+
+- All Admin work in the Admin section and can only be accessed by staff. Working as expected. 
 
 ### Links
 
