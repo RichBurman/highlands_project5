@@ -324,14 +324,28 @@ Github Project
 
     ###  Package Detail
 
+    - The package detail displays to the user everything they need to know about the package. 
+        - It displays the title of the package.
+        - It displays a large image of the package. 
+        - It displays the description of the package to the user. 
+        - It displays the difficulty rating of the package. 
+        - It displays the price of the package. 
+        - It displays a Add to Cart button - which if the user clicks, will add the package to the cart. 
+        - It displays a selection of Customer Reviews for the package. The user can read through the reviews from fellow users to see what they experience of the package was. It provides the user with a fantastic user experience. The user can click on the username of the user who wrote the review, to view their User Profile, where they can see the user bio, profile picture and all the reviews they have added to the website. 
+
     ![Package Detail](https://res.cloudinary.com/dbagkfamv/image/upload/v1700344175/package_detail_trlzul.png)
     ![]()
 
     ###  About Us
 
+    - The About Us displays to the user everything about Highland Adventures. It explains who Highlands Adventures are, how the hiking packages work and what type of walk should I do. It provides a good level of detail to the user about the packages. 
+
     ![About Us](https://res.cloudinary.com/dbagkfamv/image/upload/v1700344495/aboutus_yz5cyg.png)
 
     ###  Gallery
+
+    The Gallery displays a selection of images from the packages to the user to view. It is offers a good user experience as they can view the images and this may encourage them to purchase a package to see the mountains with their own eyes!
+    
     ![Gallery](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345141/gallery_p3hgqw.png)
 
     ###  Reviews
@@ -344,22 +358,22 @@ Github Project
     ![User Reviews](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346523/user_reviews_wlcamf.png)
 
     ###  Login/Logout
-        - Login
-        - ![Login](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345098/login_fposb8.png)
-        - Logout
-        - ![Logout](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346454/logout_rlke4p.png)
+    - Login
+    - ![Login](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345098/login_fposb8.png)
+    - Logout
+    - ![Logout](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346454/logout_rlke4p.png)
        
 
     ###  Register
     ![Register](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346576/register_mllzsa.png)
 
     ###  User Profile Details
-        - User Profile
-        ![User Profile](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346710/user_profile_ivrlgi.png)
-        - Edit User Profile
-        ![Edit User Profile](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346750/edit_user_profile_jvoc9h.png)
-        - Edit Personal Details
-        - ![Edit Personal Details](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346750/edit_user_profile_jvoc9h.png)
+    - User Profile
+    ![User Profile](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346710/user_profile_ivrlgi.png)
+    - Edit User Profile
+    ![Edit User Profile](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346750/edit_user_profile_jvoc9h.png)
+    - Edit Personal Details
+    - ![Edit Personal Details](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346750/edit_user_profile_jvoc9h.png)
 
 
     ## Admin Features
