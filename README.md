@@ -986,6 +986,8 @@ All css pages passed W3C testing.
 
 ## Credits
 
+[Kera Cudmore README Template and Deployment Code](https://github.com/kera-cudmore/Bully-Book-Club/blob/main/README.md)
+
 
 ### Code Used
 
