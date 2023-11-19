@@ -330,7 +330,7 @@ Github Project
         - An image from the walking package to draw the user in. When the user hovers over the image, the image enlargens to draw the user in. 
         - A description of the package 
         - A difficuly rating for the package
-        - The price of the package (Before any discount applied)
+        - The price of the package (before any discount is applied)
 
 
     ![Package List](https://res.cloudinary.com/dbagkfamv/image/upload/v1700344145/packages_list_di1tvj.png)
@@ -400,7 +400,7 @@ Github Project
         - County
         - Country
         - Order Summary - Display the items the user is purchasing and quantity. 
-        - Discount Code - where the user can input a discount code to apply discount (This has now been hidden from the user, due to an error processing discounted payment, please see known bugs)
+        - Discount Code - where the user can input a discount code to apply discount (This has now been hidden from the user, due to an error processing discounted payments, please see known bugs)
         - Apply Discount button - this processes the discount on the total price (This has now been hidden from the user, due to an error processing discounted payment, please see known bugs)
         - Card detail field - this is a stripe field where the user inputs their card details.
         - Submit button - this processes the purchase through to stripe. If the form is valid, the order will be submiited. The user will be redirected to order confirmation page. 
@@ -409,7 +409,7 @@ Github Project
 
      ![Checkout](https://res.cloudinary.com/dbagkfamv/image/upload/v1700357773/all_fields__needed_e7epm7.png)
 
-     - Please see the image below of the checkout page, which nows hides the discount code function. 
+     - Please see the image below of the checkout page, which now hides the discount code function. 
 
      ![Live Checkout Page](https://res.cloudinary.com/dbagkfamv/image/upload/v1700387068/Updated_checkout_view_wzsriy.png)
 
@@ -439,7 +439,7 @@ Github Project
         - The package title of the review
         - The date and time the review was created
         - The review text
-        - Edit and Delete Buttons - the user can click on the edit button to navigate to a page to edit the review. If the user clicks on the delete review, it will navigate the user to a page where they can delete the review. 
+        - Edit and Delete Buttons - the user can click on the edit button to navigate to a page to edit the review. If the user clicks on the delete review, it will navigate the user to a page where they can delete their review. 
     ![User Reviews](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346523/user_reviews_wlcamf.png)
     ![Edit Review](https://res.cloudinary.com/dbagkfamv/image/upload/v1700353664/Edit_Review_dei62z.png)
     ![Delete Review](https://res.cloudinary.com/dbagkfamv/image/upload/v1700353645/delete_review_inmjkk.png)
@@ -510,7 +510,7 @@ Github Project
 
     ###  Admin View
 
-    - This is where the adim staff can access all the site admin for the website. It has the following items:
+    - This is where the admin staff can access all the site admin for the website. It has the following items:
 
     - Email addresses
     - Groups
@@ -573,8 +573,8 @@ Github Project
 
     ###  Admin Payments
 
-    - The admin staff can see the payments for all order that have been processed. It contains:
-        - Order - Who the order is for. 
+    - The admin staff can see the payments for all orders that have been processed. It contains:
+        - Order - who the order is for. 
         - Amount - how much the order is for. 
     ![Admin Payments](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345686/payment_admin_colzin.png)
 
@@ -583,7 +583,7 @@ Github Project
 
     ###  Admin Packages
 
-    - The admin staff can create, edit, view and delete all the packages that are on the website. It contains a list of all the package and if the admin click on a package they can see the following:
+    - The admin staff can create, edit, view and delete all the packages that are on the website. It contains a list of all the packages and if the admin click on a package they can see the following:
         - Title - the title of the package
         - Description - Package Description
         - Price - The price of the package
@@ -627,7 +627,7 @@ Github Project
     ###  Admin Users
 
     - The admin staff can view, edit, create and delete the users on the website here. This displays the username, first and last name, email, phone number, staff status and superuser status.
-        - 
+    
     ![Admin Users](https://res.cloudinary.com/dbagkfamv/image/upload/v1700345682/users_admin_jmzbu9.png)
 
     ####  Detailed View
@@ -643,7 +643,7 @@ Github Project
 - Please find below a detailed list of future implementations for the website. 
 
 - Discount code functionality
-    - As detailed in the bugs section below, sadly the discount code functionality is not operating in full. The discount codes work, when a user enters the discount code and applies it at the checkout. However, Stripe will take the full total price and not the discounted price, but the website will process and display to the user that the discount price has been paid! This would lead to extremely poor user experience and would need to be fixed or address prior the website going live. 
+    - As detailed in the bugs section below, sadly the discount code functionality is not operating in full. The discount codes work, when a user enters the discount code and applies it at the checkout. However, Stripe will take the full total price and not the discounted price, but the website will process and display to the user that the discount price has been paid. This would lead to an extremely poor user experience and would need to be fixed or addressed prior the website going live. The discount code function has now been hidden and a message displayed informing the user of this (please see known bugs for further information)
 - Users only being able to submit reviews on packages they have an order history of purchasing
     - At the momemnt a user can submit a review on any package, whether they have purchased it or not. I would like to set up where the user can only submit a review on packages they have purchased. The reasoning behind this is to enchance the user experience, as the user will only be reading reviews from users who have purchased the packages. 
 - Admin approving reviews before they are visible on the reviews. 
@@ -912,15 +912,20 @@ To fork the repository:
 - All fields on the checkout need to be complete before the order can be submitted. 
  ![All Fields needed](https://res.cloudinary.com/dbagkfamv/image/upload/v1700357773/all_fields__needed_e7epm7.png)
 
+ - The Discount code section has now been hidden from the checkout.html page now as this is detailed in the known bugs section below. 
+
  ## Problem with Discount Code
 
- - When the order is processed to Stripe, full payment is taken, not the discount price. 
+ - When the order is processed to Stripe, full payment is taken, not the discounted price. 
  
  - The order confirmation shows the total price was £135.00
  ![Discounted Price](https://res.cloudinary.com/dbagkfamv/image/upload/v1700358553/checkout_success_lzx5df.png)
 - But the Stripe payment was £150.00. Stripe is not taking the discounted price. 
  ![Full Pay Stripe](https://res.cloudinary.com/dbagkfamv/image/upload/v1700358547/stripe_payment_ufaxti.png)
 
+ - - The Discount code section has now been hidden from the checkout.html page now as this is detailed in the known bugs section below. 
+ ### Messages 
+ - All messages throughout the website work as expected.
  ### Database
 
  - Database Updated when ordered is processed. 
@@ -938,7 +943,7 @@ To fork the repository:
 
  ### User Reviews
 
- - All user reviews worked as expected, can be viewed and by user or admin. User reviews can be edited/deleted by the user who created them and also by Admin. 
+ - All user reviews worked as expected, can be viewed by user or admin. User reviews can be edited/deleted by the user who created them and also by Admin. 
 
 ### Admin
 
@@ -980,7 +985,7 @@ All css pages passed W3C testing.
 
  #### user_payment app
 
- - When I was having trouble trying to get Stripe payments to work, as explained in my solved bugs, I tried to use Stripe Checkout. I created a new app which is user_payment, which is still included in the code. If I delete this app and trying to remove all the links to it, it would prevent the website for loading and give various different errors. I had to go back to previous commit messages to have the user_payment app back and then the website/project would load. I want to remove the app as it isn't used, to my knowledge on the page. 
+ - When I was having trouble trying to get Stripe payments to work, as explained in my solved bugs, I tried to use Stripe Checkout. I created a new app which is user_payment, which is still included in the code. If I delete this app and trying to remove all the links to it, it would prevent the website loading and give various different errors. I had to go back to previous commit messages to have the user_payment app back and then the website/project would load. I want to remove the app as it isn't used, to my knowledge on the page. 
 
  #### Database 
 
@@ -1014,7 +1019,7 @@ Research using [w3c](https://www.w3schools.com/), [bootstrap](https://getbootstr
 ### Media
 
 - Some images were taken from Unsplash
-- 
+- All other images are owned by Richard Burman. 
 - All images were compressed using Optimizilla to aid website performance.
 - Screenshots taken from the following website for this README
 - Lighthouse
