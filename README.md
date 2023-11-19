@@ -401,11 +401,17 @@ Github Project
         - Country
         - Order Summary - Display the items the user is purchasing and quantity. 
         - Discount Code - where the user can input a discount code to apply discount (This has now been hidden from the user, due to an error processing discounted payment, please see known bugs)
-        - Apply Discount button - this processes the discount on the total price
+        - Apply Discount button - this processes the discount on the total price (This has now been hidden from the user, due to an error processing discounted payment, please see known bugs)
         - Card detail field - this is a stripe field where the user inputs their card details.
         - Submit button - this processes the purchase through to stripe. If the form is valid, the order will be submiited. The user will be redirected to order confirmation page. 
 
+        - Please see the image below of the checkout page prior to the hiding of the discount code function. 
+
      ![Checkout](https://res.cloudinary.com/dbagkfamv/image/upload/v1700357773/all_fields__needed_e7epm7.png)
+
+     - Please see the image below of the checkout page, which nows hides the discount code function. 
+
+     ![Live Checkout Page](https://res.cloudinary.com/dbagkfamv/image/upload/v1700387068/Updated_checkout_view_wzsriy.png)
 
      ### Order Confirmation
 
@@ -962,11 +968,15 @@ All css pages passed W3C testing.
 - But the Stripe payment was £150.00. Stripe is not taking the discounted price. 
  ![Full Pay Stripe](https://res.cloudinary.com/dbagkfamv/image/upload/v1700358547/stripe_payment_ufaxti.png)
 
- I have tried to change the structure of the process_checkout view, but I have been unable to solve this bug. 
+ - I have tried to change the structure of the process_checkout view, but I have been unable to solve this bug. 
 
- In the meantime, I have hidden the discount code section on the checkout.html, to prevent the user from inputting discount codes, to enhance the user experience. So if they process an order it will be at the full price and no discount will be applied. Please see the image below, how the checkout page now looks. 
+ - In the meantime, I have hidden the discount code section on the checkout.html, to prevent the user from inputting discount codes, to enhance the user experience. So if they process an order it will be at the full price and no discount will be applied. Please see the image below, how the checkout page now looks. 
 
  ![Discount Input Removed Checkout.html](https://res.cloudinary.com/dbagkfamv/image/upload/v1700386530/remove_discount_code_ys44hj.png)
+
+ - I have added a message to the checkout page to display to the user that the discount code is currently not functioning. 
+
+ ![New Checkout View](https://res.cloudinary.com/dbagkfamv/image/upload/v1700387068/Updated_checkout_view_wzsriy.png)
 
  #### user_payment app
 
