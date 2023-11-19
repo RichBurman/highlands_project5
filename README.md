@@ -955,7 +955,7 @@ All css pages passed W3C testing.
 
  The database is not linked to Stripe using webhooks, which means the database is not as accurate as it could and should be. Due to the discount code bug, I run out of time to adapt the database structure and set up webhooks. 
 
- 
+
 
 ### Lighthouse
 
@@ -968,9 +968,15 @@ All css pages passed W3C testing.
 
 ## Credits
 
+- I would like to thank the following:
+    - A huge thank you to my family for your huge support and understanding throughout the project! Thank you
+    - A big thanks to my mentor! You have been fantastic thank you
+    - Thank you to Student support, who helped with issues with Stripe not taking payments. 
+    - Thank you to fellow students in Slack for your support and help at times. 
+
 ### Code Used
 
-Some of the code was used for the base.html from the [Boutique_ado](https://github.com/Code-Institute-Org/boutique_ado_v1) walkthrough. 
+Code was used for the base.html from the [Boutique_ado](https://github.com/Code-Institute-Org/boutique_ado_v1) walkthrough. 
 
 ### Content
 
