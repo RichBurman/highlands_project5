@@ -717,3 +717,10 @@ h1.customer-reviews {
 h1.gallery-heading {
     color: #3498db;
 }
+
+/* Styling for the User Profile Image */
+
+.profile-picture {
+    max-width: 200px;
+    max-height: 300px;
+}
