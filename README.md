@@ -413,10 +413,18 @@ Github Project
 
     ###  User Profile Details
     - User Profile
+
+    - User Profile - links to a page where the user can view their User Profile and Personal Information. Also this displays to the user their discount code. 
+
     ![User Profile](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346710/user_profile_ivrlgi.png)
     - Edit User Profile
+
+    - Edit User Profile - links to a page where the user can edit their user profile
+
     ![Edit User Profile](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346750/edit_user_profile_jvoc9h.png)
     - Edit Personal Details
+
+    - Edit Personal Details - links to a page where the user can edit their personal information. 
     - ![Edit Personal Details](https://res.cloudinary.com/dbagkfamv/image/upload/v1700346750/edit_user_profile_jvoc9h.png)
 
 
