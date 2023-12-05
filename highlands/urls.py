@@ -27,7 +27,6 @@ urlpatterns = [
     path('reviews/', include('reviews.urls')),
     path('cart/', include('cart.urls')),
      path('checkout/', include('checkout.urls', namespace='checkout')),
-     path('user_payment', include('user_payment.urls')),
 ]
 
 if settings.DEBUG:
