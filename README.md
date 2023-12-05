@@ -24,6 +24,7 @@ Live Link to the project website [Live link](https://highlands-fe23cbc4972e.hero
   - [Design](#design)
     - [Typography](#typography)
     - [Imagery](#imagery)
+    - [WireFrames](#wireframes)
   - [Features](#features)
     - [Home Page](#home-page)
     - [The Navigation Bar](#the-navigation-bar)
@@ -200,6 +201,19 @@ Github Project
 
 - Some Images were used from the [Unsplash](https://unsplash.com/) website.
 - All other images are owned by Author Richard Burman
+
+### Wireframes
+
+- ![Home Page Wireframe](https://res.cloudinary.com/dbagkfamv/image/upload/v1701780326/wf_homepage_fhmmgi.png)
+- ![Walking Packages Wireframe](https://res.cloudinary.com/dbagkfamv/image/upload/v1701780327/wf_walkingpackages_rwun7p.png)
+- ![View Package Wireframe](https://res.cloudinary.com/dbagkfamv/image/upload/v1701780326/wf_viewpackage_n9yajf.png)
+- ![About Us Wireframe](https://res.cloudinary.com/dbagkfamv/image/upload/v1701780326/wf_aboutus_q3s5ha.png)
+- ![Gallery Wireframe](https://res.cloudinary.com/dbagkfamv/image/upload/v1701780326/wf_gallery_jikfbh.png)
+- ![Reviews Wireframe](https://res.cloudinary.com/dbagkfamv/image/upload/v1701780326/wf_reviews_xpwgxv.png)
+- ![A Review Wireframe](https://res.cloudinary.com/dbagkfamv/image/upload/v1701780326/wf_reviewdetail_rl15ms.png)
+- ![Cart Wireframe](https://res.cloudinary.com/dbagkfamv/image/upload/v1701780325/wf_cart_pw19mx.png)
+- ![Checkout Wireframe](https://res.cloudinary.com/dbagkfamv/image/upload/v1701780325/wf_checkout_cems79.png)
+- ![Order Confirm Wireframe](https://res.cloudinary.com/dbagkfamv/image/upload/v1701780325/wf_orderconfirm_d8nd0k.png)
 
 
 ## Features
