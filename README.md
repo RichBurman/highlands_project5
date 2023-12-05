@@ -204,15 +204,26 @@ Github Project
 
 ### Wireframes
 
+- Below are the Wireframes for the project website. 
+- Home Page Wireframe
 - ![Home Page Wireframe](https://res.cloudinary.com/dbagkfamv/image/upload/v1701780326/wf_homepage_fhmmgi.png)
+- Walking Packages Wireframe
 - ![Walking Packages Wireframe](https://res.cloudinary.com/dbagkfamv/image/upload/v1701780327/wf_walkingpackages_rwun7p.png)
+- View Package Wireframe
 - ![View Package Wireframe](https://res.cloudinary.com/dbagkfamv/image/upload/v1701780326/wf_viewpackage_n9yajf.png)
+- About Us Wireframe
 - ![About Us Wireframe](https://res.cloudinary.com/dbagkfamv/image/upload/v1701780326/wf_aboutus_q3s5ha.png)
+- Gallery Wireframe
 - ![Gallery Wireframe](https://res.cloudinary.com/dbagkfamv/image/upload/v1701780326/wf_gallery_jikfbh.png)
+- Review Wireframe
 - ![Reviews Wireframe](https://res.cloudinary.com/dbagkfamv/image/upload/v1701780326/wf_reviews_xpwgxv.png)
+- Individual Review Wireframe
 - ![A Review Wireframe](https://res.cloudinary.com/dbagkfamv/image/upload/v1701780326/wf_reviewdetail_rl15ms.png)
+- Cart Wireframe
 - ![Cart Wireframe](https://res.cloudinary.com/dbagkfamv/image/upload/v1701780325/wf_cart_pw19mx.png)
+- Checkout Wireframe
 - ![Checkout Wireframe](https://res.cloudinary.com/dbagkfamv/image/upload/v1701780325/wf_checkout_cems79.png)
+- Order Confirmation Wireframe
 - ![Order Confirm Wireframe](https://res.cloudinary.com/dbagkfamv/image/upload/v1701780325/wf_orderconfirm_d8nd0k.png)
 
 
